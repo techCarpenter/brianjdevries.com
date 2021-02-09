@@ -1,0 +1,30 @@
+
+        __         _               _     __               _                                   
+       / /_  _____(_)___ _____    (_)___/ /__ _   _______(_)__  _____     _________  ____ ___ 
+      / __ \/ ___/ / __ `/ __ \  / / __  / _ \ | / / ___/ / _ \/ ___/    / ___/ __ \/ __ `__ \
+     / /_/ / /  / / /_/ / / / / / / /_/ /  __/ |/ / /  / /  __(__  ) __ / /__/ /_/ / / / / / /
+    /_.___/_/  /_/\__,_/_/ /_/_/ /\__,_/\___/|___/_/  /_/\___/____/ /_/ \___/\____/_/ /_/ /_/ 
+                            /___/                                                             
+
+    /* TEAM */
+
+    Owner/Developer:    Brian DeVries
+    Contact:            brian [at] brianjdevries.com
+    Twitter:            @brianjdevries
+    Location:           Jenison, Michigan, USA
+
+
+    /* SITE INFORMATION */
+
+    Site Name:          Brian DeVries
+    Site URL:           https://brianjdevries.com/
+    Launched:           August 2020
+
+
+    /* TECHNOLOGY COLOPHON */
+
+    IDE:                VSCode      (code.visualstudio.com)
+    Version Control:    Github      (github.com)
+    Site Generator:     Eleventy    (11ty.dev)
+    Hosting:            Netlify     (netlify.com)
+    Graphic Design:     Inkscape    (inkscape.org)
