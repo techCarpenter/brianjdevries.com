@@ -1,29 +1,31 @@
-{% include "partials/htmlhead.njk" %}
+<!DOCTYPE html>
+<html lang="en">
 
-<header>
-  <nav>
-    {% navlist collections.all | eleventyNavigation,
-    page,
-    1 %}
-  </nav>
-</header>
+  {% include "partials/htmlhead.njk" %}
 
-<main>
-  {% block content %}
+  <body>
 
-    <h1>{{ title }}</h1>
+    {# Navigation header #}
+    {% include "partials/nav-header.njk" %}
 
-    {{ content | safe }}
+    <main>
+      {% block content %}
 
-  {% endblock %}
-</main>
+        <h1>{{ title }}</h1>
 
-<footer>
-  <nav>
-    {% navlist collections.all | eleventyNavigation,
-    page,
-    2 %}
-  </nav>
-</footer>
+        {{ content | safe }}
 
-{% include "partials/htmlfoot.njk" %}
+      {% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <p>uncopyright</p>
+      <nav>
+        {% navlist collections.all | eleventyNavigation,
+        page,
+        1 %}
+      </nav>
+    </footer>
+
+  </body>
+</html>

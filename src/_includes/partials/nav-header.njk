@@ -1,0 +1,12 @@
+<header>
+  <nav class="site-nav">
+    <div class="site-logo">
+      <a href="/">
+        <img src="/android-chrome-192x192.png"/>
+      </a>
+    </div>
+    {% navlist collections.all | eleventyNavigation,
+    page,
+    1 %}
+  </nav>
+</header>

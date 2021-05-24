@@ -1,117 +1,30 @@
 module.exports = [
   {
+    startDate: new Date(2015, 4, 30),
+    endDate: new Date(2017, 4, 20),
+    title: "Turf Maintenance Assistant",
+    employer: "Calvin College",
+    description: "short job description"
+  },
+  {
     startDate: new Date(2017, 4, 30),
     endDate: new Date(2018, 3, 15),
     title: "Production Support Engineer",
-    company: "Gentex",
+    employer: "Gentex",
+    description: "short job description"
+  },
+  {
+    startDate: new Date(2018, 3, 15),
+    endDate: new Date(2020, 3, 15),
+    title: "Associate Test Engineer",
+    employer: "Gentex",
+    description: "short job description"
+  },
+  {
+    startDate: new Date(2020, 3, 15),
+    endDate: null,
+    title: ".NET Software Developer",
+    employer: "Meijer",
     description: "short job description"
   }
 ];
-
-/*
-FCC Badges
-
-{
-  name: "Responsive Web Design",
-  url: "https://www.freecodecamp.org/certification/techcarpenter/responsive-web-design",
-  image: ""
-},
-{
-  name: "Javascript Algorithms and Data Structures",
-  url: "https://www.freecodecamp.org/certification/techcarpenter/javascript-algorithms-and-data-structures",
-  image: ""
-},
-{
-  name: "Frontend Libraries",
-  url: "https://www.freecodecamp.org/certification/techcarpenter/front-end-libraries",
-  image: ""
-},
-{
-  name: "Data Visualization",
-  url: "https://www.freecodecamp.org/certification/techcarpenter/data-visualization",
-  image: ""
-}
-
-Projects
-
-{
-  name: "Tribute page",
-  url: "https://techcarpenter.github.io/tributepage/",
-  image: ""
-},
-{
-  name: "Survey Form",
-  url: "https://techcarpenter.github.io/surveyform/",
-  image: ""
-},
-{
-  name: "Landing page",
-  url: "https://techcarpenter.github.io/landingpage/",
-  image: ""
-},
-{
-  name: "Technical Document",
-  url: "https://techcarpenter.github.io/technicaldocument/",
-  image: ""
-},
-{
-  name: "Personal Portfolio",
-  url: "https://techcarpenter.github.io/personalportfolio/",
-  image: ""
-},
-{
-  name: "JS calculator",
-  url: "https://techcarpenter.github.io/jscalculator/",
-  image: ""
-},
-{
-  name: "Pomodoro Clock",
-  url: "https://techcarpenter.github.io/pomodoroclock/",
-  image: ""
-},
-{
-  name: "Markdown Previewer",
-  url: "https://techcarpenter.github.io/markdownpreviewer/",
-  image: ""
-},
-{
-  name: "Drum machine",
-  url: "https://techcarpenter.github.io/drummachine/",
-  image: ""
-},
-{
-  name: "Random quote machine",
-  url: "https://techcarpenter.github.io/randomquotemachine/",
-  image: ""
-},
-{
-  name: "Choropleth visualization",
-  url: "https://techcarpenter.github.io/fcc-d3-choropleth/",
-  image: ""
-},
-{
-  name: "Treemap visualization",
-  url: "https://techcarpenter.github.io/fcc-d3-treemap/",
-  image: ""
-},
-{
-  name: "Heatmap visualization",
-  url: "https://techcarpenter.github.io/fcc-d3-heatmap/",
-  image: ""
-},
-{
-  name: "Scatterplot visualization",
-  url: "https://techcarpenter.github.io/fcc-d3-scatterplot/",
-  image: ""
-},
-{
-  name: "Bar chart visualization",
-  url: "https://techcarpenter.github.io/fcc-d3-bar-chart/",
-  image: ""
-},
-{
-  name: "Topple",
-  url: "https://techcarpenter.github.io/",
-  image: ""
-}
-*/

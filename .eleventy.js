@@ -16,6 +16,7 @@ module.exports = config => {
   const dateformat = require("./lib/filters/dateformat");
   config.addFilter("datefriendly", dateformat.friendly);
   config.addFilter("dateymd", dateformat.ymd);
+  config.addFilter("datemonthyear", dateformat.monthYear);
 
   config.addPassthroughCopy({"src/static": "/"})
 

@@ -1,0 +1,7 @@
+{% extends "page.njk" %}
+
+{% block content %}
+  <h1>{{title}}</h1>
+  <p style="margin-top: 0; font-variant-caps: all-petite-caps; color: #555;">{{date | datefriendly}}</p>
+  {{ content | safe }}
+{% endblock %}
