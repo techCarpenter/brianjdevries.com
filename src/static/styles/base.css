@@ -30,9 +30,14 @@ h6 {
 
 a,
 :visited {
-  color: var(--dark-color);
+  color: inherit;
   text-decoration-thickness: 2px;
   text-decoration-color: var(--vermillion);
+}
+
+a:hover,
+a:active {
+  color: var(--vermillion);
 }
 
 pre,
@@ -44,12 +49,6 @@ code {
   border-radius: 0.25rem;
   padding: 3px 6px;
   white-space: break-spaces;
-}
-
-a:hover,
-a:active {
-  color: var(--vermillion);
-  text-decoration: none;
 }
 
 /* Site Navigation */
@@ -112,12 +111,13 @@ main {
   padding: 0 0.5rem;
   max-width: 600px;
   margin: 1rem auto 0;
+  min-height: 100vh;
 }
 
 /* Site Footer */
 
 .site-footer {
-  padding: 1.5rem;
+  padding: 0.5rem;
   margin-top: 2rem;
   background-color: var(--dark-color);
   color: var(--light-color);
@@ -126,6 +126,13 @@ main {
 
 .site-footer p {
   max-width: 600px;
-  padding: 0 0.5rem;
+  padding: 0;
   margin: 0 auto;
+  text-align: center;
+}
+
+.uncopyright-notice svg {
+  height: 1.2em;
+  width: 1.2em;
+  margin-bottom: -0.2em;
 }

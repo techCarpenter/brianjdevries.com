@@ -18,14 +18,7 @@
       {% endblock %}
     </main>
 
-    <footer class="site-footer">
-      <p>uncopyright</p>
-      <nav>
-        {% navlist collections.all | eleventyNavigation,
-        page,
-        1 %}
-      </nav>
-    </footer>
+    {% include "partials/site-footer.njk" %}
 
-  </body>
-</html>
+    </body>
+  </html>
