@@ -4,7 +4,7 @@ description: Right now I'm working on this website and the emails that go along 
 layout: page.njk
 eleventyNavigation:
   key: Now
-  order: 500
+  order: 400
 ---
 
 {{description}}
