@@ -9,6 +9,8 @@ eleventyNavigation:
 
 Reach out with a question, some criticism, praise, or just to say hi 👋!
 
-- \*[brian@brianjdevries.com](mailto:brian@brianjdevries.com?subject=Hey%20Brian!%20👋)
-- [@brianjdevries](https://twitter.com/brianjdevries)
-- [github](https://github.com/techcarpenter)
+|  |  |
+| :-- | :-- |
+| Email: | [brian@brianjdevries.com](mailto:brian@brianjdevries.com?subject=Hey%20Brian!%20👋) |
+| Twitter: | [@brianjdevries](https://twitter.com/brianjdevries) |
+| Github: | [github.com/techcarpenter](https://github.com/techcarpenter) |
