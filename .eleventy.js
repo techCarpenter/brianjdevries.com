@@ -17,6 +17,7 @@ module.exports = config => {
   config.addFilter("datefriendly", dateformat.friendly);
   config.addFilter("dateymd", dateformat.ymd);
   config.addFilter("datemonthyear", dateformat.monthYear);
+  config.addFilter("datemonthdate", dateformat.monthDate);
 
   config.addPassthroughCopy({"src/static": "/"})
 
