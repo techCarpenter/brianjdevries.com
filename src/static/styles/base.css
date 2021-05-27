@@ -79,8 +79,8 @@ h6 {
   font-size: 1rem;
 }
 
-ul:not(.posts),
-ol:not(.posts) {
+ul,
+ol {
   padding-left: 1.5rem;
 }
 
@@ -159,6 +159,15 @@ ol:not(.posts) {
   line-height: 110%;
 }
 
+.inline {
+  padding: 0;
+}
+
+.inline li {
+  display: inline-block;
+  padding: 0 0.2em;
+}
+
 a,
 :visited {
   color: inherit;
@@ -232,8 +241,9 @@ th {
 }
 
 .site-nav {
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 0 auto;
   padding: 0.5rem;
   max-width: 600px;
@@ -246,33 +256,67 @@ th {
   text-decoration: underline;
 }
 
+.site-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-nav > a {
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+.site-nav > a:hover,
+.site-nav > a:active,
+.site-nav > a:focus {
+  color: var(--light-color);
+}
+
 .site-logo img {
-  max-height: 40px;
-  max-width: 40px;
+  display: inline-block;
+  max-height: 30px;
+  max-width: 30px;
   background-color: rgba(0, 0, 0, 0);
+}
+
+.site-logo span {
+  margin-left: 0.3em;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 .nav-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  justify-items: center;
   list-style: none;
   padding: 0;
-  margin: 0;
-  justify-content: flex-end;
+  margin: 0.3em 0 0;
 }
 
 .nav-list li {
-  width: 100%;
-  text-align: center;
+  padding: 0 0.2em;
+}
+
+.nav-list li span {
+  padding: 0.25rem 0.5rem;
 }
 
 .nav-list li a {
-  padding: 0.25rem;
+  padding: 0.25rem 0.5rem;
   display: block;
   text-decoration: none;
-  color: white;
+  color: var(--light-color);
+  border-radius: 0.25rem;
+}
+
+.nav-list li a:hover {
+  background-color: #333333;
 }
 
 /* Main Block */
@@ -282,12 +326,13 @@ main {
   padding: 0 0.5rem;
   max-width: 600px;
   margin: 2rem auto 0;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 /* Site Footer */
 
 .site-footer {
+  font-family: Arial, Helvetica, sans-serif;
   padding: 0.5rem;
   margin-top: 2rem;
   background-color: var(--dark-color);
@@ -302,8 +347,31 @@ main {
   text-align: center;
 }
 
+.site-footer nav {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.site-footer nav ul {
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .uncopyright-notice svg {
   height: 1.2em;
   width: 1.2em;
   margin-bottom: -0.2em;
+}
+
+.uncopyright-notice a {
+  text-decoration: none;
+}
+
+@media (min-width: 600px) {
+  p {
+    line-height: inherit;
+  }
 }
