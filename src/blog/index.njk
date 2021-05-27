@@ -6,18 +6,14 @@ eleventyNavigation:
   order: 300
 ---
 
-<ul>
+<ol class="posts">
   {% for blog in collections.blog | reverse %}
 
     {% if blog.url != "/blog" %}
       <li>
-        <div>
-          <span>{{(blog.data.date.getMonth() + 1).toString().padStart(2, '0')}}/{{(blog.data.date.getDate()).toString().padStart(2, '0')}}/{{blog.data.date.getFullYear().toString().substring(2)}}</span>
-          -
-          <a href="{{blog.url}}">{{blog.data.title}}</a>
-        </div>
+        <a class="post-link" href="{{blog.url}}">{{blog.data.title}}</a>
       </li>
     {% endif %}
 
   {% endfor %}
-</ul>
+</ol>
