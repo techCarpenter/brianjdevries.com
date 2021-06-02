@@ -1,5 +1,3 @@
-@import "variables.css";
-
 :root {
   scrollbar-color: var(--vermillion) var(--dark-color);
   scrollbar-width: thin;
