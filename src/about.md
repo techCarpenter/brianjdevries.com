@@ -7,11 +7,13 @@ eleventyNavigation:
   order: 200
 ---
 
-![Brian DeVries](./../../src/assets/images/briandevries.jpg)
+![Brian DeVries](/images/briandevries.jpg)
 
-Hi, I'm Brian DeVries. Thanks for checking out my site!
+### Howdy!
 
-You probably landed on this page because you want to learn a little more about me and perhaps about how I made the transition into a software career.
+I'm Brian DeVries. Thanks for stopping by, I'm glad you're here!
+
+Let me share a bit about myself and my career.
 
 ## Some Background
 
@@ -35,27 +37,27 @@ I tried all kinds of things.
 - Freelance engineering.
 - Working as a handyman.
 
-The results were always the same: make little to no money and despise working the extra time.
+The results were always the same. I'd make little-to-no money and get frustrated working extra time for nothing.
 
 ## Things Start To Change
 
-One year into my career (2018), I landed a job where I wrote a little software to talk with the circuits I was building. I was psyched!
+One year into my career (2018), I landed a job where I wrote a little software to interface with the circuits I was building. I was stoked!
 
 But another year after that, I felt drained by the hardware part of my job.
 
-I was less interested in the electrical engineering aspect, but I LOVED the programming.
+I was less interested in the electrical engineering aspect, but I **loved** the programming.
 
 And I was still trying to find a way to make money on the side.
 
-My wife asked, "Why don't you try to do a side hustle with programming?"
+My wife asked, "_Why don't you try to do a side hustle with programming?_"
 
-**This was a turning point for me.**
+### This was a turning point for me.
 
 I knew enough about software to be dangerous. So rather than just doing something on the side, why couldn't I become a full-time software developer?
 
 Writing software again brought back all the excitement I originally had experienced back in college.
 
-I was interested in web development so I taught myself how to build websites through online resources.
+I was interested in web development. I found tutorials and courses to learn how to build websites through online resources.
 
 Almost 3 years out of college, I transitioned from engineering into a full time software programming job.
 
@@ -63,8 +65,8 @@ Now I'm able to pay more towards my student loans and save more money doing the 
 
 ## Why I Created This Site
 
-Since I've graduated college, I've learned a lot about programming, self-teaching, money management, and much more.
+Since I've graduated college, I've learned a lot about programming, self-improvement, money management, habit building, and more.
 
-I built this website to share what I've learned on my journey. Take a look through the content here to help you learn.
+I started this website to share what I've learned on my journey. I want to inspire others to take action and better themselves.
 
-I hope you enjoy it. _[Send me a message](mailto:brian@brianjdevries.com)_ to let me know what you think or if you'd like to learn something I haven't written about yet!
+[Let's talk!](/contact) I love hearing from readers. And if you'd like to learn about something I haven't written about, I'm open to suggestions.

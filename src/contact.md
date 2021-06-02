@@ -1,14 +1,23 @@
 ---
-title: Drop me a line!
-description: Say hello to Brian DeVries
-layout: page.njk
+title: "Drop me a line!"
+description: "Say hello to Brian DeVries"
+layout: "page.njk"
 ---
 
-Reach out with a question, some criticism, praise, or just to say hi 👋!
+## Howdy! 👋
 
-|  |  |
-| :-- | :-- |
-| Email: | [brian@brianjdevries.com](mailto:brian@brianjdevries.com?subject=Hey%20Brian!%20👋) |
-| Twitter: | [@brianjdevries](https://twitter.com/brianjdevries) |
-| LinkedIn: | [profile](https://www.linkedin.com/in/brian-devries/) |
-| Github: | [github.com/techcarpenter](https://github.com/techcarpenter) |
+You're in the right place to reach me 😃
+
+|             |                                    |
+| :---------- | :--------------------------------- |
+| Email 📧    | [brian@brianjdevries.com][email]   |
+| Twitter 🐦  | [@brianjdevries][twitter]          |
+| LinkedIn 👨‍💼 | [Brian's LinkedIn][linkedin]       |
+| Github 💻   | [github.com/techcarpenter][github] |
+
+<!-- Links -->
+
+[email]: mailto:brian@brianjdevries.com?subject=Hey%20Brian!%20👋 "Email Brian!"
+[twitter]: https://twitter.com/brianjdevries/ "Brian's Twitter"
+[linkedin]: https://www.linkedin.com/in/brian-devries/ "Brian's LinkedIn Profile"
+[github]: https://github.com/techcarpenter "Brian's Github"
