@@ -14,10 +14,11 @@ module.exports = config => {
 
   // format dates
   const dateformat = require("./lib/filters/dateformat");
-  config.addFilter("datefriendly", dateformat.friendly);
   config.addFilter("dateymd", dateformat.ymd);
   config.addFilter("datemonthyear", dateformat.monthYear);
   config.addFilter("datemonthdate", dateformat.monthDate);
+  config.addFilter("monthdateyear", dateformat.monthDateYear);
+  config.addFilter("shortmonthdate", dateformat.shortMonthDate);
 
   config.addPassthroughCopy({"src/static": "/"})
 
