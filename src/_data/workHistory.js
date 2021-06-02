@@ -25,6 +25,10 @@ module.exports = [
     endDate: null,
     title: ".NET Software Developer",
     employer: "Meijer",
-    description: "short job description"
+    description: `<ul>
+    <li>Build out SQL stored procedures</li>
+    <li>Create APIs using .NET Core</li>
+    <li>Operate within a SAFe Agile team</li>
+    </ul>`
   }
 ];
