@@ -130,7 +130,7 @@ ol {
 
 .posts .subhed {
   padding: 0;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   border-bottom: 1px dotted var(--dark-color);
   line-height: 140%;
   display: flex;
@@ -142,6 +142,19 @@ ol {
 
 .posts .subhed:first-child {
   margin-top: 0;
+}
+
+.posts .date {
+  font-style: italic;
+  display: block;
+  margin-right: 1rem;
+  min-width: 3.7em;
+}
+
+.posts .post {
+  display: flex;
+  flex-direction: column-reverse;
+  align-content: flex-start;
 }
 
 .posts li {
@@ -169,17 +182,11 @@ ol {
 }
 
 a,
-:visited {
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-color: var(--vermillion);
-  text-decoration-skip-ink: auto;
-  text-underline-offset: 2px;
-}
-
+:visited,
 a:focus,
 a:hover,
 a:active {
+  text-decoration: underline;
   color: var(--vermillion);
 }
 
@@ -190,7 +197,7 @@ code {
   background-color: var(--dark-color);
   color: var(--light-color);
   border-radius: 0.25rem;
-  padding: 3px 6px;
+  padding: 2px 5px;
   white-space: break-spaces;
 }
 
@@ -343,7 +350,7 @@ main {
 .site-footer p {
   max-width: 600px;
   padding: 0;
-  margin: 0 auto;
+  margin: 1rem auto;
   text-align: center;
 }
 
@@ -366,12 +373,23 @@ main {
   margin-bottom: -0.2em;
 }
 
-.uncopyright-notice a {
-  text-decoration: none;
+.newsletter-form-container {
+  margin: 4rem auto;
+}
+
+.experience-entry {
+  margin: 1rem 0;
+}
+
+.experience-entry p {
+  margin: 0.3rem 0;
 }
 
 @media (min-width: 600px) {
   p {
     line-height: inherit;
+  }
+  .posts .post {
+    flex-direction: row;
   }
 }
