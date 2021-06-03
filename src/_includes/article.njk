@@ -1,9 +1,35 @@
 {% extends "page.njk" %}
 
+{% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.blog | getNextCollectionItem(page) %}
+
 {% block content %}
   <article>
     <h1>{{title}}</h1>
-    <p style="margin-top: 0; font-variant-caps: all-petite-caps; color: #555;">{{date | monthdateyear }}</p>
+    <p class="article-date">{{date | monthdateyear }}</p>
     {{ content | safe }}
   </article>
+  {% if previousPost or nextPost %}
+    <div class="next-previous-post">
+      <div class="previous-post">
+        {% if previousPost %}
+          <strong>Previous Post:</strong><br>
+          <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+        {% endif %}
+      </div>
+      <div class="next-post">
+        {% if nextPost %}
+          <strong>Next Post:</strong><br>
+          <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+        {% endif %}
+      </div>
+    </div>
+    <style>
+      .next-previous-post { display: flex; flex-direction: row; justify-items: space-between; }
+      .next-post { text-align: right; }
+      .previous-post { text-align: left; }
+      .next-post, .previous-post { min-width: 50%; }
+      .article-date { margin-top: 0; font-variant-caps: all-petite-caps; color: #555; }
+    </style>
+  {% endif %}
 {% endblock %}
