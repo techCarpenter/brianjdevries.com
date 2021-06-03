@@ -1,9 +1,9 @@
 ---
-title: Brian DeVries
-description: Brian DeVries's personal website.
-layout: page.njk
+title: "Brian DeVries"
+description: "Brian DeVries's personal website."
+layout: "page.njk"
 eleventyNavigation:
-  key: Home
+  key: "Home"
   order: 100
 ---
 
