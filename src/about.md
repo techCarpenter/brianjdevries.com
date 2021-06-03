@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 200
 ---
 
-![Brian DeVries](/images/briandevries.jpg)
+![Brian in a bucket hat](/images/brian-bucket-hat1.jpg)
 
 ### Howdy!
 
