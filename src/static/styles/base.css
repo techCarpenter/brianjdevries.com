@@ -134,7 +134,7 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2em;
+  margin-top: 1em;
   margin-bottom: 4px;
 }
 
@@ -191,7 +191,7 @@ a:active {
 pre,
 code {
   font-size: 1rem;
-  font-family: Consolas;
+  font-family: 'Courier New', Courier, monospace;
   background-color: var(--dark-color);
   color: var(--light-color);
   border-radius: 0.25rem;
