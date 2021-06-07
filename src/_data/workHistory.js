@@ -4,21 +4,29 @@ module.exports = [
     endDate: new Date(2017, 4, 20),
     title: "Turf Maintenance Assistant",
     employer: "Calvin College",
-    description: "short job description"
+    description: "Helped maintain athletic fields at Calvin College"
   },
   {
     startDate: new Date(2017, 4, 30),
     endDate: new Date(2018, 3, 15),
     title: "Production Support Engineer",
     employer: "Gentex",
-    description: "short job description"
+    description: `<ul>
+    <li>Managed a production line of 10 individuals</li>
+    <li>Troubleshoot technical issues with testers</li>
+    <li>Investigated root cause of circuit board issues in production</li>
+    </ul>`
   },
   {
     startDate: new Date(2018, 3, 15),
     endDate: new Date(2020, 3, 15),
     title: "Associate Test Engineer",
     employer: "Gentex",
-    description: "short job description"
+    description: `<ul>
+    <li>Developed .NET applications to test product functionality and quality</li>
+    <li>Managed the launch of new testers and products into production</li>
+    <li>Maintained an internal MVC .NET website connected to a MySQL Database</li>
+    </ul>`
   },
   {
     startDate: new Date(2020, 3, 15),
