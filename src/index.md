@@ -1,5 +1,5 @@
 ---
-title: "Brian DeVries"
+title: "Start Here"
 description: "Brian DeVries's personal website."
 layout: "page.njk"
 eleventyNavigation:
@@ -7,62 +7,37 @@ eleventyNavigation:
   order: 100
 ---
 
-What do I want to accomplish on my home page? What do I have to offer people? What have I done that's valuable to others?
+## Hi, I'm Brian DeVries.
 
-- Transitioned into web dev career
-- Made websites for clients
-- Bullet journaling
-- Got a BA in Electrical Engineering
-- Interview well, prep for interviews well
-- Keep tabs on my market value
-- Research alternatives and options
-- Build new habits
-- Set up custom email address
-- Firebase integration
-- Vue app
-- Eleventy website
-- Netlify hosting/deployment
-- Git commandline
-- Create a node.js project
-- Re-handle axe
-- Refurbish hand tools
-- Sharpen an axe
-- Sharpen hand planes and chisels
-- VSCode Setup
-- Built a coffee table
-- Sold physical products on Etsy
-- Use semantic `html` tags
-- CSS understanding
-  - Flexbox
-  - CSS Grid
-  - Selectors
-  - "The cascade"
-  - CSS resets
-- Use markdown for writing posts
-- Understand "the cloud"
-- IndexedDB
-- Bash scripting
-- Plain javascript
-- npm
-- javascript modules
-- free/libre software
-- project licensing
-- uncopyright content (gift to the commons)
-- Style guide for website
-- Tie useful knots
-- Optimize for interesting
-- \* Saving and finances
-- Student loan payments
-- Parenting/Spousing
+Thanks for being here! I [write articles](/blog), [develop software](https://github.com/techcarpenter), and work with hand tools.
 
-Things I want to learn/do that have value to others
+This website is a way for me to engage with others and share my learnings. My articles cover topics like software, self improvement, and personal experiences.
 
-- gulp/grunt/webpack/etc.
-- create an npm package
-- create an icon pack
-- Eleventy RSS feed
-- 
+If you want to see all my writing on a single page, [you can see all my posts here](/blog).
 
-## Start a blog without a niche
+I'm on a journey to find how I can best help others with my skills. In order to do that, I try new things and see what people value most. I continually try new approaches to sharing content and interacting with others.
 
-[Article](https://www.hustleandhearts.com/how-to-start-a-blog-without-a-niche/)
+Some examples of ways I've helped people include creating websites, building wooden products, refurbishing tools, and giving feedback on tech projects. If you think I could help you, [please reach out](/contact).
+
+Thanks for visiting, enjoy!
+
+Brian DeVries
+
+<!-- Inline embed subscription form - offer freebie? -->
+
+## My favorites
+
+_I've made a list of some of my favorite resources below_
+
+### External blog posts
+
+- [Survivorship Bias](https://youarenotsosmart.com/2013/05/23/survivorship-bias/)
+- [Kill Your To Do List](https://www.cjchilvers.com/blog/kill-your-to-do-list)
+- [Overcoming Procrastination With The Habit Rule Of Half](https://www.breakthetwitch.com/habit-rule-of-half/)
+
+### People and Sites
+
+- [Tania Rascia](https://taniarascia.com/)
+- [Jordon O'Connor](https://jdnoc.com/)
+- [David Perell](https://perell.com/)
+- [Art of Manliness](https://artofmanliness.com/)
