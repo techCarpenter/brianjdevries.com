@@ -1,0 +1,48 @@
+---
+title: "Projects"
+description: "Brian DeVries' projects"
+layout: "page.njk"
+eleventyNavigation:
+  key: "Projects"
+  order: 700
+showNewsletterForm: false
+---
+
+{% for project in collections.projects | reverse %}
+  <div id="{{project.data.title}}" class="demo project-entry" data-demo-label="">
+    <h2>{{project.data.title}}</h2>
+    <p class="project-date">
+      <em>{{project.data.startDate | datemonthyear}} - {% if project.data.endDate === null %}Present{% else %}{{project.data.endDate | datemonthyear}}
+        {% endif %}
+      </em>
+    </p>
+    <p>
+      <strong>
+        {% if project.data.url %}
+          <a href="{{project.data.url}}">Project</a>
+        {% endif %}
+      </strong>
+      {% if project.data.repo %} (<a href="{{project.data.repo}}">source</a>){% endif %}
+    </p>
+    <h4>Summary</h4>
+    {{project.templateContent | safe}}
+  </div>
+{% endfor %}
+
+<style>
+  .project-entry {
+    margin: 2rem auto;
+    padding: 0.75rem;
+  }
+  .project-entry h2 {
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    font-size: 2rem;
+  }
+  .project-entry h3 {
+    font-size: 1.7rem;
+  }
+  .project-date {
+    margin: 0.25rem auto;
+  }
+</style>
