@@ -1,7 +1,9 @@
 ---
-title: Site Style Guide
-layout: page.njk
-description: The style guide for brianjdevries.com
+title: "Site Style Guide"
+layout: "page.njk"
+description: "The style guide for brianjdevries.com"
+showNewsletterForm: false
+eleventyExcludeFromCollections: true
 ---
 
 <h2>Colors</h2>
@@ -11,12 +13,8 @@ description: The style guide for brianjdevries.com
   <div class="swatch" style="background-color: var(--light-color); color: black; margin-left: 0.5rem; border: 1px solid black;">Light</div>
 </div>
 <h2>Demos</h2>
-<div class="demo">
-  <p>This is a basic demo</p>
-</div>
-<div class="demo" data-demo-label="New label">
-  <p>This is a demo with a new label.</p>
-</div>
+  <p class="demo">This is a basic demo</p>
+  <p class="demo" data-demo-label="New label">This is a demo with a new label.</p>
 <h2>Typography</h2>
 <h3>Headers and Text</h3>
 <div class="demo">
@@ -38,10 +36,7 @@ description: The style guide for brianjdevries.com
   <h1 class="primary-title">Primary Title Demo</h1>
 </div>
 <h3>Links</h3>
-<div class="demo" data-demo-label="standard link">
-  <p>This is a <a href="#">standard link</a>
-  </p>
-</div>
+  <p class="demo" data-demo-label="standard link">This is a <a href="#">standard link</a></p>
 <h3>Blockquotes</h3>
 <div class="demo">
   <p>Normal paragraph text.</p>

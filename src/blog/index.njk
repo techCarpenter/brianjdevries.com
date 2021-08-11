@@ -1,9 +1,11 @@
 ---
-title: Blog
-description: My writings
+title: "Blog"
+description: "Brian's Blog"
+layout: "page.njk"
 eleventyNavigation:
-  key: Blog
+  key: "Blog"
   order: 300
+showNewsletterForm: false
 ---
 
 {% set curYear = null %}
@@ -23,6 +25,5 @@ eleventyNavigation:
         <a class="post-link" href="{{blog.url}}">{{blog.data.title}}</a>
       </li>
     {% endif %}
-
   {% endfor %}
 </ol>

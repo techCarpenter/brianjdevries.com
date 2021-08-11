@@ -1,0 +1,5 @@
+{
+  "layout": "landingPage.njk",
+  "permalink": false,
+  "showNewsletterForm": false
+}
