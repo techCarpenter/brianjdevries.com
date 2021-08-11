@@ -3,9 +3,9 @@
 {% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.blog | getNextCollectionItem(page) %}
 
-{% block content %}
+{% block contentBlock %}
   <article>
-    <h1>{{title}}</h1>
+    <h1 class="primary-title">{{ title }}</h1>
     <p class="article-date">{{date | monthdateyear }}</p>
     {{ content | safe }}
   </article>
@@ -25,11 +25,26 @@
       </div>
     </div>
     <style>
-      .next-previous-post { display: flex; flex-direction: row; justify-items: space-between; }
-      .next-post { text-align: right; }
-      .previous-post { text-align: left; }
-      .next-post, .previous-post { min-width: 50%; }
-      .article-date { margin-top: 0; font-variant-caps: all-petite-caps; color: #555; }
+      .next-previous-post {
+        display: flex;
+        flex-direction: row;
+        justify-items: space-between;
+      }
+      .next-post {
+        text-align: right;
+      }
+      .previous-post {
+        text-align: left;
+      }
+      .next-post,
+      .previous-post {
+        min-width: 50%;
+      }
+      .article-date {
+        margin-top: 0;
+        font-variant-caps: all-petite-caps;
+        color: #555;
+      }
     </style>
   {% endif %}
 {% endblock %}
