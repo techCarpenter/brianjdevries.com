@@ -18,5 +18,10 @@ module.exports = [
     name: "Data Visualization",
     url: "https://www.freecodecamp.org/certification/techcarpenter/data-visualization",
     image: ""
+  },
+  {
+    name: "Certified SAFe 5 Practitioner",
+    url: "https://www.credly.com/badges/1276643e-f02d-481e-b8e5-5e90706434cc?source=linked_in_profile",
+    image: ""
   }
-]
+];
