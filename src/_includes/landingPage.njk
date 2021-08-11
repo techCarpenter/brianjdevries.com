@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include "partials/htmlhead.njk" %}
+  {% block extendHead %}
+    <style>
+      body {
+        min-height: 0;
+      }
+      main {
+        height: 100%;
+      }
+    </style>
+  {% endblock %}
+
+  <body>
+    <main>
+
+      {% block contentBlock %}
+        <h1>{{title}}</h1>
+
+        {{ content | safe }}
+      {% endblock %}
+      
+    </main>
+    <script data-goatcounter="https://brianjdevries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>
