@@ -1,22 +1,18 @@
+{% from "macros/title.njk" import titleBlock%}
+
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>
-    {% if title == "Brian DeVries" %}
-      Brian DeVries
-    {% else %}
-      {{ title }} | Brian DeVries
-    {% endif %}
-  </title>
-  <meta name="description" content="{{ description }}">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
   <link type="text/plain" rel="author" href="https://brianjdevries.com/humans.txt"/>
-  <link rel="preload" href="/styles/variables.css" as="style" />
-  <link rel="preload" href="/styles/reset.css" as="style" />
-  <link rel="stylesheet" href="/styles/variables.css" />
-  <link rel="stylesheet" href="/styles/reset.css"/>
-  <link rel="stylesheet" href="/styles/base.css"/>
+
+  {{ titleBlock(title, layout) }}
+
+  {% if description %}
+    <meta name="description" content="{{ description }}">
+  {% endif %}
+
+  {% include "partials/head-icons.njk" %}
+  {% include "partials/head-styles.njk" %}
+
+  {% block extendHead %}{% endblock %}
 </head>

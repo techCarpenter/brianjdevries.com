@@ -1,0 +1,11 @@
+{% macro titleBlock(title="", layout="") %}
+  <title>
+    {% if title == "Brian DeVries" %}
+      Brian DeVries
+    {% elif layout == "landingPage.njk" %}
+      {{title}}
+    {% else %}
+      {{ title }} | Brian DeVries
+    {% endif %}
+  </title>
+{% endmacro %}
