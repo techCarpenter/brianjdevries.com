@@ -1,16 +1,32 @@
-module.exports = config => {
-  // PLUGINS
+module.exports = function (config) {
+  /* PLUGINS */
   config.addPlugin(require("@11ty/eleventy-navigation"));
 
-  // SHORTCODES
+  /* SHORTCODES */
   config.addShortcode("navlist", require("./lib/shortcodes/navlist.js"));
 
-  // blog collection (in src/blog)
-  config.addCollection("blog", collection =>
-    collection.getFilteredByGlob("./src/blog/**/*.md")
-  );
+  /* COLLECTIONS */
+  config.addCollection("blog", function (collection) {
+    return collection.getFilteredByGlob("./src/blog/**/*.md");
+  });
 
-  // FILTERS
+  config.addCollection("workHistory", function (collection) {
+    return collection
+      .getFilteredByGlob("./src/work-history/*.md")
+      .sort(function (a, b) {
+        return a.data.startDate - b.data.startDate;
+      });
+  });
+
+  config.addCollection("projects", function (collection) {
+    return collection
+      .getFilteredByGlob("./src/projects/*.md")
+      .sort(function (a, b) {
+        return a.data.startDate - b.data.startDate;
+      });
+  });
+
+  /* FILTERS */
 
   // format dates
   const dateformat = require("./lib/filters/dateformat");
@@ -20,7 +36,7 @@ module.exports = config => {
   config.addFilter("monthdateyear", dateformat.monthDateYear);
   config.addFilter("shortmonthdate", dateformat.shortMonthDate);
 
-  config.addPassthroughCopy({"src/static": "/"})
+  config.addPassthroughCopy({ "src/static": "/" });
 
   return {
     dir: {
