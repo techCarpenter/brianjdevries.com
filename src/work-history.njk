@@ -1,0 +1,61 @@
+---
+title: "Work Experience"
+description: "Brian DeVries' work experience"
+layout: "page.njk"
+eleventyNavigation:
+  key: "Experience"
+  order: 600
+showNewsletterForm: false
+---
+
+{% for job in collections.workHistory | reverse %}
+  <div class="demo experience-entry" data-demo-label="">
+    <h2>{{job.data.title}}</h2>
+    <p style="line-height: 1.5;">
+      <strong>
+        {% if job.data.url %}
+          <a href="{{job.data.url}}">{{job.data.employer}}</a>
+        {% else %}
+          {{job.data.employer}}
+          {%endif%}
+        </strong>
+        {% if job.data.location %}<br class="show-mobile"/>
+          <span style="color: #555;"> - {{job.data.location}}</span>
+        {% endif %}
+      </p>
+      <p>
+        <em>{{job.data.startDate | datemonthyear}} - {% if job.data.endDate === null %}Present{% else %}{{job.data.endDate | datemonthyear}}
+          {% endif %}
+        </em>
+      </p>
+      {{job.templateContent | safe}}
+    </div>
+  {% endfor %}
+
+  <style>
+    .hide-mobile {
+      display: none;
+    }
+    .experience-entry {
+      margin: 2rem auto;
+      padding: 0.75rem;
+    }
+    .experience-entry h2 {
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+    .experience-entry h3 {
+      font-size: 1.7rem;
+    }
+    .experience-entry p {
+      margin: 0.3rem 0;
+    }
+    @media (min-width: 600px) {
+      .show-mobile {
+        display: none;
+      }
+      .hide-mobile {
+        display: initial;
+      }
+    }
+  </style>
