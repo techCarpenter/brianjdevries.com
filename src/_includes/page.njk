@@ -1,3 +1,7 @@
+{% if showNewsletterForm == null %}
+  {% set showNewsletterForm = true %}
+{% endif %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,19 +9,19 @@
 
   <body>
 
-    {# Navigation header #}
     {% include "partials/nav-header.njk" %}
 
     <main>
-      {% block content %}
 
-        <h1>{{ title }}</h1>
-
+      {% block contentBlock %}
+        <h1 class="primary-title">{{ title }}</h1>
         {{ content | safe }}
-
       {% endblock %}
 
-      {% include "partials/newsletter-form.njk" %}
+      {% if showNewsletterForm %}
+        {% include "partials/newsletter-form.njk" %}
+      {% endif %}
+
     </main>
 
     {% include "partials/site-footer.njk" %}
