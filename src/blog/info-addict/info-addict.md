@@ -1,12 +1,12 @@
 ---
-title: "I am an addict"
+title: "10 ways to consume less content"
 author: "Brian DeVries"
 description: "On average, I need to consume less information so I can produce more. I offer 10 tactics to help avoid distractions."
 date: 2021-06-07
 tags: ""
 ---
 
-No, I don't go to anonymous meetings to support others or to get support. This addiction isn't thought of as destructive like drugs or alcohol. But it does affect me on a daily basis.
+I have an addiction. No, I don't go to anonymous meetings to support others or to get support. This addiction isn't thought of as destructive like drugs or alcohol. But it does affect me on a daily basis.
 
 ## I'm addicted to information
 
@@ -56,7 +56,7 @@ My phone is where most of my distractions come from. If I need to focus on somet
 
 ### 7. If-Then Planning
 
-I've talked about [if-then planning](/cold-showers-and-habit-building#if-then-planning) before. Having a planned exit from distractions can help. For example, "If I get distracted, I will close the distracting app." This could be all you need to snap out of a distracting situation.
+I've talked about [if-then planning](/blog/cold-showers-and-habit-building#if-then-planning) before. Having a planned exit from distractions can help. For example, "If I get distracted, I will close the distracting app." This could be all you need to snap out of a distracting situation.
 
 ### 8. Time box when you allow yourself to get distracted
 
