@@ -54,7 +54,7 @@ h1 {
 }
 
 h1.primary-title {
-  font-size: clamp(2.9rem, 4.5vw, 3.5rem);
+  font-size: clamp(2.6rem, 4.5vw, 3.5rem);
 }
 
 h2 {
@@ -381,14 +381,14 @@ main {
 
 .bounce-in {
   opacity: 0;
-  animation: bounce-in 2s ease 0.5s 1 normal forwards;
+  animation: bounce-in 1.1s ease 0.5s 1 normal forwards;
 }
 
 @keyframes bounce-in {
   0% {
     animation-timing-function: ease-in;
     opacity: 0;
-    transform: translateY(-45px);
+    transform: translateY(-55px);
   }
 
   24% {
@@ -424,7 +424,7 @@ main {
   }
 
   100% {
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-in;
     opacity: 1;
     transform: translateY(0);
   }
