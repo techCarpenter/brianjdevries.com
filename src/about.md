@@ -10,7 +10,7 @@ eleventyNavigation:
 <img class="profile-pic bounce-in"
   alt="Brian's headshot photo"
   title="That's me!"
-  src="/images/Brian-noBackground.png" />
+  src="/images/BrianProfilePic.png" />
 
 ### Howdy!
 
