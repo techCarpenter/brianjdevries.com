@@ -1,0 +1,31 @@
+---
+title: "Notebook"
+description: "Morning writing"
+layout: "page.njk"
+eleventyNavigation:
+  key: "Notebook"
+  order: 800
+showNewsletterForm: false
+---
+
+<p>This is where I put my unedited writing. It will act as a proving ground for my ideas so I can write more complete pieces on the <a href="/blog">blog</a>.</p>
+
+{% set curYear = null %}
+<ol class="posts">
+  {% for note in collections.notebook | reverse %}
+    {% if note.url != "/notebook" %}
+      {% if note
+        .date
+        .getUTCFullYear() != curYear %}
+        {% set curYear = note
+          .date
+          .getUTCFullYear() %}
+        <li class="subhed">{{curYear}}</li>
+      {% endif %}
+      <li class="post">
+        <span class="date">{{ note.date | shortmonthdate }}</span>
+        <a class="post-link" href="{{note.url}}">{{note.data.title}}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ol>
