@@ -5,7 +5,6 @@ title: ".NET Software Developer"
 employer: "Randstad (Meijer)"
 url: "https://www.randstad.com"
 location: "Walker, MI"
-showNewsletterForm: false
 ---
 
 #### API Development
