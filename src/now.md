@@ -18,7 +18,7 @@ showNewsletterForm: false
 ---
 
 **Last updated: {{ lastModified | monthdateyear }}**  
-This is a _now page_. To learn more, [read here](https://nownownow.com/about)
+[Click here to learn more about _now pages_](https://nownownow.com/about)
 
 <!-- Links -->
 

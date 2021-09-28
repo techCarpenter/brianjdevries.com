@@ -304,10 +304,10 @@ th {
 .nav-list li span,
 .nav-list li a {
   padding: 0.5rem 0.75rem;
+  display: block;
 }
 
 .nav-list li a {
-  display: block;
   text-decoration: none;
   color: var(--light-color);
   border-radius: 0.25rem;
