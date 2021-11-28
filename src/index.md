@@ -10,7 +10,7 @@ eleventyNavigation:
 <img class="profile-pic bounce-in"
   alt="Brian's headshot photo"
   title="That's me!"
-  src="/images/BrianProfilePic.png" />
+  src="/images/BrianProfilePic.jpg" />
 
 ## Hi, I'm Brian DeVries.
 
@@ -40,10 +40,16 @@ Below you'll find some of my favorite resources.
 
 ### People and Sites
 
-- [Tania Rascia](https://taniarascia.com/)
+- [Tania Rascia](https://tania.dev/)
+  - Excellent technical web dev tutorials
 - [Jordon O'Connor](https://jdnoc.com/)
+  - Openly shares ideas about business and technology
 - [David Perell](https://perell.com/)
+  - Prolific writer of the internet
+- [Kevon Cheung](https://kevoncheung.com/)
+  - Building courses and projects in public
 - [Art of Manliness](https://artofmanliness.com/)
+  - Tons of articles and resources about the art of manliness
 
 <!-- Links -->
 

@@ -1,6 +1,6 @@
 ---
 title: "About me"
-description: "I'm Brian DeVries, a software developer living in Jenison, Michigan. I'm originally from Loveland, Colorado."
+description: "I'm Brian DeVries, a software developer living in West Michigan. I'm originally from Loveland, Colorado."
 layout: "page.njk"
 eleventyNavigation:
   key: "About"
@@ -10,7 +10,7 @@ eleventyNavigation:
 <img class="profile-pic bounce-in"
   alt="Brian's headshot photo"
   title="That's me!"
-  src="/images/BrianProfilePic.png" />
+  src="/images/BrianProfilePic.jpg" />
 
 ### Howdy!
 
