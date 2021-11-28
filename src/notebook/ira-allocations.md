@@ -34,7 +34,7 @@ This will give me a nice range of companies to track without getting so detailed
 
 Investing in the stock market through index funds will be much better than sitting on the sidelines with cash.
 
-I thought I was invested fot eh last 6 months, but apparently when I rolled my 401k from a previous company into a traditional IRA, I didn't set up my allocations... So I didn't see any gains or losses over the last 6 months... 😕 But better late than never!
+I thought I was invested for the last 6 months, but apparently when I rolled my 401k from a previous company into a traditional IRA, I didn't set up my allocations... So I didn't see any gains or losses over the last 6 months... 😕 But better late than never!
 
 We also got into some server admin stuff last night. He's been self hosting some services for a few years now and got pretty involved with writing custom scripts a while back.
 

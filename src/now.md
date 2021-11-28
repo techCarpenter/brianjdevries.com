@@ -5,24 +5,23 @@ layout: "page.njk"
 eleventyNavigation:
   key: "Now"
   order: 400
-lastModified: 2021-08-08
+lastModified: 2021-11-28
 showNewsletterForm: false
 ---
 
-- Working as a full stack developer with [Vue][vue], [Typescript][ts], C#, and SQL 👌
-- Building this website with [Eleventy][eleventy] and an app to plan and track student debt payoff called [Topple][topple]
-- Raising 2 boys in West Michigan with my wife
-- Paying off student loans
-- Setting up my own home-server with linux
+This is where I share what I'm up to right now. I'll do my best to keep it updated!
+
+## Currently...
+
+- Working fully remote as a full stack developer
+  - TypeScript (with Vue.js), C#, and SQL
+- Running a headless server on a Raspberry Pi
+- Raising 2 young boys, ages 3 and 1
+- Working on leading my family better spiritually through devotions and prayer
+- Prepping for Christmas! 🎄
+- Thinking about big ideas and problems that I want to work on 💭
 
 ---
 
 **Last updated: {{ lastModified | monthdateyear }}**  
 [Click here to learn more about _now pages_](https://nownownow.com/about)
-
-<!-- Links -->
-
-[vue]: https://vuejs.org "Vue JS framework website"
-[ts]: https://www.typescriptlang.org "Typescript home page"
-[eleventy]: https://11ty.dev "Eleventy website"
-[topple]: /projects#Topple "Debt payoff app"
