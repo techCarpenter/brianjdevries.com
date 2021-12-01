@@ -11,8 +11,8 @@ module.exports = function (config) {
     return collection.getFilteredByGlob("./src/blog/**/*.md");
   });
 
-  config.addCollection("notebook", function (collection) {
-    return collection.getFilteredByGlob("./src/notebook/*.md");
+  config.addCollection("notes", function (collection) {
+    return collection.getFilteredByGlob("./src/notes/*.md");
   });
 
   config.addCollection("workHistory", function (collection) {

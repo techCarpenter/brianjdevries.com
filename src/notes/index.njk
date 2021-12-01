@@ -1,9 +1,9 @@
 ---
-title: "Notebook"
+title: "Notes"
 description: "Morning writing"
 layout: "page.njk"
 eleventyNavigation:
-  key: "Notebook"
+  key: "Notes"
   order: 800
 showNewsletterForm: false
 ---
@@ -12,8 +12,8 @@ showNewsletterForm: false
 
 {% set curYear = null %}
 <ol class="posts">
-  {% for note in collections.notebook | reverse %}
-    {% if note.url != "/notebook" %}
+  {% for note in collections.notes | reverse %}
+    {% if note.url != "/notes" %}
       {% if note
         .date
         .getUTCFullYear() != curYear %}

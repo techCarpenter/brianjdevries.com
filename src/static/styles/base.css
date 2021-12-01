@@ -185,12 +185,13 @@ a:active {
   color: var(--vermillion);
 }
 
-pre,
-code {
-  font-size: 1rem;
-  font-family: "Courier New", Courier, monospace;
-  background-color: var(--dark-color);
+:not(pre) > code,
+:not(pre) > code[class*="language-"] {
+  background-color: #272822;
   color: var(--light-color);
+
+  font-size: 1rem;
+  font-family: Consolas, Courier, monospace;
   border-radius: 0.25rem;
   padding: 2px 5px;
   white-space: break-spaces;
