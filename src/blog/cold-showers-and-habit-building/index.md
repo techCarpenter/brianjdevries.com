@@ -6,7 +6,7 @@ date: 2020-09-28
 tags: habits
 ---
 
-![Child splashing water](./images/kiddo-splashing.jpg)
+![Child splashing water](/images/kiddo-splashing.jpg)
 
 For over 2 months now, I've been turning the water to its coldest setting for 1 minute at the end of my shower. What started as a desire to build resilience has taught me valuable lessons about building habits and consistency.
 

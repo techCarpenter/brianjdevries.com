@@ -14,7 +14,7 @@ HTML elements are the bones of the web page. CSS is the skin and appearance of t
 
 When I press `F12` in my browser, the Developer Tools window will open. Before learning about HTML and web development, this window would only pop up by accident.
 
-![Developer Tools window in Firefox](./images/OpenDevTools.jpg)
+![Developer Tools window in Firefox](/images/OpenDevTools.jpg)
 
 When the Developer Tools window is open, you can see all the markup that makes up the web page. I'll give an overview of HTML so you can start learning yourself.
 
