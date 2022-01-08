@@ -1,4 +1,22 @@
+const fs = require("fs");
+
 module.exports = function (config) {
+  if (process.env.ELEVENTY_ENV === "development") {
+    config.setBrowserSyncConfig({
+      callbacks: {
+        ready: function (err, bs) {
+          bs.addMiddleware("*", (req, res) => {
+            const content_404 = fs.readFileSync("dist/404.html");
+            // Add 404 http status code in request header.
+            res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
+            // Provides the 404 content without redirect.
+            res.write(content_404);
+            res.end();
+          });
+        }
+      }
+    });
+  }
   /* PLUGINS */
   config.addPlugin(require("@11ty/eleventy-navigation"));
   config.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
@@ -42,6 +60,7 @@ module.exports = function (config) {
   config.addFilter("shortmonthdate", dateformat.shortMonthDate);
 
   config.addPassthroughCopy({ "src/static": "/" });
+  config.addPassthroughCopy({ "src/blog/**/*.jpg": "/images" });
 
   return {
     dir: {
