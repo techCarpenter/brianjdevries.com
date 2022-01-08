@@ -3,6 +3,10 @@
 {% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.blog | getNextCollectionItem(page) %}
 
+{% block extendHead %}
+<link href="/styles/prism-okaidia.css" rel="stylesheet">
+{% endblock %}
+
 {% block contentBlock %}
   <article>
     <h1 class="primary-title">{{ title }}</h1>

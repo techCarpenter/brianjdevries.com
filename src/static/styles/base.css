@@ -185,9 +185,17 @@ a:active {
   color: var(--vermillion);
 }
 
+pre {
+  overflow: auto;
+  scrollbar-color: initial;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  width: calc(100% + 1.5rem);
+}
+
 :not(pre) > code,
 :not(pre) > code[class*="language-"] {
-  background-color: #272822;
+  background-color: var(--dark-color);
   color: var(--light-color);
 
   font-size: 1rem;
@@ -326,6 +334,7 @@ main {
   max-width: 600px;
   margin: 2rem auto 0;
   min-height: 80vh;
+  overflow: hidden;
 }
 
 /* Site Footer */
@@ -435,11 +444,22 @@ main {
   body {
     font-size: 1.2rem;
   }
+  main {
+    overflow: visible;
+  }
   p {
     line-height: inherit;
   }
   .posts .post {
     flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  pre {
+    margin-left: -5rem;
+    margin-right: -5rem;
+    width: calc(100% + 10rem);
   }
 }
 
