@@ -1,8 +1,8 @@
 {
   "name": "brianjdevries.com",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "description": "Brian DeVries's personal website",
-  "main": "index.js",
+  "main": ".eleventy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "set ELEVENTY_ENV=development& npx @11ty/eleventy --serve",

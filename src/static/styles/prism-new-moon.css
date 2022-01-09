@@ -1,0 +1,202 @@
+/**
+ * New Moon theme for prism.js
+ * Based on Tania Rascia's New Moon theme: https://github.com/taniarascia/new-moon
+ * 
+ * Ported by Brian DeVries: https://github.com/techcarpenter
+ */
+
+/**
+ * Prism supports IE11, which does not support CSS variables
+ * However, you are encouraged to leave a list of colours you use here
+ * so that when we transition to Prism V2 (and drop support for IE11),
+ * the transition will be a little easier!
+ */
+
+:root {
+  --background: var(--dark-color); /*#2d2d2d;*/
+  --default-foreground: #b3b9c5;
+  --string: #92d192;
+  --keyword: #ffeea6;
+  --comment: #777c85;
+  --attribute: #ffd479;
+  --function: #ffffff;
+  --variable: #f2777a;
+  --number: #fca369;
+  --support: #e1a6f2;
+  --brackets: #d5d8df;
+  --operator: #ac8d58;
+  --property: #abb2bf;
+  --tag: #6ab0f3;
+  --variable-alt: #62cfcf;
+  --selection: #4a7baa66;
+}
+
+/**
+ * How to use this template:
+ *
+ * This file contains all the boilerplate necessary for a Prism theme along with template rules for you to fill in.
+ *
+ * All properties with the value `unset` are for you to change.
+ * You should fill in all `color` and `background` properties.
+ * If you don't need an `unset` property (e.g. `border-radius`), then feel free to remove it.
+ * You are also free to add more properties that aren't stated, such as `text-shadow`.
+ * If you wish to style the plugins, you may grab their selectors from their respective .css files in the template folder.
+ *
+ * Your finished theme should have all `unset` properties either filled in or removed.
+ */
+
+/* Set the main properties of the code, code blocks, and inline code */
+code[class*="language-"],
+pre[class*="language-"] {
+  background: var(--background);
+  color: var(--default-foreground);
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  /* The following properties are standard, please leave them as they are */
+  font-size: 0.9em;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  /* The default is 4, but you could change it if you really, really want to */
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  /* The following properties are also standard */
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Optional: What the code looks like when highlighted */
+code[class*="language-"]::-moz-selection,
+code[class*="language-"]::-moz-selection,
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"]::-moz-selection {
+  background: var(--selection);
+  /* color: unset; */
+}
+
+code[class*="language-"]::selection,
+code[class*="language-"]::selection,
+pre[class*="language-"]::selection,
+pre[class*="language-"]::selection {
+  background: var(--selection);
+  /* color: unset; */
+}
+
+/* Properties specific to code blocks */
+pre[class*="language-"] {
+  padding: 1em; /* this is standard */
+  margin: 0.5em 0; /* this is the default */
+  overflow: auto; /* this is standard */
+  /* border-radius: unset; */
+}
+
+/* Properties specific to inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em; /* this is the default */
+  border-radius: 0.3em;
+  white-space: normal; /* this is standard */
+}
+
+/**
+ * These are the minimum tokens you must style, you can rearrange them and/or style more tokens as you want
+ * The concepts behind these standard tokens, as well as some examples, can be found here: https://prismjs.com/tokens.html
+ */
+.token.comment,
+.token.punctuation,
+.token.prolog,
+.token.url {
+  color: var(--comment);
+}
+
+/* 
+.token.cdata {
+	color: unset;
+} */
+
+.token.doctype,
+.token.class-name,
+.token.selector,
+.token.tag {
+  color: var(--tag);
+}
+
+.token.entity {
+  color: var(--default-foreground);
+}
+
+.token.attr-name {
+  color: var(--attribute);
+}
+
+.token.boolean,
+.token.constant,
+.token.builtin {
+  color: var(--support);
+}
+
+.token.number {
+  color: var(--number);
+}
+
+.token.atrule,
+.token.keyword,
+.token.important {
+  color: var(--keyword);
+}
+
+.token.property {
+  color: var(--property);
+}
+
+.token.symbol,
+.token.string,
+.token.char,
+.token.inserted,
+.token.attr-value {
+  color: var(--string);
+}
+
+.token.deleted,
+.token.variable {
+  color: var(--variable);
+}
+
+.token.function {
+  color: var(--function);
+}
+
+.token.regex {
+  color: var(--variable-alt);
+}
+
+.token.operator {
+  color: var(--operator);
+}
+
+/* The following rules are pretty similar across themes, but feel free to adjust them */
+.token.bold {
+  font-weight: 700;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+/* LANGUAGE-SPECIFIC OVERRIDES */
+/* If you'd like your theme to have overrides for specific languages, here's an example, you can remove it and/or add more overrides */
+/* .language-css .token.important {
+	color: unset;
+} */
