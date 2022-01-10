@@ -5,15 +5,24 @@ fields:
 - type: text
   name: title
   label: title
+  config:
+    required: true
 - type: text
   name: author
   label: author
+  default: Brian DeVries
+  config:
+    required: true
 - type: textarea
   name: description
   label: description
+  config:
+    required: true
 - type: datetime
   name: date
   label: date
-- type: text
-  name: tags
+  default: now
+- name: tags
+  type: tag_list
+  default: []
   label: tags
