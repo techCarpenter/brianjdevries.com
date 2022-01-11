@@ -257,7 +257,7 @@ th {
   flex-direction: column;
   margin: 0 auto;
   padding: 0.5rem;
-  max-width: 600px;
+  max-width: 700px;
   width: 100%;
   color: white;
   justify-content: space-between;
@@ -331,7 +331,7 @@ th {
 main {
   width: 100%;
   padding: 0 0.5rem;
-  max-width: 600px;
+  max-width: 700px;
   margin: 2rem auto 0;
   min-height: 80vh;
   overflow: hidden;
@@ -349,19 +349,19 @@ main {
 }
 
 .site-footer p {
-  max-width: 600px;
+  max-width: 700px;
   padding: 0;
   margin: 1rem auto;
   text-align: center;
 }
 
 .site-footer nav {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .site-footer nav ul {
-  max-width: 600px;
+  max-width: 700px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -440,7 +440,7 @@ main {
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
   body {
     font-size: 1.2rem;
   }
