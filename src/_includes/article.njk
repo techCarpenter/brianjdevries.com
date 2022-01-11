@@ -14,6 +14,7 @@
     {{ content | safe }}
   </article>
   {% if previousPost or nextPost %}
+    <hr style="margin: 1.5rem auto;">
     <div class="next-previous-post">
       <div class="previous-post">
         {% if previousPost %}
