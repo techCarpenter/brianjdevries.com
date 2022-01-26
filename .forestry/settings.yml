@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: src/admin
 webhook_url: 
 sections:
+- type: document
+  path: src/now.md
+  label: Now
+  match: "**/*"
 - type: directory
   path: src/blog
   label: Blog
