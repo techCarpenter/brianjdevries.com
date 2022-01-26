@@ -7,7 +7,6 @@ sections:
 - type: document
   path: src/now.md
   label: Now
-  match: "**/*"
 - type: directory
   path: src/blog
   label: Blog
