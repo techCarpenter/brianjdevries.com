@@ -4,9 +4,6 @@ auto_deploy: false
 admin_path: src/admin
 webhook_url: 
 sections:
-- type: document
-  path: src/now.md
-  label: Now
 - type: directory
   path: src/blog
   label: Blog
@@ -21,6 +18,19 @@ sections:
   path: src/work-history
   label: Work History
   create: all
+  match: "**/*"
+- type: heading
+  label: Main pages
+- type: document
+  path: src/now.md
+  label: Now
+- type: document
+  path: src/about.md
+  label: About
+  match: "**/*"
+- type: document
+  path: src/index.md
+  label: Home
   match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
