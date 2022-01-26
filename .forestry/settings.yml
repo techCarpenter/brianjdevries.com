@@ -27,11 +27,9 @@ sections:
 - type: document
   path: src/about.md
   label: About
-  match: "**/*"
 - type: document
   path: src/index.md
   label: Home
-  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
