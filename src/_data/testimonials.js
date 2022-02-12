@@ -18,7 +18,7 @@ module.exports = [
   {
     name: "Jeff Warnke",
     testimonial:
-      "Brian was a valued member of our team.  He has demonstrated the motivation to learn, and was always willing to help others on the team.  Brian recognizes that a good understanding of requirements is critical to successful delivery, and has been developing the skills to ensure understanding.",
+      "Brian was a valued member of our team. He has demonstrated the motivation to learn, and was always willing to help others on the team. Brian recognizes that a good understanding of requirements is critical to successful delivery, and has been developing the skills to ensure understanding.",
     dateReceived: new Date("2021-08-13"),
     title: "Solution Development Manager",
     company: "Meijer",
@@ -27,7 +27,7 @@ module.exports = [
   {
     name: "Tanner Wysocki",
     testimonial:
-      "Brian has been a pleasure to work with professionally from day one. you will find that he carries himself with a friendly and approachable demeanor that makes him a breeze to work with. In addition, you will find that he is a knowledgeable developer, and he has the passion, curiosity, adaptability, and organizational skills to learn and fill in the gaps of knowledge he may have. I can say with confidence that Brian has the skills to succeed on your team.",
+      "Brian has been a pleasure to work with professionally from day one. You will find that he carries himself with a friendly and approachable demeanor that makes him a breeze to work with. In addition, you will find that he is a knowledgeable developer, and he has the passion, curiosity, adaptability, and organizational skills to learn and fill in the gaps of knowledge he may have. I can say with confidence that Brian has the skills to succeed on your team.",
     dateReceived: new Date("2021-08-13"),
     title: "Software Engineer",
     company: "Meijer",
