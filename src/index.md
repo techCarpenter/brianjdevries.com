@@ -10,6 +10,8 @@ eleventyNavigation:
 <img class="profile-pic bounce-in"
   alt="Brian's headshot photo"
   title="That's me!"
+  height="200"
+  width="200"
   src="/images/BrianProfilePic.jpg" />
 
 ## Hi, I'm Brian DeVries.
