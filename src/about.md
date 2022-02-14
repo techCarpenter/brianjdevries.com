@@ -75,3 +75,27 @@ Since I've graduated college, I've learned a lot about programming, self-improve
 I started this website to share what I've learned on my journey. I want to inspire others to take action and better themselves.
 
 [Let's talk!](/contact) I love hearing from readers. And if you'd like to learn about something I haven't written about, I'm open to suggestions.
+
+## Nice things people say
+
+<!-- List testimonials -->
+{% for tml in testimonials %}
+  <figure class="testimonial">
+    <blockquote class="testimonial-quote">“{{tml.testimonial}}”</blockquote>
+    <figcaption class="testimonial-caption">
+      —<strong>{{tml.name}}</strong>, {{tml.title}}, <a href="{{tml.company.url}}" rel="noreferrer nofollow">{{tml.company.name}}</a>
+    </figcaption>
+  </figure>
+{% endfor %}
+
+<style>
+  .testimonial {
+    margin: 2.5rem 0;
+  }
+  .testimonial-quote {
+    margin: 0;
+  }
+  .testimonial-caption {
+    margin-top: 0.75rem;
+  }
+</style>
