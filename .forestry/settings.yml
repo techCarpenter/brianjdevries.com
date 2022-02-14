@@ -19,6 +19,17 @@ sections:
   label: Work History
   create: all
   match: "**/*"
+- type: heading
+  label: Main pages
+- type: document
+  path: src/now.md
+  label: Now
+- type: document
+  path: src/about.md
+  label: About
+- type: document
+  path: src/index.md
+  label: Home
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
