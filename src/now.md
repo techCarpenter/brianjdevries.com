@@ -5,7 +5,7 @@ layout: page.njk
 eleventyNavigation:
   key: Now
   order: "400"
-lastModified: 2022-01-26T00:00:00-05:00
+lastModified: 2022-02-23T00:00:00-05:00
 showNewsletterForm: false
 
 ---
@@ -18,7 +18,7 @@ This is where I share what I'm up to right now. I'll do my best to keep it updat
 * Learning functional programming with [Clojure](https://clojure.org)
 * Raising 2 young boys
 * Working on leading my family better spiritually through devotions and prayer
-* I turn 27 this month! 🎉
+* Tracking my habits using the [Don't Break the Chain](https://msbrown.net/chain/) method
 
 ***
 
