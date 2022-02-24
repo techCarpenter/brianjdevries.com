@@ -43,6 +43,8 @@ Other personal project details can be found on my [project page](/projects) and 
 </figure>
 {% endfor %}
 
+If you think I can help you with a project, [get in touch](/contact).
+
 <style>
   .testimonial {
     margin: 2.5rem 0;
