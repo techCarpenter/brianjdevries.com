@@ -21,15 +21,15 @@ You can learn more about the type of work I do on my [about page](/about).
 
 I also occasionally write articles on [my blog](/blog).
 
-## Recent articles
+## Latest articles
 
 <ol class="posts">
 {% set count = 0 %}
 {% for blog in collections.blog | reverse %}
 {% if blog.url != "/blog" and count < 3 %}
-<li class="post">
-<span class="date">{{ blog.date | monthdateyear }}</span>
-<a class="post-link" href="{{blog.url}}">{{blog.data.title}}</a>
+<li style="display: flex; justify-content: space-between;" class="post">
+<div><a class="post-link" href="{{blog.url}}">{{blog.data.title}}</a></div>
+<div style="float: right;" class="date">{{ blog.date | shortmonthdateyear }}</div>
 </li>
 {% set count = count + 1 %}
 {% endif %}
