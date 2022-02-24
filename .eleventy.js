@@ -58,6 +58,7 @@ module.exports = function (config) {
   config.addFilter("datemonthdate", dateformat.monthDate);
   config.addFilter("monthdateyear", dateformat.monthDateYear);
   config.addFilter("shortmonthdate", dateformat.shortMonthDate);
+  config.addFilter("shortmonthdateyear", dateformat.shortMonthDateYear);
 
   config.addPassthroughCopy({ "src/static": "/" });
   config.addPassthroughCopy({ "src/blog/**/*.jpg": "/images" });
