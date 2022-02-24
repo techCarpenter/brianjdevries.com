@@ -8,13 +8,6 @@ eleventyNavigation:
 showNewsletterForm: false
 ---
 
-<img class="profile-pic bounce-in"
-  alt="Brian's headshot photo"
-  title="That's me!"
-  height="194"
-  width="194"
-  src="/images/BrianProfilePic.jpg" />
-
 I'm Brian DeVries, a JavaScript/TypeScript and .NET developer who's been shipping code since 2018.
 
 Here are some things I've done in that time:
