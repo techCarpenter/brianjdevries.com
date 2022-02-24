@@ -1,12 +1,13 @@
 ---
-title: "Drop me a line!"
+title: "Drop me a line"
 description: "Say hello to Brian DeVries"
 layout: "page.njk"
+showNewsletterForm: false
 ---
 
-## Howdy! 👋
+## Howdy!
 
-You're in the right place to reach me 😃
+You're in the right place to reach me
 
 |             |                                    |
 | :---------- | :--------------------------------- |
