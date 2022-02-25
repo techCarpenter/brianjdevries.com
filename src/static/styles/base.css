@@ -383,7 +383,9 @@ main {
   border-radius: 50%;
   margin: auto;
   max-width: 200px;
+  min-width: 150px;
   width: 50%;
+  height: 50%;
   border: 3px solid var(--vermillion);
   box-shadow: 0 8px 24px rgba(17, 17, 26, 0.1),
     0 16px 56px rgba(17, 17, 26, 0.1), 0 24px 80px rgba(17, 17, 26, 0.1);
