@@ -4,9 +4,9 @@
   "description": "Brian DeVries's personal website",
   "main": ".eleventy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "set ELEVENTY_ENV=development& npx @11ty/eleventy --serve",
-    "build": "set ELEVENTY_ENV=production& npx @11ty/eleventy"
+    "build": "set ELEVENTY_ENV=production& npx @11ty/eleventy",
+    "new-post": "node ./setup-scripts/new-post.js"
   },
   "keywords": [
     "eleventy",
