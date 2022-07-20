@@ -15,11 +15,13 @@ showNewsletterForm: false
   height="194"
   width="194" />
 
-Hi there! My name's Brian. I make things on the interwebs. More specifically, I'm a software engineer who builds full stack web applications and websites. I've been programming professionally since 2018 and love what I do!
+Hi there! My name's Brian. I've tried to categorize myself many times, but my interests cover a wide range: woodworking, sewing, programming, backpacking, and many more. The best way I can think to categorize myself is as a do-it-yourself guy who loves learning new things.
 
-You can learn more about the type of work I do on my [about page](/about).
+Having said that, I am a professional software engineer. My career transitioned in 2018 and I haven't looked back.
 
-I also occasionally write articles on [my blog](/blog).
+To read more about who I am, check out [my about page](/about).
+
+I also write occasionally on [my blog](/blog).
 
 ## Latest articles
 
