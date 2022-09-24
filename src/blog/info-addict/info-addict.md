@@ -56,7 +56,7 @@ My phone is where most of my distractions come from. If I need to focus on somet
 
 ### 7. If-Then Planning
 
-I've talked about [if-then planning](/blog/cold-showers-and-habit-building#if-then-planning) before. Having a planned exit from distractions can help. For example, "If I get distracted, I will close the distracting app." This could be all you need to snap out of a distracting situation.
+I've talked about [if-then planning](/blog/cold-showers-and-habit-building#if-then-planning/) before. Having a planned exit from distractions can help. For example, "If I get distracted, I will close the distracting app." This could be all you need to snap out of a distracting situation.
 
 ### 8. Time box when you allow yourself to get distracted
 

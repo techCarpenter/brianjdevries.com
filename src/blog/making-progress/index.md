@@ -10,7 +10,7 @@ Ahoy, readers!
 
 Now that it's been over a month with a newborn (2nd kiddo born 9/15), I have an updated daily routine.
 
-Clearly I was [being ambitious](/blog/new-routine) before. Interrupted sleep makes it difficult to get up at 4:45AM... 😂
+Clearly I was [being ambitious](/blog/new-routine/) before. Interrupted sleep makes it difficult to get up at 4:45AM... 😂
 
 Here's my current routine:
 

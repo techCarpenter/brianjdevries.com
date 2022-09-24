@@ -19,7 +19,7 @@ Here are some things I've done in that time:
 - Contributed to the open source project Foam ([pull request #865](https://github.com/foambubble/foam/pull/865))
 - Designed and developed two client websites
 
-Other personal project details can be found on my [project page](/projects) and on [github](https://github.com/techcarpenter).
+Other personal project details can be found on my [project page](/projects/) and on [github](https://github.com/techcarpenter).
 
 ## Nice things people say
 
@@ -33,7 +33,7 @@ Other personal project details can be found on my [project page](/projects) and 
 </figure>
 {% endfor %}
 
-If you think I can help you with a project, [get in touch](/contact).
+If you think I can help you with a project, [get in touch](/contact/).
 
 <style>
   .testimonial {
