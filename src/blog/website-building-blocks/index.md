@@ -89,7 +89,7 @@ The `<img />` element allows you to embed images within web pages. This is an ex
 
 This is the image that shows from the above `img` element.
 
-<img src="https://brianjdevries.com/favicon.ico" />
+<img src="https://brianjdevries.com/favicon.ico" alt="favicon image" />
 
 ### link
 
