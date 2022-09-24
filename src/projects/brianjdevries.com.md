@@ -8,7 +8,7 @@ repo: "https://github.com/techcarpenter/brianjdevries.com"
 
 This is my personal website. It's a constant work in progress, but I enjoy trying new things with it!
 
-I also write occasionally on [my blog](/blog).
+I also write occasionally on [my blog](/blog/).
 
 #### Tech
 

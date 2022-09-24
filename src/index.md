@@ -19,9 +19,9 @@ Hi there! My name's Brian. I've tried to categorize myself many times, but my in
 
 Having said that, I am a professional software engineer. My career transitioned in 2018 and I haven't looked back.
 
-To read more about who I am, check out [my about page](/about).
+To read more about who I am, check out [my about page](/about/).
 
-I also write occasionally on [my blog](/blog).
+I also write occasionally on [my blog](/blog/).
 
 ## Latest articles
 
