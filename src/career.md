@@ -1,18 +1,15 @@
 ---
-title: "About me"
-description: "I'm Brian DeVries, a software developer living in West Michigan. I'm originally from Loveland, Colorado."
+title: "Career"
+description: "Brian DeVries has been shipping code since 2018."
 layout: "page.njk"
-eleventyNavigation:
-  key: "About"
-  order: 200
 showNewsletterForm: false
 ---
 
-I'm Brian DeVries, a JavaScript/TypeScript and .NET developer who's been shipping code since 2018.
+I'm Brian DeVries, a developer who's been shipping code since 2018.
 
 Here are some things I've done in that time:
 
-- Integrated a preventive maintenance tracker with the internal wiki at [Gentex](https://www.gentex.com)
+- Integrated a preventative maintenance tracker with the internal wiki at [Gentex](https://www.gentex.com)
 - Wrote .NET applications to test physical HomeLink garage door openers and auto-dimming rear view mirrors at [Gentex](https://www.gentex.com)
 - Received a SAFe Agile Practitioner certification (scrum, kanban, product owners, etc.)
 - Completed 3 [FreeCodeCamp](https://freecodecamp.org) certifications
@@ -20,7 +17,7 @@ Here are some things I've done in that time:
 - Helped port a Windows Forms desktop app to a Vue webapp for [Life Storage](https://lifestorage.com)
 - Set up my own DNS server with a Raspberry Pi
 - Contributed to the open source project Foam ([pull request #865](https://github.com/foambubble/foam/pull/865))
-- Designed and developed two client websites: [Professional Turf Solutions](/projects/pro-turf-solutions) and [Anna's dog grooming](https://annasdoggrooming.netlify.app)
+- Designed and developed two client websites
 
 Other personal project details can be found on my [project page](/projects) and on [github](https://github.com/techcarpenter).
 
