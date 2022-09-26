@@ -1,15 +1,30 @@
 //Original code from blog post: https://sandroroth.com/blog/eleventy-html-validation
 
-const { HtmlValidate, StaticConfigLoader } = require("html-validate");
-const loader = new StaticConfigLoader({
+/** @type {import("html-validate").ConfigData} */
+const validateConfig = {
 	extends: ["html-validate:recommended"],
+	elements: [
+		"html5",
+		{
+			th: {
+				attributes: {
+					scope: {
+						required: false
+					}
+				}
+			}
+		}
+	],
 	rules: {
 		"no-trailing-whitespace": "off",
 		"void-style": "off",
 		"no-inline-style": "off",
 		"long-title": "off"
 	}
-});
+};
+
+const { HtmlValidate, StaticConfigLoader } = require("html-validate");
+const loader = new StaticConfigLoader(validateConfig);
 const htmlValidate = new HtmlValidate(loader);
 const fs = require("fs");
 
