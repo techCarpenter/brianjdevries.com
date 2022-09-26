@@ -1,8 +1,9 @@
+{% from "./macros/htmlhead.njk" import htmlHead with context %}
+
 <!DOCTYPE html>
 <html lang="en">
 
-  {% include "partials/htmlhead.njk" %}
-  {% block extendHead %}
+  {% set headContent %}
     <style>
       body {
         min-height: 0;
@@ -11,7 +12,8 @@
         height: 100%;
       }
     </style>
-  {% endblock %}
+  {% endset %}
+  {{ htmlHead(headContent) }}
 
   <body>
     <main>

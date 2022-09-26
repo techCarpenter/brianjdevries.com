@@ -1,11 +1,16 @@
-{% extends "page.njk" %}
+{% extends "./page.njk" %}
+
+{% from "./macros/htmlhead.njk" import htmlHead with context %}
 
 {% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.blog | getNextCollectionItem(page) %}
-
-{% block extendHead %}
+{% set prismLink %}
 <link href="/styles/prism-okaidia.css" rel="stylesheet">
-{% endblock %}
+{% endset %}
+
+{% block headBlock %}
+  {{ htmlHead(prismLink) }}
+{% endblock%}
 
 {% block contentBlock %}
   <article>

@@ -1,3 +1,5 @@
+{% from "./macros/htmlhead.njk" import htmlHead with context %}
+
 {% if showNewsletterForm == null %}
   {% set showNewsletterForm = true %}
 {% endif %}
@@ -5,12 +7,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  {% include "partials/htmlhead.njk" %}
-  {%block extendHead %}{% endblock %}
+	{% block headBlock %}
+    {{ htmlHead() }}
+	{% endblock %}
 
   <body>
 
-    {% include "partials/nav-header.njk" %}
+    {% include "./partials/nav-header.njk" %}
 
     <main>
 
@@ -20,12 +23,12 @@
       {% endblock %}
 
       {% if showNewsletterForm %}
-        {% include "partials/newsletter-form.njk" %}
+        {% include "./partials/newsletter-form.njk" %}
       {% endif %}
 
     </main>
 
-    {% include "partials/site-footer.njk" %}
+    {% include "./partials/site-footer.njk" %}
 
     <script data-goatcounter="https://brianjdevries.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   </body>
