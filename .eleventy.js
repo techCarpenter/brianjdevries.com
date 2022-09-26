@@ -1,4 +1,5 @@
 const fs = require("fs");
+const htmlValidator = require("./html-validator");
 
 module.exports = function (config) {
   if (process.env.ELEVENTY_ENV === "development") {
@@ -17,6 +18,10 @@ module.exports = function (config) {
       }
     });
   }
+	/* HTML VALIDATION */
+	config.on("eleventy.after", htmlValidator.storeResults);
+	config.addLinter("html-validator", htmlValidator.validate);
+	
   /* PLUGINS */
   config.addPlugin(require("@11ty/eleventy-navigation"));
   config.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
