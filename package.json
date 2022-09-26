@@ -5,6 +5,7 @@
   "main": ".eleventy.js",
   "scripts": {
     "serve": "set ELEVENTY_ENV=development& npx @11ty/eleventy --serve",
+		"test": "set ELEVENTY_ENV=development& npx @11ty/eleventy --quiet",
     "build": "set ELEVENTY_ENV=production& npx @11ty/eleventy",
     "new-post": "node ./setup-scripts/new-post.js"
   },
