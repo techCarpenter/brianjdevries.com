@@ -31,18 +31,31 @@ const fs = require("fs");
 exports.results = {};
 
 exports.storeResults = function storeResults() {
+	const resultFilePath = "./dist/html-validation.json";
 	const totalErrors = Object.values(exports.results)
 		.filter(val => !!val)
 		.reduce((acc, cur) => {
 			return (acc = acc + cur.errorCount);
 		}, 0);
-	console.log("Total Errors: ", totalErrors);
+	const totalFileCount = Object.values(exports.results).filter(
+		file => !!file
+	).length;
+	let results = {};
+
+	results["Total error count"] = totalErrors;
+	results["Files with errors"] = totalFileCount;
+	results["Results file path"] = resultFilePath;
+
 	const content = JSON.stringify(exports.results, null, 2);
-	fs.writeFileSync("dist/html-validation.json", content);
+	fs.writeFileSync(resultFilePath, content);
+
+	console.table(results);
 };
 
 exports.validate = function validate(content) {
 	if (!this.outputPath) return;
+
+	// Only validate 'html' files
 	if (this.outputPath.split(".").pop() !== "html") return;
 
 	const validationResult = htmlValidate.validateString(content);
