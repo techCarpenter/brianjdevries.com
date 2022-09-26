@@ -59,7 +59,9 @@ exports.validate = function validate(content) {
 			);
 		});
 	});
-	console.log(`${validationResult.valid ? "✅" : "❌"} ${this.outputPath}`);
+	if (!validationResult.valid) {
+		console.log(`❌ ${this.outputPath}`);
+	}
 
 	exports.results[this.outputPath] = validationResult.valid
 		? undefined
