@@ -1,0 +1,20 @@
+{% from "./title.njk" import titleBlock with context%}
+
+{% macro htmlHead(extraContent="") %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/plain" rel="author" href="/humans.txt">
+
+  {{ titleBlock(title, layout) }}
+
+  {% if description %}
+    <meta name="description" content="{{ description }}">
+  {% endif %}
+
+  {% include "../partials/head-icons.njk" %}
+  {% include "../partials/head-styles.njk" %}
+
+  {{ extraContent | safe }}
+</head>
+{% endmacro %}
