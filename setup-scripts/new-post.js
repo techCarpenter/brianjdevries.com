@@ -5,7 +5,7 @@ const { exec } = require("child_process");
 
 const postTitle = argv[2];
 const newDir = `./src/blog/${slugify(postTitle, {
-  lower: true
+	lower: true
 })}`;
 const today = new Date();
 
@@ -14,14 +14,14 @@ title: "${postTitle}"
 author: "Brian DeVries"
 description: ""
 date: ${today.getFullYear().toString()}-${(today.getMonth() + 1)
-  .toString()
-  .padStart(2, "0")}-${today.getDate().toString()}
+	.toString()
+	.padStart(2, "0")}-${today.getDate().toString()}
 tags: []
 ---
 `;
 
 if (!fs.existsSync(newDir)) {
-  fs.mkdirSync(newDir, { recursive: true });
+	fs.mkdirSync(newDir, { recursive: true });
 }
 
 fs.writeFileSync(`${newDir}/index.md`, boilerplate);
