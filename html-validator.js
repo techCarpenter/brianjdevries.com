@@ -28,6 +28,7 @@ const { HtmlValidate, StaticConfigLoader } = require("html-validate");
 const loader = new StaticConfigLoader(validateConfig);
 const htmlValidate = new HtmlValidate(loader);
 const fs = require("fs");
+const { green, red } = require("kleur");
 
 exports.results = {};
 
@@ -47,10 +48,14 @@ exports.storeResults = function storeResults() {
 	results["Files with errors"] = totalFileCount;
 	results["Results file path"] = resultFilePath;
 
-	const content = JSON.stringify(exports.results, null, 2);
-	fs.writeFileSync(resultFilePath, content);
+	if (totalErrors > 0) {
+		const content = JSON.stringify(exports.results, null, 2);
+		fs.writeFileSync(resultFilePath, content);
 
-	console.table(results);
+		console.table(results);
+	} else {
+		console.log(green(`✅ No html errors!`));
+	}
 };
 
 exports.validate = function validate(content) {
@@ -74,7 +79,7 @@ exports.validate = function validate(content) {
 		});
 	});
 	if (!validationResult.valid) {
-		console.log(`❌ ${this.outputPath}`);
+		console.log(red(`❌ ${this.outputPath}`));
 	}
 
 	exports.results[this.outputPath] = validationResult.valid
