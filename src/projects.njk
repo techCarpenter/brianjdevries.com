@@ -6,7 +6,7 @@ showNewsletterForm: false
 ---
 
 {% for project in collections.projects | reverse %}
-  <div id="{{project.data.title}}" class="demo project-entry" data-demo-label="">
+  <div id="{{project.data.title | slugify}}" class="demo project-entry" data-demo-label="">
     <h2>{{project.data.title}}</h2>
     <p class="project-date">
       <em>{{project.data.startDate | datemonthyear}} - {% if project.data.endDate === null %}Present{% else %}{{project.data.endDate | datemonthyear}}
