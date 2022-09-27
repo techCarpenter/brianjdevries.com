@@ -19,7 +19,8 @@ const validateConfig = {
 		"no-trailing-whitespace": "off",
 		"void-style": "off",
 		"no-inline-style": "off",
-		"long-title": "off"
+		"long-title": "off",
+		"no-raw-characters": "off"
 	}
 };
 
