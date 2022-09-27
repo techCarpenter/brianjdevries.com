@@ -65,6 +65,17 @@ module.exports = function (config) {
 	config.addFilter("monthdateyear", dateformat.monthDateYear);
 	config.addFilter("shortmonthdate", dateformat.shortMonthDate);
 	config.addFilter("shortmonthdateyear", dateformat.shortMonthDateYear);
+	config.addFilter("slugify", text =>
+		text
+			.toString()
+			.normalize("NFD")
+			.replace(/[\u0300-\u036f]/g, "")
+			.toLowerCase()
+			.trim()
+			.replace(/\s+/g, "-")
+			.replace(/[^\w-]+/g, "")
+			.replace(/--+/g, "-")
+	);
 
 	config.addPassthroughCopy({ "src/static": "/" });
 	config.addPassthroughCopy({ "src/blog/**/*.jpg": "/images" });
