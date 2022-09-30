@@ -40,10 +40,6 @@ module.exports = function (config) {
 		return collection.getFilteredByGlob("./src/blog/**/*.md");
 	});
 
-	config.addCollection("notes", function (collection) {
-		return collection.getFilteredByGlob("./src/notes/*.md");
-	});
-
 	/* FILTERS */
 
 	// format dates
