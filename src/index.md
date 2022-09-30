@@ -31,7 +31,7 @@ I also write occasionally on [my blog](/blog/).
 {% if blog.url != "/blog" and count < 3 %}
 <li style="display: flex; justify-content: space-between;" class="post">
 <div><a class="post-link" href="{{blog.url}}">{{blog.data.title}}</a></div>
-<div style="float: right;" class="date">{{ blog.date | shortmonthdateyear }}</div>
+<div style="float: right;" class="date">{{ blog.date | dateformat("MMM DD, YYYY") }}</div>
 </li>
 {% set count = count + 1 %}
 {% endif %}

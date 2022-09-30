@@ -21,7 +21,7 @@ showNewsletterForm: false
         {% endif %}
       </p>
       <p>
-        <em>{{job.startDate | datemonthyear}} - {% if job.endDate === null %}Present{% else %}{{job.endDate | datemonthyear}}
+        <em>{{job.startDate | dateformat("MMMM YYYY")}} - {% if job.endDate === null %}Present{% else %}{{job.endDate | dateformat("MMMM YYYY")}}
           {% endif %}
         </em>
       </p>

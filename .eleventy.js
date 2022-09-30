@@ -43,13 +43,7 @@ module.exports = function (config) {
 	/* FILTERS */
 
 	// format dates
-	const dateformat = require("./lib/filters/dateformat");
-	config.addFilter("dateymd", dateformat.ymd);
-	config.addFilter("datemonthyear", dateformat.monthYear);
-	config.addFilter("datemonthdate", dateformat.monthDate);
-	config.addFilter("monthdateyear", dateformat.monthDateYear);
-	config.addFilter("shortmonthdate", dateformat.shortMonthDate);
-	config.addFilter("shortmonthdateyear", dateformat.shortMonthDateYear);
+	config.addFilter("dateformat", require("./lib/filters/dateformat"));
 	config.addFilter("markdown", content => md.render(content));
 	config.addFilter("slugify", require("./lib/filters/slugify"));
 

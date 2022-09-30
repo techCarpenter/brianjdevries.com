@@ -22,5 +22,5 @@ This is where I share what I'm up to right now. I'll do my best to keep it updat
 
 ---
 
-**Last updated: {{ lastModified | monthdateyear }}**  
+**Last updated: {{ lastModified | dateformat("MMMM D, YYYY") }}**  
 [Click here to learn more about _now pages_](https://nownownow.com/about)

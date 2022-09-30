@@ -9,7 +9,7 @@ showNewsletterForm: false
   <div id="{{project.title | slugify}}" class="demo project-entry" data-demo-label="">
     <h2>{{project.title}}</h2>
     <p class="project-date">
-      <em>{{project.startDate | datemonthyear}} - {% if project.endDate === null %}Present{% else %}{{project.endDate | datemonthyear}}
+      <em>{{project.startDate | dateformat("MMMM YYYY")}} - {% if project.endDate === null %}Present{% else %}{{project.endDate | dateformat("MMMM YYYY")}}
         {% endif %}
       </em>
     </p>
