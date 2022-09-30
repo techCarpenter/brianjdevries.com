@@ -8,6 +8,10 @@ module.exports = function (config) {
 	});
 
 	if (process.env.ELEVENTY_ENV === "development") {
+		/**
+		 * Required during development to show 404 page
+		 * when path doesn't exist
+		 */
 		config.setBrowserSyncConfig({
 			callbacks: {
 				ready: function (err, bs) {
@@ -24,6 +28,9 @@ module.exports = function (config) {
 		});
 
 		/* HTML VALIDATION */
+		/**
+		 * Only run html validation in development mode
+		 */
 		config.on("eleventy.after", htmlValidator.storeResults);
 		config.addLinter("html-validator", htmlValidator.validate);
 	}
