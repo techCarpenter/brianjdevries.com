@@ -21,6 +21,7 @@
     "@11ty/eleventy-navigation": "^0.1.6",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
     "html-validate": "^7.5.0",
-    "kleur": "^4.1.5"
+    "kleur": "^4.1.5",
+    "markdown-it": "^13.0.1"
   }
 }

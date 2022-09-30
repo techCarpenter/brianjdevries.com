@@ -1,7 +1,12 @@
 const fs = require("fs");
 const htmlValidator = require("./html-validator");
+const markdownIt = require("markdown-it");
 
 module.exports = function (config) {
+	const md = new markdownIt({
+		html: true
+	});
+
 	if (process.env.ELEVENTY_ENV === "development") {
 		config.setBrowserSyncConfig({
 			callbacks: {
@@ -65,6 +70,7 @@ module.exports = function (config) {
 	config.addFilter("monthdateyear", dateformat.monthDateYear);
 	config.addFilter("shortmonthdate", dateformat.shortMonthDate);
 	config.addFilter("shortmonthdateyear", dateformat.shortMonthDateYear);
+	config.addFilter("markdown", content => md.render(content));
 	config.addFilter("slugify", text =>
 		text
 			.toString()
