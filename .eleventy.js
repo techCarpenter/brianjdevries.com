@@ -51,17 +51,7 @@ module.exports = function (config) {
 	config.addFilter("shortmonthdate", dateformat.shortMonthDate);
 	config.addFilter("shortmonthdateyear", dateformat.shortMonthDateYear);
 	config.addFilter("markdown", content => md.render(content));
-	config.addFilter("slugify", text =>
-		text
-			.toString()
-			.normalize("NFD")
-			.replace(/[\u0300-\u036f]/g, "")
-			.toLowerCase()
-			.trim()
-			.replace(/\s+/g, "-")
-			.replace(/[^\w-]+/g, "")
-			.replace(/--+/g, "-")
-	);
+	config.addFilter("slugify", require("./lib/filters/slugify"));
 
 	config.addPassthroughCopy({ "src/static": "/" });
 	config.addPassthroughCopy({ "src/blog/**/*.jpg": "/images" });
