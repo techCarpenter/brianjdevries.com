@@ -44,22 +44,6 @@ module.exports = function (config) {
 		return collection.getFilteredByGlob("./src/notes/*.md");
 	});
 
-	config.addCollection("workHistory", function (collection) {
-		return collection
-			.getFilteredByGlob("./src/work-history/*.md")
-			.sort(function (a, b) {
-				return a.data.startDate - b.data.startDate;
-			});
-	});
-
-	config.addCollection("projects", function (collection) {
-		return collection
-			.getFilteredByGlob("./src/projects/*.md")
-			.sort(function (a, b) {
-				return a.data.startDate - b.data.startDate;
-			});
-	});
-
 	/* FILTERS */
 
 	// format dates

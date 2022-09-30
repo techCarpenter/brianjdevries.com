@@ -5,27 +5,29 @@ layout: "page.njk"
 showNewsletterForm: false
 ---
 
-{% for job in collections.workHistory | reverse %}
+{% for job in workHistory | reverse %}
   <div class="demo experience-entry" data-demo-label="">
-    <h2>{{job.data.title}}</h2>
+    <h2>{{job.title}}</h2>
     <p style="line-height: 1.5;">
       <strong>
-        {% if job.data.url %}
-          <a href="{{job.data.url}}">{{job.data.employer}}</a>
+        {% if job.url %}
+          <a href="{{job.url}}">{{job.employer}}</a>
         {% else %}
-          {{job.data.employer}}
+          {{job.employer}}
           {%endif%}
         </strong>
-        {% if job.data.location %}<br class="show-mobile"/>
-          <span style="color: #555;"> - {{job.data.location}}</span>
+        {% if job.location %}<br class="show-mobile"/>
+          <span style="color: #555;"> - {{job.location}}</span>
         {% endif %}
       </p>
       <p>
-        <em>{{job.data.startDate | datemonthyear}} - {% if job.data.endDate === null %}Present{% else %}{{job.data.endDate | datemonthyear}}
+        <em>{{job.startDate | datemonthyear}} - {% if job.endDate === null %}Present{% else %}{{job.endDate | datemonthyear}}
           {% endif %}
         </em>
       </p>
-      {{job.templateContent | safe}}
+      {% if job.summary %}
+        {{ job.summary | markdown | safe }}
+      {% endif %}
     </div>
   {% endfor %}
 

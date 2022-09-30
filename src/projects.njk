@@ -5,24 +5,24 @@ layout: "page.njk"
 showNewsletterForm: false
 ---
 
-{% for project in collections.projects | reverse %}
-  <div id="{{project.data.title | slugify}}" class="demo project-entry" data-demo-label="">
-    <h2>{{project.data.title}}</h2>
+{% for project in projectData | reverse %}
+  <div id="{{project.title | slugify}}" class="demo project-entry" data-demo-label="">
+    <h2>{{project.title}}</h2>
     <p class="project-date">
-      <em>{{project.data.startDate | datemonthyear}} - {% if project.data.endDate === null %}Present{% else %}{{project.data.endDate | datemonthyear}}
+      <em>{{project.startDate | datemonthyear}} - {% if project.endDate === null %}Present{% else %}{{project.endDate | datemonthyear}}
         {% endif %}
       </em>
     </p>
     <p>
       <strong>
-        {% if project.data.url %}
-          <a href="{{project.data.url}}">Demo</a>
+        {% if project.url %}
+          <a href="{{project.url}}">Demo</a>
         {% endif %}
       </strong>
-      {% if project.data.repo %} (<a href="{{project.data.repo}}">source</a>){% endif %}
+      {% if project.repo %} (<a href="{{project.repo}}">source</a>){% endif %}
     </p>
     <h4>Summary</h4>
-    {{project.templateContent | safe}}
+    {{ project.summary | markdown | safe }}
   </div>
 {% endfor %}
 
