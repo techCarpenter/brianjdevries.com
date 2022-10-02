@@ -53,6 +53,7 @@ module.exports = function (config) {
 	config.addFilter("dateformat", require("./lib/filters/dateformat"));
 	config.addFilter("markdown", content => md.render(content));
 	config.addFilter("slugify", require("./lib/filters/slugify"));
+	config.addFilter("splitlines", require("./lib/filters/splitLines"));
 
 	config.addPassthroughCopy({ "src/static": "/" });
 	config.addPassthroughCopy({ "src/blog/**/*.jpg": "/images" });
