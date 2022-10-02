@@ -58,6 +58,8 @@ module.exports = function (config) {
 	config.addPassthroughCopy({ "src/static": "/" });
 	config.addPassthroughCopy({ "src/blog/**/*.jpg": "/images" });
 
+	config.on("eleventy.after", require("./socialPreviewImages"))
+
 	return {
 		dir: {
 			input: "src",
