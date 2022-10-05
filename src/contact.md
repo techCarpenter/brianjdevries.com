@@ -1,6 +1,6 @@
 ---
 title: "Drop me a line"
-description: "Say hello to Brian DeVries"
+description: "Contact Brian DeVries here. Get help with a software question, work together on your next website, or just say hi!"
 layout: "page.njk"
 showNewsletterForm: false
 ---
@@ -9,12 +9,12 @@ showNewsletterForm: false
 
 You're in the right place to reach me
 
-|             |                                    |
-| :---------- | :--------------------------------- |
-| Email 📧    | [brian@brianjdevries.com][email]   |
-| Twitter 🐦  | [@brianjdevries][twitter]          |
-| LinkedIn 👨‍💼 | [Brian's LinkedIn][linkedin]       |
-| Github 💻   | [github.com/techcarpenter][github] |
+|          |     |                                    |
+| :------- | :-: | :--------------------------------- |
+| Email    | 📧  | [brian@brianjdevries.com][email]   |
+| Twitter  | 🐦  | [@brianjdevries][twitter]          |
+| LinkedIn | 👨‍💼  | [Brian's LinkedIn][linkedin]       |
+| Github   | 💻  | [github.com/techcarpenter][github] |
 
 <!-- Links -->
 

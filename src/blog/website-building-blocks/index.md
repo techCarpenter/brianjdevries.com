@@ -1,7 +1,7 @@
 ---
 title: Website building blocks
 author: Brian DeVries
-description: A basic introduction to html and website source markup.
+description: "A basic introduction to html and website source markup. All websites have the same basic structure that anyone can learn."
 date: 2020-09-07
 tags: [html]
 ---

@@ -1,6 +1,6 @@
 ---
-title: Start Here
-description: Brian DeVries's personal website.
+title: "Start Here"
+description: "Brian DeVries's personal website. He writes occasionally on his blog and frequently updates his site with new information."
 layout: page.njk
 eleventyNavigation:
   key: Home

@@ -1,6 +1,6 @@
 ---
 title: "Career"
-description: "Brian DeVries has been shipping code since 2018."
+description: "Brian DeVries has been shipping code since 2018. He primarily works with JavaScript and C# to deliver technical solutions."
 layout: "page.njk"
 showNewsletterForm: false
 ---
