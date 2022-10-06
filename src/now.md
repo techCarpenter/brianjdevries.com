@@ -13,7 +13,7 @@ This is where I share what I'm up to right now. I'll do my best to keep it updat
 
 ## Right now!
 
-- Working  remote to Buffalo, NY as a full stack developer for [Life Storage](https://lifestorage.com)
+- Working remote to Buffalo, NY as a full stack developer for [Life Storage](https://lifestorage.com)
   - TypeScript, Vue, C#, and SQL
 - Raising my two sons
 - Working on leading my family better spiritually through devotions and prayer
