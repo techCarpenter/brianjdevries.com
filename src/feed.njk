@@ -32,7 +32,7 @@
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
     <published>{{ post.data.date | dateToRfc3339 }}</published>
-    {% if post.data.lastModified %}<updated>{{ post.data.lastModified | dateToRfc3339 }}</updated>{% endif %}
+    <updated>{% if post.data.lastModified %}{{ post.data.lastModified | dateToRfc3339 }}{% else %}{{ post.data.date | dateToRfc3339 }}{% endif %}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content xml:lang="{{ metadata.language }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
