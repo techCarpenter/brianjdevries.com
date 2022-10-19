@@ -36,6 +36,7 @@ module.exports = function (config) {
 
 	config.addPlugin(require("@11ty/eleventy-navigation"));
 	config.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
+	config.addPlugin(require("@11ty/eleventy-plugin-rss"));
 
 	config.addShortcode("navlist", require("./lib/shortcodes/navlist.js"));
 
