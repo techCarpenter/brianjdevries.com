@@ -23,9 +23,9 @@ If you're looking for information about my professional life, check out my [care
 
 ---
 
-Now, since _you_ came to _me_, let me tell you a bit about myself.
+Now, let me tell you a bit about myself.
 
-Growing up, I was able to learn a lot about fixing and building/making things from my mom, dad, uncles, and grandpas.
+Growing up, I was able to learn a lot about fixing, building, and making things from my mom, dad, uncles, and grandpas.
 
 If it involved using your hands, you could convince me to give it a try! I learned things like crocheting, baking, woodworking, farming, plumbing, and auto repair.
 

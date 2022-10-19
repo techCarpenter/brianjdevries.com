@@ -2,9 +2,6 @@
 title: "What I'm doing now"
 description: "What Brian DeVries is up to right now. This page is updated frequently so people can see the latest in my life."
 layout: page.njk
-eleventyNavigation:
-  key: Now
-  order: "400"
 lastModified: 2022-10-05
 showNewsletterForm: false
 ---
