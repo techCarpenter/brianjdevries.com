@@ -18,9 +18,9 @@
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.subtitle }}</subtitle>
   <link href="{{ permalink | absoluteUrl(site.url) }}" rel="self"/>
-  <link href="{{ site.url }}"/>
+  <link href="{{ site.url }}/"/>
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-  <id>{{ site.url }}</id>
+  <id>{{ site.url }}/</id>
   <author>
     <name>{{ metadata.author.name }}</name>
     <uri>{{ site.url }}</uri>
