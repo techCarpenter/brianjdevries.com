@@ -91,7 +91,7 @@ ol {
 }
 
 .demo {
-  margin: 2rem -0.75rem;
+  margin: 2rem 0;
   position: relative;
   padding: 0.75rem;
   border: var(--demo-border-width) solid var(--vermillion);
@@ -99,7 +99,7 @@ ol {
 }
 
 .demo::after {
-  content: "Demonstration";
+  content: "Demo";
   position: absolute;
   right: 1rem;
   top: calc(-1 * var(--demo-border-width));
@@ -455,6 +455,9 @@ main {
   }
   .posts .post {
     flex-direction: row;
+  }
+  .demo {
+    margin: 2rem -0.75rem;
   }
 }
 
