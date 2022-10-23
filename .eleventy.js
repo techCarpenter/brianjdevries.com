@@ -50,7 +50,6 @@ module.exports = function (config) {
 	config.addFilter("splitlines", require("./lib/filters/splitLines"));
 
 	config.addPassthroughCopy({ "src/static": "/" });
-	config.addPassthroughCopy({ "src/blog/**/*.jpg": "/images" });
 
 	config.on("eleventy.after", require("./socialPreviewImages"));
 

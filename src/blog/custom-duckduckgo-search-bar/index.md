@@ -59,7 +59,7 @@ Most of the input fields have a set value. Only the `input type="search"` elemen
 
 The form appears as a simple text box with a search button.
 
-<img style="border: 1px solid black;" alt="Custom search bar in action" src="/images/live-search-bar.jpg" height="298" />
+<img style="border: 1px solid black;" alt="Custom search bar in action" src="/images/blog/custom-duckduckgo-search-bar/live-search-bar.jpg" height="298" />
 
 ## Adding the form in eleventy
 

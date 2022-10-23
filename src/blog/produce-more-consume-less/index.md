@@ -6,7 +6,7 @@ date: 2020-09-13
 tags: [thoughts]
 ---
 
-![Produce More, Consume Less](/images/produce-more.jpg)
+![Produce More, Consume Less](/images/blog/produce-more-consume-less/produce-more.jpg)
 
 Long-term thinking yields greater results. But short-term results feel more urgent.
 
