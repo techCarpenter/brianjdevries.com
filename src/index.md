@@ -27,7 +27,7 @@ I also write occasionally on [my blog](/blog/).
 
 <ol class="posts">
 {% set count = 0 %}
-{% for blog in collections.blog | reverse %}
+{% for blog in collections.blog %}
 {% if blog.url != "/blog" and count < 3 %}
 <li style="display: flex; justify-content: space-between;" class="post">
 <div><a class="post-link" href="{{blog.url}}">{{blog.data.title}}</a></div>

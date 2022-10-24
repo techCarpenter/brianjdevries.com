@@ -10,7 +10,7 @@ showNewsletterForm: false
 
 {% set curYear = null %}
 <ol class="posts">
-  {% for blog in collections.blog | reverse %}
+  {% for blog in collections.blog %}
     {% if blog.url != "/blog" %}
       {% if blog
         .date

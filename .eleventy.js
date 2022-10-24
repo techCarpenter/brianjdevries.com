@@ -40,8 +40,19 @@ module.exports = function (config) {
 
 	config.addShortcode("navlist", require("./lib/shortcodes/navlist.js"));
 
+	function getPosts(collectionApi) {
+		return collectionApi.getFilteredByGlob("./src/blog/*.md").reverse().filter(function (item) {
+			return !!item.data.permalink;
+		}).filter(function (item) {
+			if (process.env.ELEVENTY_ENV === "production" && item.data.tags && item.data.tags.includes("draft")) {
+				return false;
+			}
+			return true;
+		});
+	}
+
 	config.addCollection("blog", function (collection) {
-		return collection.getFilteredByGlob("./src/blog/**/*.md");
+		return getPosts(collection);
 	});
 
 	config.addFilter("dateformat", require("./lib/filters/dateformat"));

@@ -26,7 +26,7 @@
     <uri>{{ site.url }}</uri>
     <email>{{ metadata.author.email }}</email>
   </author>
-  {%- for post in collections.blog | reverse %}
+  {%- for post in collections.blog %}
   {%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
   <entry>
     <title>{{ post.data.title }}</title>
