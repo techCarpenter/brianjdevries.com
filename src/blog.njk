@@ -11,19 +11,17 @@ showNewsletterForm: false
 {% set curYear = null %}
 <ol class="posts">
   {% for blog in collections.blog %}
-    {% if blog.url != "/blog" %}
-      {% if blog
+    {% if blog
+      .date
+      .getUTCFullYear() != curYear %}
+      {% set curYear = blog
         .date
-        .getUTCFullYear() != curYear %}
-        {% set curYear = blog
-          .date
-          .getUTCFullYear() %}
-        <li class="subhed">{{curYear}}</li>
-      {% endif %}
-      <li class="post">
-        <span class="date">{{ blog.date | dateformat("MMM DD") }}</span>
-        <a class="post-link" href="{{blog.url}}">{{blog.data.title}}</a>
-      </li>
+        .getUTCFullYear() %}
+      <li class="subhed">{{curYear}}</li>
     {% endif %}
+    <li class="post">
+      <span class="date">{{ blog.date | dateformat("MMM DD") }}</span>
+      <a class="post-link" href="{{blog.url}}">{{blog.data.title}}</a>
+    </li>
   {% endfor %}
 </ol>
