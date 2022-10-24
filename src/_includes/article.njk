@@ -15,7 +15,7 @@
 {% block contentBlock %}
   <article>
     <h1 class="primary-title">{{ title }}</h1>
-    <p class="article-date">{{date | dateformat("MMMM D, YYYY") }}</p>
+    <p class="article-date">{{ page.date | dateformat("MMMM D, YYYY") }}</p>
     {{ content | safe }}
   </article>
   {% if previousPost or nextPost %}

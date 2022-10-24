@@ -14,8 +14,8 @@
   <meta property="og:url" content="{{site.url}}{{ page.url }}">
 
   {% if tags %}
-  <meta property="og:image" content="{{site.url}}/images/social-preview-images/{{ date | dateformat("YYYY-MM-DD") }}-{{ title | slugify }}-preview.jpeg">
-  <meta property="og:image:secure_url" content="{{site.url}}/images/social-preview-images/{{ date | dateformat("YYYY-MM-DD") }}-{{ title | slugify }}-preview.jpeg">
+  <meta property="og:image" content="{{site.url}}/images/social-preview-images/{{ page.date | dateformat("YYYY-MM-DD") }}-{{ title | slugify }}-preview.jpeg">
+  <meta property="og:image:secure_url" content="{{site.url}}/images/social-preview-images/{{ page.date | dateformat("YYYY-MM-DD") }}-{{ title | slugify }}-preview.jpeg">
   {% else %}
   <meta property="og:image" content="{{site.url}}/images/social-preview-images/default-social-preview.jpeg" />
   <meta property="og:image:secure_url" content="{{site.url}}/images/social-preview-images/default-social-preview.jpeg" />

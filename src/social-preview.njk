@@ -4,7 +4,7 @@ pagination:
   data: collections.blog
   size: 1
   alias: preview
-permalink: "/images/social-preview-images/{{ preview.data.date | dateformat('YYYY-MM-DD') }}-{{ preview.data.title | slugify }}-preview.svg"
+permalink: "/images/social-preview-images/{{ preview.date | dateformat('YYYY-MM-DD') }}-{{ preview.data.title | slugify }}-preview.svg"
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
