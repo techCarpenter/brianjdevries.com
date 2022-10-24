@@ -31,8 +31,8 @@
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
-    <published>{{ post.data.date | dateToRfc3339 }}</published>
-    <updated>{% if post.data.lastModified %}{{ post.data.lastModified | dateToRfc3339 }}{% else %}{{ post.data.date | dateToRfc3339 }}{% endif %}</updated>
+    <published>{{ post.date | dateToRfc3339 }}</published>
+    <updated>{% if post.data.lastModified %}{{ post.data.lastModified | dateToRfc3339 }}{% else %}{{ post.date | dateToRfc3339 }}{% endif %}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content xml:lang="{{ metadata.language }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
