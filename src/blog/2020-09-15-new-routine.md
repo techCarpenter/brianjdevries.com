@@ -2,7 +2,6 @@
 title: New Routine
 author: Brian DeVries
 description: "Routine and daily schedule are important. Starting a new routine with a newborn will be challenging. I think I'm up for it."
-date: 2020-09-15
 tags: [family, thoughts]
 ---
 

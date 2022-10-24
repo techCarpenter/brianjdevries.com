@@ -2,7 +2,6 @@
 title: Cold Showers and Habit Building
 author: Brian DeVries
 description: "Learning to take cold showers incrementally helps build consistency with other habits. Starting small is the key to success."
-date: 2020-09-28
 tags: habits
 ---
 

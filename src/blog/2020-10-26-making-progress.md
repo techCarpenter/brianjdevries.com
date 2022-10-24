@@ -2,7 +2,6 @@
 title: Making Progress
 author: Brian DeVries
 description: "Despite helping care for my newborn son, I'm making some  progress on my web app. Consistent progress is the goal."
-date: 2020-10-26
 tags: [updates, saas]
 ---
 

@@ -2,7 +2,6 @@
 title: You're Being Watched
 author: Brian DeVries
 description: "Online privacy is often misunderstood. Be aware of who's watching you online and keep a pulse on your online presence so you can monitor it."
-date: 2020-08-24
 tags: [privacy]
 ---
 

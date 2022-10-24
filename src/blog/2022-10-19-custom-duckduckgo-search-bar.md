@@ -2,7 +2,6 @@
 title: "How to add a custom search bar to your eleventy website with duckduckgo"
 author: "Brian DeVries"
 description: "Site search is convenient for visitors, but not always easy to implement. Duckduckgo offers url parameters to customize the search results look and feel so you can make your own custom site search bar."
-date: 2022-10-19
 tags: [html]
 ---
 
