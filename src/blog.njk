@@ -19,9 +19,9 @@ showNewsletterForm: false
         .getUTCFullYear() %}
       <li class="subhed">{{curYear}}</li>
     {% endif %}
-    <li class="post">
-      <span class="date">{{ blog.date | dateformat("MMM DD") }}</span>
-      <a class="post-link" href="{{blog.url}}">{{blog.data.title}}</a>
+    <li style="display: flex; justify-content: space-between;" class="post">
+      <div><a class="post-link" href="{{blog.url}}">{{blog.data.title}}</a></div>
+      <div style="float: right;" class="date">{{ blog.date | dateformat("MMM DD") }}</div>
     </li>
   {% endfor %}
 </ol>

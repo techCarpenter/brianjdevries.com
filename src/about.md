@@ -11,19 +11,21 @@ showNewsletterForm: false
 <img class="profile-pic bounce-in"
   alt="Brian's face"
   title="That's me!"
-  src="/images/BrianProfilePic.jpg"
+  src="/images/goofy-profile-pic.png"
   height="194"
   width="194" />
 
-Well thanks for stopping by! You see the guy above? That's me!
+Well thanks for stopping by! The guy above is me.
 
-My name is Brian and I made this site to share things I know, have a home online, and meet other awesome people.
+My name is Brian and I'm a Christian resting in Jesus Christ for my salvation.
+
+I made this site to share things I know and meet other awesome people.
 
 If you're looking for information about my professional life, check out my [career page](/career/).
 
 ---
 
-Now, let me tell you a bit about myself.
+Let me tell you a bit about myself.
 
 Growing up, I was able to learn a lot about fixing, building, and making things from my mom, dad, uncles, and grandpas.
 

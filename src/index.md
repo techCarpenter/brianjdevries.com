@@ -11,7 +11,7 @@ showNewsletterForm: false
 <img class="profile-pic bounce-in"
   alt="Brian's headshot photo"
   title="That's me!"
-  src="/images/BrianProfilePic.jpg"
+  src="/images/goofy-profile-pic.png"
   height="194"
   width="194" />
 
@@ -23,7 +23,7 @@ To read more about who I am, check out [my about page](/about/).
 
 I also write occasionally on [my blog](/blog/).
 
-## Latest articles
+## Latest posts
 
 <ol class="posts">
 {% set count = 0 %}
