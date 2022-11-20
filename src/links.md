@@ -8,6 +8,8 @@ eleventyNavigation:
 showNewsletterForm: false
 ---
 
+I hope you find what you're looking for.
+
 - [Contact](/contact/)
 - [Feed (atom)](/feed.xml)
 - [Now](/now/)
