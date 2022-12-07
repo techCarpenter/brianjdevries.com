@@ -17,6 +17,8 @@
     <h1 class="primary-title">{{ title }}</h1>
     <p class="article-date">{{ page.date | dateformat("MMMM D, YYYY") }}</p>
     {{ content | safe }}
+    {% set comments %}{% include "partials/comments.njk" %}{% endset %}
+    {{ comments | safe }}
   </article>
   {% if previousPost or nextPost %}
     <hr style="margin: 1.5rem auto;">
