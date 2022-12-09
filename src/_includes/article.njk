@@ -2,8 +2,8 @@
 
 {% from "./macros/htmlhead.njk" import htmlHead with context %}
 
-{% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
-{% set nextPost = collections.blog | getNextCollectionItem(page) %}
+{% set previousPost = collections.blog | getNextCollectionItem(page) %}
+{% set nextPost = collections.blog | getPreviousCollectionItem(page) %}
 {% set prismLink %}
 <link href="/styles/prism-okaidia.css" rel="stylesheet">
 {% endset %}
