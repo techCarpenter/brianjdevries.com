@@ -140,7 +140,7 @@ ol {
 }
 
 .posts .date {
-  font-style: italic;
+  font-family: Consolas, monospace;
   display: block;
   margin-right: 1rem;
   min-width: max-content;
