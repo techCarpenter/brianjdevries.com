@@ -180,10 +180,13 @@ ol {
 a,
 :visited,
 a:focus,
-a:hover,
 a:active {
   text-decoration: underline;
   color: var(--vermillion);
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 pre {
