@@ -264,10 +264,6 @@ th {
   justify-content: space-between;
 }
 
-.active {
-  text-decoration: underline;
-}
-
 .site-logo {
   display: flex;
   flex-direction: row;
