@@ -29,9 +29,11 @@ I also write occasionally on [my blog](/blog/).
 {% set count = 0 %}
 {% for blog in collections.blog %}
 {% if count < 3 %}
-<li style="display: flex; justify-content: space-between;" class="post">
+<li class="post">
 <div><a class="post-link" href="{{blog.url}}">{{blog.data.title}}</a></div>
-<div style="float: right;" class="date">{{ blog.date | dateformat("MMM DD, YYYY") }}</div>
+<div class="date">
+  <time datetime="{{ blog.date | dateformat('YYYY-MM-DD') }}">{{ blog.date | dateformat("MMM DD, YYYY") }}</time>
+</div>
 </li>
 {% set count = count + 1 %}
 {% endif %}

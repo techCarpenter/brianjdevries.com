@@ -144,10 +144,12 @@ ol {
   display: block;
   margin-right: 1rem;
   min-width: max-content;
+  float: right;
 }
 
 .posts .post {
   display: flex;
+  justify-content: space-between;
   flex-direction: column-reverse;
   align-content: flex-start;
 }
