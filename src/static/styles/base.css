@@ -321,6 +321,7 @@ th {
 .nav-list li a {
   color: var(--light-color);
   border-radius: 0.25rem;
+  text-decoration: none;
 }
 
 .nav-list li a:hover {
