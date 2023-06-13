@@ -1,0 +1,98 @@
+---
+title: "Baby Gender Reveal"
+layout: "landingPage.njk"
+description: ""
+showNewsletterForm: false
+eleventyExcludeFromCollections: true
+---
+
+{#
+  boy = 62
+  girl = 67
+#}
+
+<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<style>
+  :root
+  {
+    --boy: #89cff0;
+    --girl: #f8b9d4;
+    --baby-color: #000;
+  }
+  h1,
+  h2,
+  p {
+    text-align: center;
+  }
+  body {
+    background: repeating-linear-gradient(-45deg, var(--boy), var(--girl) 200px, var(--boy) 400px);
+    background-size: 100% 100%;
+    min-height: 90vh;
+  }
+  .white-background {
+    background: unset;
+    background-color: white !important;
+  }
+  .spacer {
+    display: block;
+    min-height: 300vh;
+  }
+  .small-spacer {
+    display: block;
+    min-height: 30vh;
+  }
+  button {
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 6px;
+    background: linear-gradient(45deg, var(--boy), var(--girl), var(--boy), var(--girl), var(--boy), var(--girl));
+    margin: auto;
+    cursor: pointer;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+  }
+  section {
+    min-height: 60vh;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  section.reveal {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .reveal {
+    font-size: 100px;
+    color: var(--baby-color);
+    text-align: center;
+  }
+</style>
+
+{# Main content #}
+<section>
+  <p>We thought we'd have a little fun with revealing the gender 😛</p>
+  <p>Are you ready? Alright, scroll down to find out!</p>
+  <h3>(SOUND ON) 🔊</h3>
+  <h3 style="text-align: center; font-size: 50px;">⬇</h3>
+  <div class="spacer"></div>
+  <h2>Getting closer!</h2>
+  <div class="spacer"></div>
+  <h2>Almost there....</h2>
+  <div class="spacer"></div>
+  <h2>Just a little further</h2>
+  <div class="spacer"></div>
+  <h2>Yay, you made it 🙌🏼 High five that button!</h2>
+  <div style="display: flex; flex-direction: column;">
+    <button id="reveal-gender" type="button">Woohoo, show me the gender! ✋🏼</button>
+  </div>
+  <div class="small-spacer"></div>
+</section>
+
+<script onload src="/scripts/genderReveal.js"></script>
