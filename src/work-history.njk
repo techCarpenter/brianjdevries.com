@@ -6,7 +6,7 @@ showNewsletterForm: false
 ---
 
 {% for job in workHistory | reverse %}
-  <div class="demo experience-entry" data-demo-label="">
+  <div class="experience-entry">
     <h2>{{job.title}}</h2>
     <p style="line-height: 1.5;">
       <strong>
@@ -29,10 +29,17 @@ showNewsletterForm: false
         {{ job.summary | markdown | safe }}
       {% endif %}
     </div>
+    <hr class="entry-divider">
   {% endfor %}
 
   <style>
     .hide-mobile {
+      display: none;
+    }
+    .entry-divider {
+      border: 3px solid var(--vermillion);
+    }
+    .entry-divider:nth-last-of-type(1) {
       display: none;
     }
     .experience-entry {
