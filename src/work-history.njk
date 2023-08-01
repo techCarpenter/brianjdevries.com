@@ -16,14 +16,12 @@ showNewsletterForm: false
           {{job.employer}}
           {%endif%}
         </strong>
-        {% if job.location %}<br class="show-mobile"/>
-          <span style="color: #555;"> - {{job.location}}</span>
+        {% if job.location %}<br class="hide-desktop"/>
+          <span> - {{job.location}}</span>
         {% endif %}
       </p>
-      <p>
-        <em>{{job.startDate | dateformat("MMMM YYYY")}} - {% if job.endDate === null %}Present{% else %}{{job.endDate | dateformat("MMMM YYYY")}}
+      <p class="entry-time-frame">{{job.startDate | dateformat("MMMM YYYY")}} - {% if job.endDate === null %}Present{% else %}{{job.endDate | dateformat("MMMM YYYY")}}
           {% endif %}
-        </em>
       </p>
       {% if job.summary %}
         {{ job.summary | markdown | safe }}
@@ -33,9 +31,6 @@ showNewsletterForm: false
   {% endfor %}
 
   <style>
-    .hide-mobile {
-      display: none;
-    }
     .entry-divider {
       border: 3px solid var(--vermillion);
     }
@@ -56,12 +51,13 @@ showNewsletterForm: false
     .experience-entry p {
       margin: 0.3rem 0;
     }
+    .entry-time-frame {
+      color: var(--muted-color);
+      font-style: italic;
+    }
     @media (min-width: 700px) {
-      .show-mobile {
+      .hide-desktop {
         display: none;
-      }
-      .hide-mobile {
-        display: initial;
       }
     }
   </style>

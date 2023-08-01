@@ -1,8 +1,9 @@
 :root {
   /* Colors */
-  --dark-color: #040404;
+  --dark-color: #242424;
   --light-color: #fefefe;
   --vermillion: #E03021;
+  --muted-color: #aaa;
 
   /* Other */
   --demo-border-width: 3px;
