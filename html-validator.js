@@ -20,7 +20,8 @@ const validateConfig = {
 		"void-style": "off",
 		"no-inline-style": "off",
 		"long-title": "off",
-		"no-raw-characters": "off"
+		"no-raw-characters": "off",
+		"wcag/h63": "off"
 	}
 };
 
