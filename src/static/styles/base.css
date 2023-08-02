@@ -126,7 +126,7 @@ ol {
 .posts .subhed {
   padding: 0;
   font-size: 1.5rem;
-  border-bottom: 1px dotted var(--dark-color);
+  border-bottom: 1px dotted var(--light-color);
   line-height: 140%;
   display: flex;
   justify-content: space-between;
@@ -197,12 +197,13 @@ pre {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
   width: calc(100% + 1.5rem);
+  border: 1px solid var(--muted-color);
 }
 
 :not(pre) > code,
 :not(pre) > code[class*="language-"] {
-  background-color: var(--dark-color);
-  color: var(--light-color);
+  background-color: color-mix(in srgb, var(--light-color), #000 15%); /* darken the light color */
+  color: var(--dark-color);
 
   font-size: 1rem;
   font-family: Consolas, Courier, monospace;
@@ -215,7 +216,6 @@ pre {
 
 header {
   width: 100%;
-  background-color: var(--dark-color);
   display: flex;
   flex-direction: row;
 }
@@ -349,7 +349,6 @@ main {
   font-family: Arial, Helvetica, sans-serif;
   padding: 0.5rem;
   margin-top: 2rem;
-  background-color: var(--dark-color);
   color: var(--light-color);
   width: 100%;
 }
