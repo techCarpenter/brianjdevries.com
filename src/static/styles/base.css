@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--site-font);
   font-size: 1.1rem;
   line-height: 1.6;
   background-color: var(--dark-color);
@@ -42,7 +42,7 @@ h4,
 h5,
 h6 {
   margin: 1.5em 0 0.8em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--site-font);
   font-weight: 600;
   line-height: 1.1em;
 }
@@ -103,7 +103,7 @@ ol {
   position: absolute;
   right: 1rem;
   top: calc(-1 * var(--demo-border-width));
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--site-font);
   font-weight: 600;
   font-size: 0.8rem;
   padding: 0 0.25rem;
@@ -206,7 +206,7 @@ pre {
   color: var(--dark-color);
 
   font-size: 1rem;
-  font-family: Consolas, Courier, monospace;
+  font-family: var(--mono-font);
   border-radius: 0.25rem;
   padding: 2px 5px;
   white-space: break-spaces;
@@ -258,7 +258,7 @@ th {
 }
 
 .site-nav {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--site-font);
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -346,7 +346,7 @@ main {
 /* Site Footer */
 
 .site-footer {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--site-font);
   padding: 0.5rem;
   margin-top: 2rem;
   color: var(--light-color);

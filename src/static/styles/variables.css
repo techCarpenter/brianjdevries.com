@@ -7,4 +7,19 @@
 
   /* Other */
   --demo-border-width: 3px;
+  --site-font: Arial, Helvetica, sans-serif;
+  --mono-font: Consolas, Courier, monospace;
+
+  /* Pagefind variables */
+  --pagefind-ui-scale: 1;
+  --pagefind-ui-primary: #034ad8;
+  --pagefind-ui-text: var(--light-color);
+  --pagefind-ui-background: var(--dark-color);
+  --pagefind-ui-border: var(--muted-color);
+  --pagefind-ui-tag: var(--muted-color);
+  --pagefind-ui-border-width: 2px;
+  --pagefind-ui-border-radius: 8px;
+  --pagefind-ui-image-border-radius: 8px;
+  --pagefind-ui-image-box-ratio: 3 / 2;
+  --pagefind-ui-font: var(--site-font);
 }
