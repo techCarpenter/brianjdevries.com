@@ -2,23 +2,35 @@
 title: "What I'm doing now"
 description: "What Brian DeVries is up to right now. This page is updated frequently so people can see the latest in my life."
 layout: page.njk
-lastModified: 2023-09-29
+lastModified: 2024-03-08
 showNewsletterForm: false
 ---
 
-This is where I share what I'm up to right now. I'll do my best to keep it updated!
-
-## Right now!
-
-- Working remote to Buffalo, NY as a full stack developer for [Life Storage](https://lifestorage.com)
-- I started a job as a Software Engineer for Meijer in August. I'm working remotely, but have been able to meet some of my coworkers since HQ is only 20 minutes away!
-  - C#, SQL, and .NET
-- Raising my two sons (ages 5 and 3)
-  - Expecting a third baby boy in November 😊
-- Working on leading my family better spiritually through devotions and prayer
-- We've been living in our new house for almost a year already! We have made a lot of aesthetic changes inside and outside. It's been a fun journey and we're looking forward to enjoying fall here instead of just moving in 😅
+Last updated: _{{ lastModified | dateformat("MMMM D, YYYY") }}_ <span id="edited-ago"></span>
 
 ---
 
-**Last updated: {{ lastModified | dateformat("MMMM D, YYYY") }}**  
-[Click here to learn more about _now pages_](https://nownownow.com/about)
+- I'm working as a Software Engineer for [Meijer](https://meijer.com). I work remotely, but have been able to meet many of my coworkers since HQ is only 20 minutes away!
+  - C#, SQL, and .NET
+- Raising my ~~two~~ three sons (ages 5, 3, and 4 months) with my wife.
+- Planning a garden for this coming warm season.
+- Installing a gazebo over our back deck to add shade for hot summer days.
+
+(Create your own [now page](https://nownownow.com/about))
+
+<script>
+  let daysSince = {value: (new Date() - new Date("{{lastModified.toISOString().split("T")[0]}}T00:00:00.000")) / (60 * 60 * 1000 * 24), unit: "day" };
+  let weeksSince = {value: daysSince.value / 7, unit: "week"};
+  let monthsSince = {value: weeksSince.value / (52/12), unit: "month"};
+  let yearsSince = {value: daysSince.value / 365, unit: "year"};
+  let retVal = daysSince;
+
+  if (daysSince.value >= 7) { retVal = weeksSince }
+  if (weeksSince.value >= 8) { retVal = monthsSince }
+  if (monthsSince.value >= 12) { retVal = yearsSince }
+
+  let text = retVal.unit === 'day' && retVal.value < 1 ? 'Today' : `${parseInt(retVal.value)} ${retVal.unit}${parseInt(retVal.value) > 1 ? "s" : ""} ago`;
+
+  let editedAgo = document.querySelector("#edited-ago");
+  editedAgo.textContent = `(${text})`;
+</script>
