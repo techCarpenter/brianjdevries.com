@@ -84,6 +84,10 @@ ol {
   padding-left: 1.5rem;
 }
 
+button {
+  cursor: pointer;
+}
+
 .swatch {
   max-width: min-content;
   padding: 0.5rem 1rem;
@@ -380,7 +384,33 @@ main {
 }
 
 .newsletter-form-container {
-  margin: 4rem auto;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: var(--light-color);
+  /* border: 1px solid var(--light-color); */
+}
+
+.newsletter-form-container > * {
+  color: var(--dark-color);
+  margin: 1rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.newsletter-form-container input,
+.newsletter-form-container button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.newsletter-form-container button {
+  background-color: var(--vermillion);
+  color: var(--light-color);
+  border: none;
+}
+
+.newsletter-form-container form {
+  margin: 0;
 }
 
 .visually-hidden-focusable:not(:focus):not(:focus-within) {
@@ -473,6 +503,13 @@ main {
   }
   .demo {
     margin: 2rem -0.75rem;
+  }
+  .newsletter-form-container form {
+    display: flex;
+    flex-direction: row;
+  }
+  .newsletter-form-container button {
+    max-width: max-content;
   }
 }
 
