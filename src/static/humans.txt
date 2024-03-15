@@ -10,7 +10,6 @@
 
     Owner/Developer:    Brian DeVries
     Contact:            brian [at] brianjdevries.com
-    Twitter:            @brianjdevries
     Location:           Jenison, Michigan, USA
 
 

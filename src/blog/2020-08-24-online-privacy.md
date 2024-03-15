@@ -49,7 +49,7 @@ Stay vigilant and don't be afraid to ask questions.
 
 ## Start a conversation
 
-What do you think? Start a conversation by [emailing me](mailto:brian@brianjdevries.com) or [messaging me on twitter](https://twitter.com/brianjdevries).
+What do you think? Start a conversation by [emailing me](mailto:brian@brianjdevries.com)!
 
 [1]: https://www.mozilla.org/en-US/firefox/new/ "Firefox browser"
 [2]: https://duckduckgo.com/ "DuckDuckGo search engine"
