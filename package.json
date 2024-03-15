@@ -4,7 +4,7 @@
   "description": "Brian DeVries's personal website",
   "main": ".eleventy.js",
   "scripts": {
-    "serve": "set ELEVENTY_ENV=development& npx @11ty/eleventy --serve --quiet --incremental",
+    "serve": "set ELEVENTY_ENV=development& npx @11ty/eleventy --serve --quiet",
     "test": "set ELEVENTY_ENV=development& npx @11ty/eleventy --quiet",
     "build": "set ELEVENTY_ENV=production& npx @11ty/eleventy && npm run create-search-index",
     "create-search-index": "npx pagefind --site dist",
