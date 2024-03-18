@@ -27,7 +27,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 ::selection {
   background-color: var(--vermillion);
-  color: white;
+  color: var(--light-color);
 }
 
 p {
@@ -91,7 +91,6 @@ button {
 .swatch {
   max-width: min-content;
   padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
 }
 
 .demo {
@@ -99,7 +98,6 @@ button {
   position: relative;
   padding: 0.75rem;
   border: var(--demo-border-width) solid var(--vermillion);
-  border-radius: 0.5rem;
 }
 
 .demo::after {
@@ -212,7 +210,6 @@ pre {
 
   font-size: 1rem;
   font-family: var(--mono-font);
-  border-radius: 0.25rem;
   padding: 2px 5px;
   white-space: break-spaces;
 }
@@ -330,7 +327,6 @@ th {
 
 .nav-list li a {
   color: var(--light-color);
-  border-radius: 0.25rem;
   text-decoration: none;
 }
 
@@ -382,12 +378,6 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
-
-.uncopyright-notice svg {
-  height: 1.2em;
-  width: 1.2em;
-  margin-bottom: -0.2em;
 }
 
 .newsletter-form-container {
@@ -470,7 +460,7 @@ img.kofiimg {
 }
 
 span.kofitext {
-  color: #fff;
+  color: var(--light-color);
   letter-spacing: -0.15px;
   text-wrap: none;
   vertical-align: middle;
@@ -478,28 +468,23 @@ span.kofitext {
   padding: 0;
   text-align: center;
   text-decoration: none;
-  text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
 }
 
 a.kofi-button {
-  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
   line-height: 36px;
   min-width: 150px;
   display: inline-block;
-  background-color: #29abe0;
+  background-color: var(--dark-color);
   padding: 2px 12px;
   text-align: center;
-  border-radius: 12px;
-  color: #fff;
+  color: var(--vermillion);
   cursor: pointer;
   overflow-wrap: break-word;
   vertical-align: middle;
-  border: 0 none #fff;
-  font-family: "Quicksand", Helvetica, Century Gothic, sans-serif;
+  border: 1px solid var(--vermillion);
   text-decoration: none;
   text-shadow: none;
-  font-weight: 700;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 @keyframes kofi-wiggle {
@@ -586,7 +571,7 @@ a.kofi-button {
   }
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 720px) {
   body {
     font-size: 1.2rem;
   }
@@ -617,7 +602,7 @@ a.kofi-button {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
   pre {
     margin-left: -5rem;
     margin-right: -5rem;
