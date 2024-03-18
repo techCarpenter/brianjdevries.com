@@ -1,7 +1,7 @@
 module.exports = [
 	{
 		startDate: new Date("2020-05-15"),
-		endDate: null,
+		endDate: new Date("2021-08-01"),
 		title: "Topple",
 		url: "https://topple.netlify.com",
 		repo: "https://github.com/techcarpenter/topple",
