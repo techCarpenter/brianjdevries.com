@@ -9,10 +9,19 @@ eleventyNavigation:
 showNewsletterForm: false
 ---
 
-I hope you find what you're looking for.
+Here's a list of pertinent links on my site and elsewhere.
 
-- [Contact](/contact/)
-- [Now](/now/)
-- [Work experience](/work-history/)
-- [Career](/career/)
-- [Projects](/projects/)
+## Pages
+
+- 📧 [Contact](/contact/)
+- ⌚ [Now](/now/)
+- 🏢 [Work experience](/work-history/)
+- 👨🏼‍💼 [Career](/career/)
+- 🔨 [Projects](/projects/)
+- 🙏🏼 [Supporters](/supporters/)
+- 🔎 [Search](/search/)
+
+## Others
+
+- [Ko-fi](https://ko-fi.com/brianjdevries)
+- [Github](https://github.com/techcarpenter)
