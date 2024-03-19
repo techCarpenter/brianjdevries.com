@@ -69,6 +69,13 @@ button {
   cursor: pointer;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(to right, #242424ff, var(--vermillion), #242424ff);
+  margin: 2.5rem;
+}
+
 .swatch {
   max-width: min-content;
   padding: 0.5rem 1rem;
@@ -361,7 +368,7 @@ main {
 }
 
 .newsletter-form-container {
-  margin: 2rem auto;
+  margin: 4rem auto;
   padding: 1rem;
   background-color: var(--light-color);
 }
