@@ -1,62 +1,71 @@
 {% extends "./page.njk" %}
-
 {% from "./macros/htmlhead.njk" import htmlHead with context %}
-
 {% set previousPost = collections.blog | getNextCollectionItem(page) %}
 {% set nextPost = collections.blog | getPreviousCollectionItem(page) %}
 {% set prismLink %}
 <link href="/styles/prism-okaidia.css" rel="stylesheet">
-{% endset %}
-
-{% block headBlock %}
-  {{ htmlHead(prismLink) }}
-{% endblock%}
-
-{% block contentBlock %}
-  <article>
-    <h1 class="primary-title">{{ title }}</h1>
-    <p class="article-date">{{ page.date | dateformat("MMMM D, YYYY") }}</p>
-    {{ content | safe }}
-    {% set comments %}{% include "partials/comments.njk" %}{% endset %}
-    {{ comments | safe }}
-  </article>
-  {% if previousPost or nextPost %}
-    <hr style="margin: 1.5rem auto;">
-    <div class="next-previous-post">
-      <div class="previous-post">
+  {% endset %}
+  {% block headBlock %}
+    {{ htmlHead(prismLink) }}
+  {% endblock %}
+  {% block contentBlock %}
+    <article>
+      <h1 class="primary-title">{{ title }}</h1>
+      <p class="article-date">{{ page.date | dateformat("MMMM D, YYYY") }}</p>
+      {{ content | safe }}
+      {% set comments %}{% include "partials/comments.njk" %}{% endset %}
+      {{ comments | safe }}
+    </article>
+    {% if previousPost or nextPost %}
+      <div class="next-previous-post">
         {% if previousPost %}
-          <strong>Previous Post:</strong><br>
-          <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+          <a class="previous-post" href="{{ previousPost.url }}">
+            <strong>← Previous</strong>
+            <br>
+              {{ previousPost.data.title }}
+            </a>
+          {% endif %}
+          {% if nextPost %}
+            <a class="next-post" href="{{ nextPost.url }}">
+              <strong>Next →</strong>
+              <br>
+                {{ nextPost.data.title }}
+              </a>
+            {% endif %}
+          </div>
+          <style>
+            .next-previous-post {
+              margin: 5rem auto;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 0.5rem;
+            }
+            .next-post {
+              text-align: right;
+            }
+            .previous-post {
+              text-align: left;
+            }
+            .next-post,
+            .previous-post {
+              border: 2px solid var(--vermillion);
+              display: block;
+              padding: 0.5rem;
+              text-decoration: none;
+            }
+            .next-post:hover,
+            .previous-post:hover {
+              background-color: #444;
+            }
+            .next-post strong,
+            .previous-post strong {
+              color: var(--light-color);
+            }
+            .article-date {
+              font-style: italic;
+              margin-top: 0;
+              color: var(--muted-color);
+            }
+          </style>
         {% endif %}
-      </div>
-      <div class="next-post">
-        {% if nextPost %}
-          <strong>Next Post:</strong><br>
-          <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
-        {% endif %}
-      </div>
-    </div>
-    <style>
-      .next-previous-post {
-        display: flex;
-        flex-direction: row;
-        justify-items: space-between;
-      }
-      .next-post {
-        text-align: right;
-      }
-      .previous-post {
-        text-align: left;
-      }
-      .next-post,
-      .previous-post {
-        min-width: 50%;
-      }
-      .article-date {
-        font-style: italic;
-        margin-top: 0;
-        color: var(--muted-color);
-      }
-    </style>
-  {% endif %}
-{% endblock %}
+      {% endblock %}
