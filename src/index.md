@@ -25,17 +25,5 @@ I also write occasionally on [my blog](/blog/).
 
 ## Latest posts
 
-<ol class="posts">
-{% set count = 0 %}
-{% for blog in collections.blog %}
-{% if count < 3 %}
-<li class="post">
-<div><a class="post-link" href="{{blog.url}}">{{blog.data.title}}</a></div>
-<div class="date">
-  <time datetime="{{ blog.date | dateformat('YYYY-MM-DD') }}">{{ blog.date | dateformat("MMM DD, YYYY") }}</time>
-</div>
-</li>
-{% set count = count + 1 %}
-{% endif %}
-{% endfor %}
-</ol>
+{% from "./_includes/partials/latest-posts.njk" import latestPosts with context%}
+{{ latestPosts(3) }}
