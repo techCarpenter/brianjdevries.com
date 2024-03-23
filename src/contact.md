@@ -1,5 +1,5 @@
 ---
-title: "Drop me a line"
+title: "Contact Me"
 description: "Contact Brian DeVries here. Get help with a software question, work together on your next website, or just say hi!"
 layout: "page.njk"
 showNewsletterForm: false
@@ -7,7 +7,7 @@ showNewsletterForm: false
 
 ## Howdy!
 
-You're in the right place to reach me
+Consider [sending me an email][email] to say hi. I removed all analytics and tracking from this site to respect your privacy and reduce javascript, so the only way I know you stopped by is if you message me 😛
 
 |             |     |                                       |
 | :---------- | :-: | :------------------------------------ |

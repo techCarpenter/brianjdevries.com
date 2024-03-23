@@ -2,7 +2,7 @@
 title: "What I'm doing now"
 description: "What Brian DeVries is up to right now. This page is updated frequently so people can see the latest in my life."
 layout: page.njk
-lastModified: 2024-03-08
+lastModified: 2024-03-22
 showNewsletterForm: false
 ---
 
@@ -12,9 +12,11 @@ Last updated: _{{ lastModified | dateformat("MMMM D, YYYY") }}_ <span id="edited
 
 - I'm working as a Software Engineer for [Meijer](https://meijer.com). I work remotely, but have been able to meet many of my coworkers since HQ is only 20 minutes away!
   - C#, SQL, and .NET
-- Raising my ~~two~~ three sons (ages 5, 3, and 4 months) with my wife.
+- Raising my three sons (ages 5, 3, and 4 months) with my wife.
 - Planning a garden for this coming warm season.
 - Installing a gazebo over our back deck to add shade for hot summer days.
+- I've been learning to speak Dutch and have a streak of 298 days 🔥
+  - > Hoi, hoe gaat het? Ik woon in Michigan en spreek een beetje Nederlands!
 
 (Create your own [now page](https://nownownow.com/about))
 

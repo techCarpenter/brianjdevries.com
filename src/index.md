@@ -1,5 +1,5 @@
 ---
-title: "Start Here"
+title: "Welcome!"
 description: "Brian DeVries's personal website. He writes occasionally on his blog and frequently updates his site with new information."
 layout: page.njk
 eleventyNavigation:
@@ -8,20 +8,17 @@ eleventyNavigation:
 showNewsletterForm: false
 ---
 
-<img class="profile-pic bounce-in"
-  alt="Brian's headshot photo"
-  title="That's me!"
-  src="/images/goofy-profile-pic.png"
-  height="194"
-  width="194" />
+My name is Brian.
 
-Hi there! My name's Brian. I've tried to categorize myself many times, but my interests cover a wide range: woodworking, sewing, programming, backpacking, and many more. The best way I can think to categorize myself is as a do-it-yourself guy who loves learning new things.
+I have tried to categorize myself many times, but my interests cover a wide range: woodworking, sewing, programming, backpacking, and many more. The best way I can think to categorize myself is as a do-it-yourself guy who loves learning new things.
 
-Having said that, I am a professional software engineer. My career transitioned in 2018 and I haven't looked back.
+Having said that, I am a professional software engineer. My career transitioned in 2018 and I continue to write code to this day.
 
-To read more about who I am, check out [my about page](/about/).
+To learn more about me, check out [my about page](/about/). I also [write posts](/blog/) here on the site.
 
-I also write occasionally on [my blog](/blog/).
+If you'd like to get notified of new posts, you can either subscribe to my [email newsletter](https://buttondown.email/briandevries/) or follow my blog's [feed](/feed.xml).
+
+---
 
 ## Latest posts
 

@@ -1,5 +1,5 @@
 ---
-title: "About me"
+title: "Hey! I'm Brian."
 description: "I'm Brian DeVries, a guy living in West Michigan. You'll find me being resourceful, building things, and spending time with my family!"
 layout: "page.njk"
 eleventyNavigation:
@@ -15,13 +15,9 @@ showNewsletterForm: false
   height="194"
   width="194" />
 
-Well thanks for stopping by! The guy above is me.
+Well thanks for stopping by! My name is Brian and I'm a Christian resting in Jesus Christ for my salvation.
 
-My name is Brian and I'm a Christian resting in Jesus Christ for my salvation.
-
-I made this site to share things I know and meet other awesome people.
-
-If you're looking for information about my professional life, check out my [career page](/career/).
+I made this site to share things I know and meet other awesome people like you! If you're looking for information about my professional life, check out my [career page](/career/).
 
 ---
 
@@ -37,4 +33,4 @@ From there, I went to college in Grand Rapids, MI for a degree in electrical eng
 
 Ultimately, my love of technology and learning led me to the land of programming, which is now what I do full-time.
 
-All of this is to say, my whole life has been learning new things. There's never been one thing that stood out more than the others. I continue to learn new things and hope to inspire others to learn new things too.
+All of this is to say, my whole life has been learning new things. I continue to learn new things and hope to inspire others to continue learning as well.

@@ -96,7 +96,7 @@ hr {
   border: none;
   height: 1px;
   background-image: linear-gradient(to right, #242424ff, var(--vermillion), #242424ff);
-  margin: 2.5rem;
+  margin: 2.5rem 0;
 }
 
 .swatch {
