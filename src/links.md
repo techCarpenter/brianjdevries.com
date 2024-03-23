@@ -5,7 +5,7 @@ layout: page.njk
 eleventyNavigation:
   key: "More..."
   title: "More Links"
-  order: "500"
+  order: 500
 showNewsletterForm: false
 ---
 

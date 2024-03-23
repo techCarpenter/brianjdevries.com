@@ -4,7 +4,7 @@ description: "Brian DeVries's personal website. He writes occasionally on his bl
 layout: page.njk
 eleventyNavigation:
   key: Home
-  order: "100"
+  order: 100
 showNewsletterForm: false
 ---
 
