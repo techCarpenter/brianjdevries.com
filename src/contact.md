@@ -7,7 +7,7 @@ showNewsletterForm: false
 
 ## Howdy!
 
-Consider [sending me an email][email] to say hi. I removed all analytics and tracking from this site to respect your privacy and reduce javascript, so the only way I know you stopped by is if you message me 😛
+Consider [sending me an email][email] to say hi. I [removed all analytics](/blog/removed-web-analytics/) and tracking from this site to respect your privacy and reduce javascript, so the only way I know you stopped by is if you message me 😛
 
 |             |     |                                       |
 | :---------- | :-: | :------------------------------------ |
