@@ -15,13 +15,11 @@ showNewsletterForm: false
   height="194"
   width="194" />
 
-Well thanks for stopping by! My name is Brian and I'm a Christian resting in Jesus Christ for my salvation.
+Thanks for stopping by. Read on to find out how exciting or boring I really am.
 
-I made this site to share things I know and meet other awesome people like you! If you're looking for information about my professional life, check out my [career page](/career/).
+If you're looking for information about my professional life, check out my [career page](/career/).
 
----
-
-Let me tell you a bit about myself.
+## A bit about me
 
 Growing up, I was able to learn a lot about fixing, building, and making things from my mom, dad, uncles, and grandpas.
 
@@ -33,4 +31,4 @@ From there, I went to college in Grand Rapids, MI for a degree in electrical eng
 
 Ultimately, my love of technology and learning led me to the land of programming, which is now what I do full-time.
 
-All of this is to say, my whole life has been learning new things. I continue to learn new things and hope to inspire others to continue learning as well.
+My whole life has been learning new things. I continue to learn new things and hope to inspire others to continue learning as well. But in all things, I strive to honor Jesus and praise Him for the gifts he has given me to share with others.
