@@ -6,7 +6,7 @@ eleventyNavigation:
   key: "Now"
   title: "What Brian is doing now"
   order: 400
-lastModified: 2024-03-22
+lastModified: 2024-04-01
 showNewsletterForm: false
 ---
 
@@ -14,13 +14,13 @@ Last updated: _{{ lastModified | dateformat("MMMM D, YYYY") }}_ <span id="edited
 
 ---
 
-- I'm working as a Software Engineer for [Meijer](https://meijer.com). I work remotely, but have been able to meet many of my coworkers since HQ is only 20 minutes away!
+- I'm working as a Software Engineer for [Meijer](https://meijer.com). I work remotely, but have been able to meet many of my coworkers since HQ is only 20 minutes away.
   - C#, SQL, and .NET
 - Raising my three sons (ages 5, 3, and 4 months) with my wife.
 - Planning a garden for this coming warm season.
 - Installing a gazebo over our back deck to add shade for hot summer days.
-- I've been learning to speak Dutch and have a streak of 298 days 🔥
-  - > Hoi, hoe gaat het? Ik woon in Michigan en spreek een beetje Nederlands!
+- I've been learning to speak Dutch and have a streak of 307 days 🔥
+  - _Hoi, hoe gaat het? Ik woon in Michigan en spreek een beetje Nederlands._
 
 (Create your own [now page](https://nownownow.com/about))
 
