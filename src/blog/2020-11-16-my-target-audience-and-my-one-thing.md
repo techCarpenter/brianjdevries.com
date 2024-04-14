@@ -2,6 +2,7 @@
 title: My target audience and my one thing
 author: Brian DeVries
 description: "I've spent a lot of time thinking about who my target audience is. There still isn't a clear winner, but I'll work it out as I go."
+date: 2020-11-16
 tags: [thoughts, update]
 ---
 

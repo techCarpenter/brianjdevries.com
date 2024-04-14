@@ -2,6 +2,7 @@
 title: "December Update (2022)"
 author: "Brian DeVries"
 description: "We moved into our house mid-October this year and instantly had a list of projects. This is what we've accomplished so far, along with some other life updates."
+date: 2022-12-08
 tags: [updates]
 ---
 

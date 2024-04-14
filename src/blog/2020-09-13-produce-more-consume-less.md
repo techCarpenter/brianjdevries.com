@@ -2,6 +2,7 @@
 title: Produce More, Consume Less
 author: Brian DeVries
 description: "Long-term thinking yields greater results. But short-term results feel more urgent. A classic example of the Eisenhower matrix."
+date: 2020-09-13
 tags: [thoughts]
 ---
 
