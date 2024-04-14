@@ -1,0 +1,32 @@
+backend:
+  name: github
+  repo: techcarpenter/brianjdevries.com
+  branch: main
+  squash_merges: true
+publish_mode: editorial_workflow
+logo_url: https://brianjdevries.com/android-chrome-512x512.png
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads"
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "src/blog" # The path to the folder where the documents are stored
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - {
+          label: "Author",
+          name: "author",
+          widget: "hidden",
+          default: "Brian DeVries"
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          date_format: "YYYY-MM-DD"
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
