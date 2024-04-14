@@ -14,4 +14,4 @@ It doesn't have to be polished or meet a word count minimum. I have been trying 
 
 Most people won't care about what you have to say, _and that's ok_. That doesn't stop people from posting on twitter or facebook or instagram. But you'll likely have deeper, more meaningful connections with people through an article on your site than a post on social media. I'd rather receive a thoughtful email than generic likes and comments anyway. You might too.
 
-If you want help getting started, I'm only [an email away](mailto:brian@brianjdevries).
+If you want help getting started, I'm only [an email away](mailto:brian@brianjdevries.com).
