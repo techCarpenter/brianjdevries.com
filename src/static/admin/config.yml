@@ -7,6 +7,10 @@ publish_mode: editorial_workflow
 logo_url: https://brianjdevries.com/android-chrome-512x512.png
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads"
+media_library:
+  name: uploadcare
+  config:
+    publicKey: f4c78ae90b2408207f60
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI

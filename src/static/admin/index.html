@@ -12,6 +12,12 @@
 <body>
   <!-- Include the script that builds the page and powers Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.registerPreviewStyle("/styles/variables.css");
+    CMS.registerPreviewStyle("/styles/reset.css");
+    CMS.registerPreviewStyle("/styles/base.css");
+    CMS.registerPreviewStyle(".frame-content {padding: 2em;}", { raw: true })
+  </script>
 </body>
 
 </html>
