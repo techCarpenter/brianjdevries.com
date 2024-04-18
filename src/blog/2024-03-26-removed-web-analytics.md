@@ -2,7 +2,7 @@
 title: "Removed web analytics"
 author: "Brian DeVries"
 description: "Tracking people who visit my site felt wrong and wasn't very helpful so I got rid of it."
-date: 2024-03-26
+date: 2024-03-26T00:00:00.000Z
 tags: []
 ---
 

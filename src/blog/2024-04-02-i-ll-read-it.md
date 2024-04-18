@@ -2,7 +2,7 @@
 title: "I'll read it"
 author: "Brian DeVries"
 description: ""
-date: 2024-04-03
+date: 2024-04-02T00:00:00.000Z
 tags: []
 ---
 

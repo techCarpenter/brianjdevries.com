@@ -2,7 +2,7 @@
 title: "10 ways to consume less content"
 author: "Brian DeVries"
 description: "On average, I need to consume less information so I can produce more. I offer 10 tactics to help avoid distractions."
-date: 2021-06-07
+date: 2021-06-07T00:00:00.000Z
 tags: ""
 ---
 

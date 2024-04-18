@@ -11,7 +11,9 @@
   {% block contentBlock %}
     <article>
       <h1 class="primary-title">{{ title }}</h1>
-      <p class="article-date">{{ page.date | dateformat("MMMM D, YYYY") }}</p>
+      <p class="article-date">
+        <time datetime="{{ page.date | dateformat("YYYY-MM-DDTHH:mm:ss.SSS[Z]") }}">{{ page.date | dateformat("MMMM D, YYYY") }}</time>
+      </p>
       {{ content | safe }}
       {% set comments %}{% include "partials/comments.njk" %}{% endset %}
       {{ comments | safe }}
