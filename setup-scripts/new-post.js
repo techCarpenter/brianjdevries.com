@@ -6,6 +6,7 @@ const dayjs = require("dayjs");
 
 const dateFormat = dayjs().format("YYYY-MM-DD");
 const postTitle = argv[2];
+const now = new Date().toISOString();
 const fileName = slugify(`${dateFormat}-${postTitle}`, {
   lower: true
 });
@@ -16,6 +17,7 @@ title: "${postTitle}"
 author: "Brian DeVries"
 description: ""
 tags: []
+date: ${now}
 draft: true
 ---
 `;
