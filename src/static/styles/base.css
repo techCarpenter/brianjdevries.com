@@ -397,11 +397,11 @@ main {
 .newsletter-form-container {
   margin: 4rem auto;
   padding: 1rem;
-  background-color: var(--light-color);
+  background-color: var(--dark-color);
+  border: var(--demo-border-width) solid var(--light-color);
 }
 
 .newsletter-form-container>* {
-  color: var(--dark-color);
   margin: 1rem;
   line-height: 1.2;
   text-align: center;
