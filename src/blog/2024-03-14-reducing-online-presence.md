@@ -2,7 +2,7 @@
 title: "Reducing my online presence"
 author: "Brian DeVries"
 description: "Social media started as a fun experiment. Now it's turned into a trap for your attention. I decided to start downsizing its affect in my life."
-date: 2024-03-14
+date: 2024-03-14T00:00:00.000Z
 tags: []
 ---
 

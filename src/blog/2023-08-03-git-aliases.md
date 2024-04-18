@@ -3,7 +3,7 @@ title: "Creating Git Aliases"
 author: "Brian DeVries"
 description: "The syntax to create a git alias from the command line."
 tags: []
-date: 2023-08-03
+date: 2023-08-03T00:00:00.000Z
 draft: true
 ---
 
