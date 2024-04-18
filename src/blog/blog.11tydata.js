@@ -9,7 +9,12 @@ module.exports = {
       return excludeFromProdBuild(data) ? true : data.eleventyExcludeFromCollections;
     },
     permalink: data => {
-      return excludeFromProdBuild(data) ? false : `/blog/${data.page.fileSlug}/`;
+      let blogDate = data.page.date,
+        year = blogDate.getUTCFullYear(),
+        month = ('0' + (blogDate.getUTCMonth() + 1)).slice(-2),
+        day = ('0' + (blogDate.getUTCDate())).slice(-2);
+
+      return excludeFromProdBuild(data) ? false : `/blog/${year}/${month}/${day}/${data.page.fileSlug}/`;
     }
   },
   layout: "article.njk",
