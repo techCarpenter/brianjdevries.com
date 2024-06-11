@@ -21,11 +21,13 @@ After that, my second order came from a friend who wanted a custom design. If yo
 Beyond printing stickers in bulk for customers, I have been dabbling with some designs of my own. I haven't printed any of my own designs yet, but let me know if you'd be interested in any of them in sticker form!
 
 <div style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-around;">
+
   <img style="margin: 1rem auto;" alt="Barn quilt with white cross in the middle of yellow star" src="https://assets.vries.land/crossBarnQuilt.png" width=300>
 
   <img style="margin: 1rem auto;" alt="Barn quilt with blue pinwheel in center" src="https://assets.vries.land/pinwheelBarnQuilt.png" width=300>
 
   <img style="margin: 1rem auto;" alt="Barn quilt image of woven red and blue" src="https://assets.vries.land/wovenBarnQuilt.jpeg" width=300>
+
 </div>
 
 I'm just getting started, but [shoot me an email](mailto:devriesdecals@gmail.com) if you want custom stickers printed for a business, an event, or just for fun!
