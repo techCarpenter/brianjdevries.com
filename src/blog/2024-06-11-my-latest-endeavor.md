@@ -25,3 +25,5 @@ Beyond printing stickers in bulk for customers, I have been dabbling with some d
   <img alt="Barn quilt with blue pinwheel in center" src="https://assets.vries.land/pinwheelBarnQuilt.png" width=300>
 
   <img alt="Barn quilt image of woven red and blue" src="https://assets.vries.land/wovenBarnQuilt.jpeg" width=300>
+
+I'm just getting started, but [shoot me an email](mailto:devriesdecals@gmail.com) if you want custom stickers printed for a business, an event, or just for fun!
