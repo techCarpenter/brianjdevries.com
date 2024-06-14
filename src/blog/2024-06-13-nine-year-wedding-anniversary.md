@@ -18,4 +18,4 @@ I'm thankful for you. I look forward to making more memories together.
 
 Love, Brian
 
-<img alt="" src="https://assets.vries.land/nineYearAnniversay.jpg" width="500" />
+<img alt="" src="https://assets.vries.land/nineYearAnniversay.jpg" width="400" />
