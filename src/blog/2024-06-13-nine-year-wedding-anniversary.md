@@ -12,6 +12,10 @@ We've laughed together, cried together, prayed together, and so much more. Thank
 
 When we got married half way into college, I don't think either of us could have predicted just how much God would bless us.
 
-Our three sons definitely test our patience at times, but they've also brought immeasurable joy into our lives. 
+Our three sons definitely test our patience at times, but they've also brought immeasurable joy into our lives.
+
+I'm thankful for you. I look forward to making more memories together.
+
+Love, Brian
 
 <img alt="" src="https://assets.vries.land/nineYearAnniversay.jpg" width="500" />
