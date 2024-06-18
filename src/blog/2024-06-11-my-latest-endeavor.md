@@ -1,10 +1,10 @@
 ---
 author: Brian DeVries
 title: My latest endeavor
-description: I'm always trying new things, but sometimes it's nice to make money
+description: I'm always trying new things and sometimes it's nice to make money
   from my efforts. I'm offering design and printing of custom stickers to
   promote your business/event or just for fun.
-date: 2024-06-11T15:35:00.000Z
+date: 2024-06-18T12:22:00.000Z
 ---
 For the last 6 years, I've had a bit of an entrepreneurial spirit. I like trying new things, and it's fun to make money from my efforts as well. Over the years, I've made money from woodworking, programming, graphic design, and more. Now I've found another fun avenue to explore: _custom stickers_.
 
