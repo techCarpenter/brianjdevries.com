@@ -6,6 +6,10 @@ description: I'm always trying new things and sometimes it's nice to make money
   promote your business/event or just for fun.
 date: 2024-06-18T12:22:00.000Z
 ---
+_Update 7/1/24_: I launched a website for my sticker business, [DeVries Decals ↗](https://devriesdecals.com).
+
+---
+
 For the last 6 years, I've had a bit of an entrepreneurial spirit. I like trying new things, and it's fun to make money from my efforts as well. Over the years, I've made money from woodworking, programming, graphic design, and more. Now I've found another fun avenue to explore: _custom stickers_.
 
 Everyone likes stickers, right? They're fun, easy to store and distribute, and economical. Stickers are a good way to share a message or promote a brand and customers love them. I've been working to help small businesses promote themselves with their own custom stickers.
