@@ -11,7 +11,7 @@ showNewsletterForm: false
 <img class="profile-pic bounce-in"
   alt="Brian's face"
   title="That's me!"
-  src="/images/goofy-profile-pic.png"
+  src="/images/brian-and-hannah.jpg"
   height="194"
   width="194" />
 

@@ -8,6 +8,13 @@ eleventyNavigation:
 showNewsletterForm: false
 ---
 
+<img class="profile-pic bounce-in"
+  alt="Brian's face"
+  title="That's me!"
+  src="/images/brian-and-hannah.jpg"
+  height="194"
+  width="194" />
+
 Hi, my name is Brian.
 
 I've tried to categorize myself many times, but my interests cover a wide range: woodworking, sewing, programming, backpacking, and many more. The best way I can think to categorize myself is as a do-it-yourself guy who loves learning new things.
