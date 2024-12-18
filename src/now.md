@@ -6,25 +6,26 @@ eleventyNavigation:
   key: "Now"
   title: "What Brian is doing now"
   order: 400
-lastModified: 2024-04-01
+lastModified: 2024-12-18
 showNewsletterForm: false
 ---
 
 Last updated: _{{ lastModified | dateformat("MMMM D, YYYY") }}_ <span id="edited-ago"></span>
 
+Create your own [now page](https://nownownow.com/about), or [reach out](/contact/) if you want help getting your own site up and running!
+
 ---
 
 - I'm working as a Software Engineer for [Meijer](https://meijer.com). I work remotely, but have been able to meet many of my coworkers since HQ is only 20 minutes away.
   - C#, SQL, and .NET
-- Raising my three sons (ages 5, 3, and 4 months) with my wife.
-- Planning a garden for this coming warm season.
-- Installing a gazebo over our back deck to add shade for hot summer days.
-- I've been learning to speak Dutch and have a streak of 307 days 🔥
-  - _Hoi, hoe gaat het? Ik woon in Michigan en spreek een beetje Nederlands._
-
-(Create your own [now page](https://nownownow.com/about))
+- Building websites for clients at [techcarpenter.org](https://techcarpenter.org/)
+- Raising my three sons (ages 6, 4, and 1) with my wife.
+- Running a self-hosted server on my local network.
+- Doing lots of puzzles, melting bead patterns, wrestling, and reading books with my boys.
+- My wife and I just started playing a game together called _It Takes Two_, so far we're really enjoying it on chill evenings!
 
 <script>
+  //Progressive Enhancement
   let daysSince = {value: (new Date() - new Date("{{lastModified.toISOString().split("T")[0]}}T00:00:00.000")) / (60 * 60 * 1000 * 24), unit: "day" };
   let weeksSince = {value: daysSince.value / 7, unit: "week"};
   let monthsSince = {value: weeksSince.value / (52/12), unit: "month"};
