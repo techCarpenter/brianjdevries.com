@@ -17,6 +17,7 @@ collections:
     folder: "src/blog" # The path to the folder where the documents are stored
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    preview_path: blog/{{year}}/{{month}}/{{day}}/{{slug}}
     fields:
       - {
           label: "Author",
@@ -45,5 +46,4 @@ collections:
           name: "body",
           widget: "markdown",
           required: true,
-          pattern: [".{80,}", "Write at least 80 characters..."]
         }
