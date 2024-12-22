@@ -57,6 +57,7 @@ collections:
       - {
           label: "Date",
           name: "date",
+          widget: "datetime",
           default: "{{now}}",
           picker_utc: true,
           required: true
