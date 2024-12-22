@@ -37,7 +37,27 @@ collections:
           label: "Publish Date",
           name: "date",
           widget: "datetime",
-          default: "",
+          default: "{{now}}",
+          picker_utc: true,
+          required: true
+        }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          required: true,
+        }
+  - name: "notes" # Used in routes
+    label: "Notes" # Used in the UI
+    folder: "src/notes" # The path to the folder where the documents are stored
+    create: true
+    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}" # Filename template
+    preview_path: notes
+    fields:
+      - {
+          label: "Date",
+          name: "date",
+          default: "{{now}}",
           picker_utc: true,
           required: true
         }
