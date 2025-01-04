@@ -9,7 +9,7 @@ module.exports = {
         minutes = date.getUTCMinutes().toString().padStart(2, "0"),
         seconds = date.getUTCSeconds().toString().padStart(2, "0");
 
-      return `/notes/${year}${month}${day}${hours}${minutes}${seconds}`;
+      return `/notes/${year}${month}${day}${hours}${minutes}${seconds}/index.html`;
     }
   },
   title: "Notes",
