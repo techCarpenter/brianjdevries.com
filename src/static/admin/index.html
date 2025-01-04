@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -18,7 +18,17 @@
     CMS.registerPreviewStyle("/styles/base.css");
     CMS.registerPreviewStyle(".frame-content {padding: 2em;}", { raw: true })
   </script>
-  <link href="responsive.css" rel="stylesheet">
+  <script>
+    window.onload = function() {
+      let head = document.querySelector("head");
+      let link = new HTMLLinkElement();
+      link.href = "responsive.css";
+      link.rel = "stylesheet";
+
+      head.appendChild(link);
+    }
+    </script>
+    <!--<link href="responsive.css" rel="stylesheet">-->
 </body>
 
 </html>

@@ -12,21 +12,21 @@ Everyone likes stickers, right? They're fun, easy to store and distribute, and e
 
 Whether customers already have a design or need one, I have been able to help! Here is the sticker for my first customer. He already had a logo so I took care of the printing for him.
 
-<img alt="Kuiper Tree Care sticker" src="https://assets.vries.land/KuiperTreeCareSticker.jpg" width=300>
+<img alt="Kuiper Tree Care sticker" src="https://assets.vries.land/KuiperTreeCareSticker.jpg" width="300">
 
 After that, my second order came from a friend who wanted a custom design. For this design, if you know, you know 😛
 
-<img alt="Save the Crotch Vents sticker" src="https://assets.vries.land/SaveCrotchVentsSticker.jpg" width=300>
+<img alt="Save the Crotch Vents sticker" src="https://assets.vries.land/SaveCrotchVentsSticker.jpg" width="300">
 
 Beyond printing stickers in bulk for customers, I have been dabbling with some designs of my own. I haven't printed any of my own designs yet, but I'm planning to once I decide on a worthy design. I think it'd be cool to have a custom sticker for this website.
 
 <div style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-around;">
 
-  <img style="margin: 1rem auto;" alt="Barn quilt with white cross in the middle of yellow star" src="https://assets.vries.land/crossBarnQuilt.png" width=300>
+  <img style="margin: 1rem auto;" alt="Barn quilt with white cross in the middle of yellow star" src="https://assets.vries.land/crossBarnQuilt.png" width="300">
 
-  <img style="margin: 1rem auto;" alt="Barn quilt with blue pinwheel in center" src="https://assets.vries.land/pinwheelBarnQuilt.png" width=300>
+  <img style="margin: 1rem auto;" alt="Barn quilt with blue pinwheel in center" src="https://assets.vries.land/pinwheelBarnQuilt.png" width="300">
 
-  <img style="margin: 1rem auto;" alt="Barn quilt image of woven red and blue" src="https://assets.vries.land/wovenBarnQuilt.jpeg" width=300>
+  <img style="margin: 1rem auto;" alt="Barn quilt image of woven red and blue" src="https://assets.vries.land/wovenBarnQuilt.jpeg" width="300">
 
 </div>
 
