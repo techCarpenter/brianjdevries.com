@@ -43,9 +43,15 @@ module.exports = function (config) {
 	function getPosts(collectionApi) {
 		return collectionApi.getFilteredByGlob("./src/blog/*.md").reverse();
 	}
+	function getNotes(collectionApi) {
+		return collectionApi.getFilteredByGlob("./src/notes/*.md").reverse();
+	}
 
 	config.addCollection("blog", function (collection) {
 		return getPosts(collection);
+	});
+	config.addCollection("notes", function (collection) {
+		return getNotes(collection);
 	});
 
 	config.addFilter("dateformat", require("./lib/filters/dateformat"));
@@ -54,6 +60,8 @@ module.exports = function (config) {
 	config.addFilter("splitlines", require("./lib/filters/splitLines"));
 
 	config.addPassthroughCopy({ "src/static": "/" });
+  config.addPassthroughCopy({ "node_modules/dayjs/dayjs.min.js": "/scripts/dayjs.min.js" })
+  config.addPassthroughCopy({ "node_modules/dayjs/plugin/utc.js": "/scripts/dayjs-utc.js" })
 
 	config.on("eleventy.after", require("./socialPreviewImages"));
 

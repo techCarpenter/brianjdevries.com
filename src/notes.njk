@@ -1,0 +1,23 @@
+---
+title: "Notes"
+description: "Brian DeVries's microblog, where he writes primarily about web development and technology. His articles include tutorials and observations."
+layout: "page.njk"
+eleventyNavigation:
+  key: "Notes"
+  order: 350
+showNewsletterForm: false
+---
+
+{% from "./_includes/macros/note.njk" import noteBlock with context %}
+{% for note in collections.notes %}
+  {{ noteBlock(note.content, note.url, note.date) }}
+{% endfor %}
+<script src="/scripts/dayjs.min.js"></script>
+<script src="/scripts/dayjs-utc.js"></script>
+<script>
+  window.onload = function () {
+    dayjs.extend(window.dayjs_plugin_utc);
+    let dates = document.querySelectorAll(".note__time");
+    dates.forEach(date => date.innerText = dayjs(new Date(date.getAttribute("datetime"))).format("HH:mm ddd MMM DD YYYY"));
+  }
+</script>

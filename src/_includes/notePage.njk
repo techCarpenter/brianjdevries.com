@@ -1,0 +1,13 @@
+{% extends "./page.njk" %}
+{% from "./macros/note.njk" import noteBlock with context %}
+{% block contentBlock %}
+  <h1 class="primary-title">{{ title }}</h1>
+  {{ noteBlock(content, url, date) }}
+  <script src="/scripts/dayjs.min.js"></script>
+  <script src="/scripts/dayjs-utc.js"></script>
+  <script>
+    dayjs.extend(window.dayjs_plugin_utc);
+    let title = document.querySelector(".note__time");
+    title.innerText = dayjs(new Date(title.dateTime)).format("HH:mm ddd MMM DD YYYY");
+  </script>
+{% endblock %}

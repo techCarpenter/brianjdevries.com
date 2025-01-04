@@ -1,0 +1,14 @@
+{% macro noteBlock(content, url, date) %}
+<article class="note">
+    <div class="note__content">
+      {{ content | safe }}
+    </div>
+    <footer>
+      <a href="{{ url }}">
+        <time class="note__time" datetime="{{ date | dateformat("YYYY-MM-DDTHH:mm:ss.SSSZ") }}">
+          {{ date | dateformat("HH:mm ddd MMM DD YYYY Z") }}
+        </time>
+      </a>
+    </footer>
+  </article>
+{% endmacro %}

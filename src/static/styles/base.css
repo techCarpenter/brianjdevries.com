@@ -108,6 +108,22 @@ hr {
   padding: 0.5rem 1rem;
 }
 
+.note {
+  border: 1px solid var(--light-color);
+  margin: 1rem 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.note__content:last-child {
+  margin-bottom: 0;
+}
+
+.note__time {
+  font-style: italic;
+}
+
 .demo {
   margin: 2rem 0;
   position: relative;
