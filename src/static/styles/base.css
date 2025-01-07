@@ -116,6 +116,21 @@ hr {
   flex-direction: column-reverse;
 }
 
+.note__reply {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.note__reply a {
+  display: flex;
+  line-height: 1rem;
+  align-items: center;
+}
+
+.note__reply svg {
+  margin-left: 0.5rem;
+}
+
 .note__content:last-child {
   margin-bottom: 0;
 }
