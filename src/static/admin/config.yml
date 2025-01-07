@@ -48,6 +48,7 @@ collections:
           required: true,
         }
   - name: "notes" # Used in routes
+    identifier_field: "body"
     label: "Notes" # Used in the UI
     folder: "src/notes" # The path to the folder where the documents are stored
     create: true
