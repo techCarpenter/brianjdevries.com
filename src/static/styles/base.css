@@ -8,7 +8,7 @@ body {
 
 ::selection {
   background-color: var(--vermillion);
-  color: var(--light-color);
+  color: var(--dark-color);
 }
 
 p {
@@ -446,7 +446,7 @@ main {
 
 .newsletter-form-container button {
   background-color: var(--vermillion);
-  color: var(--light-color);
+  color: var(--dark-color);
   border: none;
 }
 
