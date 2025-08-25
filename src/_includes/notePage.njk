@@ -1,7 +1,8 @@
 {% extends "./page.njk" %}
 {% from "./macros/note.njk" import noteBlock with context %}
 {% block contentBlock %}
-  <h1 class="primary-title">{{ title }}</h1>
+  <h1 class="primary-title">Note</h1>
+  <a class="button" href="/notes/">⬅ All Notes</a>
   {{ noteBlock(content, url, date) }}
   <script src="/scripts/dayjs.min.js"></script>
   <script src="/scripts/dayjs-utc.js"></script>

@@ -52,7 +52,7 @@ collections:
     label: "Notes" # Used in the UI
     folder: "src/notes" # The path to the folder where the documents are stored
     create: true
-    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}.md" # Filename template
+    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}" # Filename template
     preview_path: notes
     fields:
       - {

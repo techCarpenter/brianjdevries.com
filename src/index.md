@@ -31,3 +31,18 @@ If you'd like to get notified of new posts, you can either subscribe to my [emai
 
 {% from "./_includes/partials/latest-posts.njk" import latestPosts with context%}
 {{ latestPosts(3) }}
+
+## Latest notes
+
+{% from "./_includes/partials/latest-notes.njk" import latestNotes with context%}
+{{ latestNotes(3) }}
+
+<script src="/scripts/dayjs.min.js"></script>
+<script src="/scripts/dayjs-utc.js"></script>
+<script>
+  window.onload = function () {
+    dayjs.extend(window.dayjs_plugin_utc);
+    let dates = document.querySelectorAll(".note__time");
+    dates.forEach(date => date.innerText = dayjs(new Date(date.getAttribute("datetime"))).format("HH:mm ddd MMM DD YYYY"));
+  }
+</script>

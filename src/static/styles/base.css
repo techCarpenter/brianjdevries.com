@@ -239,6 +239,27 @@ a:hover {
   text-decoration: none;
 }
 
+a.button {
+  line-height: 36px;
+  min-width: 150px;
+  display: inline-block;
+  background-color: var(--dark-color);
+  padding: 2px 4px;
+  text-align: center;
+  color: var(--vermillion);
+  cursor: pointer;
+  overflow-wrap: break-word;
+  vertical-align: middle;
+  border: 2px solid var(--vermillion);
+  text-decoration: none;
+  text-shadow: none;
+  /* font-size: 1rem; */
+}
+
+a.button:hover {
+  border: 2px dashed var(--vermillion);
+}
+
 pre {
   overflow: auto;
   margin-left: -0.75rem;

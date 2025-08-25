@@ -1,0 +1,12 @@
+{% from "../macros/note.njk" import noteBlock with context %}
+{% macro latestNotes(maxNotes = 3) %}
+<div class="notes">
+  {% set count = 0 %}
+  {% for note in collections.notes %}
+  {% if count < maxNotes %}
+    {{ noteBlock(note.content, note.url, note.date) }}
+  {% set count = count + 1 %}
+  {% endif %}
+  {% endfor %}
+</div>
+{% endmacro %}
