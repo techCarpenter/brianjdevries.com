@@ -135,6 +135,12 @@ hr {
   margin-bottom: 0;
 }
 
+.note__content img {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+}
+
 .note__time {
   font-style: italic;
 }

@@ -29,10 +29,16 @@ If you'd like to get notified of new posts, you can either subscribe to my [emai
 
 ## Latest posts
 
+<div style="display: flex; flex-direction: row; justify-content: flex-end; font-size: 1rem; color: var(--light-color)"><a class="button" href="/blog/">All Posts ➡</a></div>
+
 {% from "./_includes/partials/latest-posts.njk" import latestPosts with context%}
 {{ latestPosts(3) }}
 
+---
+
 ## Latest notes
+
+<div style="display: flex; flex-direction: row; justify-content: flex-end; font-size: 1rem; color: var(--light-color)"><a class="button" href="/notes/">All Notes ➡</a></div>
 
 {% from "./_includes/partials/latest-notes.njk" import latestNotes with context%}
 {{ latestNotes(3) }}
