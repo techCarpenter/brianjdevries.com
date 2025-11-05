@@ -15,7 +15,7 @@ showNewsletterForm: false
   height="194"
   width="194" />
 
-Thanks for stopping by. Read on to find out how exciting or boring I really am.
+Thanks for stopping by. Read on to find out how exciting or boring I _really_ am.
 
 If you're looking for information about my professional life, check out my [career page](/career/).
 
