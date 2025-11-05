@@ -12,12 +12,12 @@ Here are some things I've done in that time:
 - Integrated a preventative maintenance tracker with the internal wiki at [Gentex](https://www.gentex.com)
 - Wrote .NET applications to test physical HomeLink garage door openers and auto-dimming rear view mirrors at [Gentex](https://www.gentex.com)
 - Received a SAFe Agile Practitioner certification (scrum, kanban, product owners, etc.)
-- Completed 3 [FreeCodeCamp](https://freecodecamp.org) certifications
+- Completed 6 [FreeCodeCamp](https://freecodecamp.org) certifications
 - Built multiple APIs to expose database procedures to 3rd party vendors at [Meijer](https://www.meijer.com)
-- Helped port a Windows Forms desktop app to a Vue webapp for [Life Storage](https://lifestorage.com)
+- Helped port a Windows Forms desktop app to a Vue webapp for ~~[Life Storage](https://lifestorage.com)~~ Now [Extra Space](https://extraspace.com)
 - Set up my own DNS server with a Raspberry Pi
 - Contributed to the open source project Foam ([pull request #865](https://github.com/foambubble/foam/pull/865))
-- Designed and developed two client websites
+- Designed and developed multiple client websites at [techcarpenter.org](https://techcarpenter.org)
 
 Other personal project details can be found on my [project page](/projects/) and on [github](https://github.com/techcarpenter). Alternatively, take a look at my [work history](/work-history/).
 

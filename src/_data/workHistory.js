@@ -104,7 +104,7 @@ module.exports = [
     {
         startDate: new Date("2021-08-16"),
         endDate: new Date("2023-07-20"),
-        employer: "Life Storage",
+        employer: "Life Storage (now Extra Space)",
         title: "Application Developer",
         location: "Remote to Buffalo, NY",
         url: "https://www.lifestorage.com/",
@@ -154,7 +154,9 @@ module.exports = [
 - Design, code, test, and implement Azure-based and on-premise systems
 - Perform unit tests, monitor results, and take required corrective actions as needed
 - Work within the SAFe Agile framework and utilize CI/CD best practices
-- Assist product owners in systems analysis and creation or updating of documentation for all business processes`
+- Assist product owners in systems analysis and creation or updating of documentation for all business processes
+- Implement new application authentication method on internal web applications
+- Enable merchandisers at Meijer through web interfaces and data flow`
     }
     // {
     //     startDate: new Date(""),
