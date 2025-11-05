@@ -3,73 +3,73 @@ const htmlValidator = require("./html-validator");
 const markdownIt = require("markdown-it");
 
 module.exports = function (config) {
-	const md = new markdownIt({
-		html: true
-	});
+    const md = new markdownIt({
+        html: true
+    });
 
-	if (process.env.ELEVENTY_ENV === "development") {
-		/**
-		 * Required during development to show 404 page
-		 * when path doesn't exist
-		 */
-		config.setBrowserSyncConfig({
-			callbacks: {
-				ready: function (err, bs) {
-					bs.addMiddleware("*", (req, res) => {
-						const content_404 = fs.readFileSync("dist/404.html");
+    if (process.env.ELEVENTY_ENV === "development") {
+        /**
+         * Required during development to show 404 page
+         * when path doesn't exist
+         */
+        config.setBrowserSyncConfig({
+            callbacks: {
+                ready: function (err, bs) {
+                    bs.addMiddleware("*", (req, res) => {
+                        const content_404 = fs.readFileSync("dist/404.html");
 
-						/**
-						 * Add 404 http status code in request header.
-						 */
-						res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
+                        /**
+                         * Add 404 http status code in request header.
+                         */
+                        res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
 
-						res.write(content_404);
-						res.end();
-					});
-				}
-			}
-		});
+                        res.write(content_404);
+                        res.end();
+                    });
+                }
+            }
+        });
 
-		config.on("eleventy.after", htmlValidator.storeResults);
-		config.addLinter("html-validator", htmlValidator.validate);
-	}
+        config.on("eleventy.after", htmlValidator.storeResults);
+        config.addLinter("html-validator", htmlValidator.validate);
+    }
 
-	config.addPlugin(require("@11ty/eleventy-navigation"));
-	config.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
-	config.addPlugin(require("@11ty/eleventy-plugin-rss"));
+    config.addPlugin(require("@11ty/eleventy-navigation"));
+    config.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
+    config.addPlugin(require("@11ty/eleventy-plugin-rss"));
 
-	config.addShortcode("navlist", require("./lib/shortcodes/navlist.js"));
+    config.addShortcode("navlist", require("./lib/shortcodes/navlist.js"));
 
-	function getPosts(collectionApi) {
-		return collectionApi.getFilteredByGlob("./src/blog/*.md").reverse();
-	}
-	function getNotes(collectionApi) {
-		return collectionApi.getFilteredByGlob("./src/notes/*.md").reverse();
-	}
+    function getPosts(collectionApi) {
+        return collectionApi.getFilteredByGlob("./src/blog/*.md").reverse();
+    }
+    function getNotes(collectionApi) {
+        return collectionApi.getFilteredByGlob("./src/notes/*.md").reverse();
+    }
 
-	config.addCollection("blog", function (collection) {
-		return getPosts(collection);
-	});
-	config.addCollection("notes", function (collection) {
-		return getNotes(collection);
-	});
+    config.addCollection("blog", function (collection) {
+        return getPosts(collection);
+    });
+    config.addCollection("notes", function (collection) {
+        return getNotes(collection);
+    });
 
-	config.addFilter("dateformat", require("./lib/filters/dateformat"));
-	config.addFilter("markdown", content => md.render(content));
-	config.addFilter("slugify", require("./lib/filters/slugify"));
-	config.addFilter("splitlines", require("./lib/filters/splitLines"));
+    config.addFilter("dateformat", require("./lib/filters/dateformat"));
+    config.addFilter("markdown", content => md.render(content));
+    config.addFilter("slugify", require("./lib/filters/slugify"));
+    config.addFilter("splitlines", require("./lib/filters/splitLines"));
 
-	config.addPassthroughCopy({ "src/static": "/" });
-  config.addPassthroughCopy({ "node_modules/dayjs/dayjs.min.js": "/scripts/dayjs.min.js" })
-  config.addPassthroughCopy({ "node_modules/dayjs/plugin/utc.js": "/scripts/dayjs-utc.js" })
+    config.addPassthroughCopy({ "src/static": "/" });
+    config.addPassthroughCopy({ "node_modules/dayjs/dayjs.min.js": "/scripts/dayjs.min.js" })
+    config.addPassthroughCopy({ "node_modules/dayjs/plugin/utc.js": "/scripts/dayjs-utc.js" })
 
-	config.on("eleventy.after", require("./socialPreviewImages"));
+    config.on("eleventy.after", require("./socialPreviewImages"));
 
-	return {
-		dir: {
-			input: "src",
-			output: "dist"
-		},
-		markdownTemplateEngine: "njk"
-	};
+    return {
+        dir: {
+            input: "src",
+            output: "dist"
+        },
+        markdownTemplateEngine: "njk"
+    };
 };

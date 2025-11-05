@@ -13,22 +13,22 @@
  */
 
 :root {
-  --background: var(--dark-color); /*#2d2d2d;*/
-  --default-foreground: #b3b9c5;
-  --string: #92d192;
-  --keyword: #ffeea6;
-  --comment: #777c85;
-  --attribute: #ffd479;
-  --function: #ffffff;
-  --variable: #f2777a;
-  --number: #fca369;
-  --support: #e1a6f2;
-  --brackets: #d5d8df;
-  --operator: #ac8d58;
-  --property: #abb2bf;
-  --tag: #6ab0f3;
-  --variable-alt: #62cfcf;
-  --selection: #4a7baa66;
+    --background: var(--dark-color); /*#2d2d2d;*/
+    --default-foreground: #b3b9c5;
+    --string: #92d192;
+    --keyword: #ffeea6;
+    --comment: #777c85;
+    --attribute: #ffd479;
+    --function: #ffffff;
+    --variable: #f2777a;
+    --number: #fca369;
+    --support: #e1a6f2;
+    --brackets: #d5d8df;
+    --operator: #ac8d58;
+    --property: #abb2bf;
+    --tag: #6ab0f3;
+    --variable-alt: #62cfcf;
+    --selection: #4a7baa66;
 }
 
 /**
@@ -48,26 +48,26 @@
 /* Set the main properties of the code, code blocks, and inline code */
 code[class*="language-"],
 pre[class*="language-"] {
-  background: var(--background);
-  color: var(--default-foreground);
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  /* The following properties are standard, please leave them as they are */
-  font-size: 0.9em;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  line-height: 1.5;
-  /* The default is 4, but you could change it if you really, really want to */
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  /* The following properties are also standard */
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
+    background: var(--background);
+    color: var(--default-foreground);
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    /* The following properties are standard, please leave them as they are */
+    font-size: 0.9em;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    /* The default is 4, but you could change it if you really, really want to */
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    /* The following properties are also standard */
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
 }
 
 /* Optional: What the code looks like when highlighted */
@@ -75,31 +75,31 @@ code[class*="language-"]::-moz-selection,
 code[class*="language-"]::-moz-selection,
 pre[class*="language-"]::-moz-selection,
 pre[class*="language-"]::-moz-selection {
-  background: var(--selection);
-  /* color: unset; */
+    background: var(--selection);
+    /* color: unset; */
 }
 
 code[class*="language-"]::selection,
 code[class*="language-"]::selection,
 pre[class*="language-"]::selection,
 pre[class*="language-"]::selection {
-  background: var(--selection);
-  /* color: unset; */
+    background: var(--selection);
+    /* color: unset; */
 }
 
 /* Properties specific to code blocks */
 pre[class*="language-"] {
-  padding: 1em; /* this is standard */
-  margin: 0.5em 0; /* this is the default */
-  overflow: auto; /* this is standard */
-  /* border-radius: unset; */
+    padding: 1em; /* this is standard */
+    margin: 0.5em 0; /* this is the default */
+    overflow: auto; /* this is standard */
+    /* border-radius: unset; */
 }
 
 /* Properties specific to inline code */
 :not(pre) > code[class*="language-"] {
-  padding: 0.1em; /* this is the default */
-  border-radius: 0.3em;
-  white-space: normal; /* this is standard */
+    padding: 0.1em; /* this is the default */
+    border-radius: 0.3em;
+    white-space: normal; /* this is standard */
 }
 
 /**
@@ -110,7 +110,7 @@ pre[class*="language-"] {
 .token.punctuation,
 .token.prolog,
 .token.url {
-  color: var(--comment);
+    color: var(--comment);
 }
 
 /* 
@@ -122,35 +122,35 @@ pre[class*="language-"] {
 .token.class-name,
 .token.selector,
 .token.tag {
-  color: var(--tag);
+    color: var(--tag);
 }
 
 .token.entity {
-  color: var(--default-foreground);
+    color: var(--default-foreground);
 }
 
 .token.attr-name {
-  color: var(--attribute);
+    color: var(--attribute);
 }
 
 .token.boolean,
 .token.constant,
 .token.builtin {
-  color: var(--support);
+    color: var(--support);
 }
 
 .token.number {
-  color: var(--number);
+    color: var(--number);
 }
 
 .token.atrule,
 .token.keyword,
 .token.important {
-  color: var(--keyword);
+    color: var(--keyword);
 }
 
 .token.property {
-  color: var(--property);
+    color: var(--property);
 }
 
 .token.symbol,
@@ -158,41 +158,41 @@ pre[class*="language-"] {
 .token.char,
 .token.inserted,
 .token.attr-value {
-  color: var(--string);
+    color: var(--string);
 }
 
 .token.deleted,
 .token.variable {
-  color: var(--variable);
+    color: var(--variable);
 }
 
 .token.function {
-  color: var(--function);
+    color: var(--function);
 }
 
 .token.regex {
-  color: var(--variable-alt);
+    color: var(--variable-alt);
 }
 
 .token.operator {
-  color: var(--operator);
+    color: var(--operator);
 }
 
 /* The following rules are pretty similar across themes, but feel free to adjust them */
 .token.bold {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .token.italic {
-  font-style: italic;
+    font-style: italic;
 }
 
 .token.entity {
-  cursor: help;
+    cursor: help;
 }
 
 .token.namespace {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 /* LANGUAGE-SPECIFIC OVERRIDES */

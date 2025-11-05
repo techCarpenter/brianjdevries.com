@@ -8,7 +8,7 @@ const dateFormat = dayjs().format("YYYY-MM-DD");
 const postTitle = argv[2];
 const now = new Date().toISOString();
 const fileName = slugify(`${dateFormat}-${postTitle}`, {
-  lower: true
+    lower: true
 });
 const newFile = `./src/blog/${fileName}.md`;
 
