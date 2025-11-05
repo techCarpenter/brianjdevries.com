@@ -23,5 +23,3 @@ draft: true
 `;
 
 fs.writeFileSync(newFile, boilerplate);
-
-exec(`code ${newFile}`);
