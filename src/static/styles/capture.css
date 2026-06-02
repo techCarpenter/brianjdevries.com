@@ -1,0 +1,133 @@
+.capture-tool {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.capture-section {
+    border: 1px solid var(--muted-color);
+    padding: 1rem;
+}
+
+.capture-section h2 {
+    margin-top: 0;
+}
+
+.capture-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.capture-field {
+    display: grid;
+    gap: 0.35rem;
+    margin: 1rem 0;
+}
+
+.capture-field span,
+.capture-options legend {
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.capture-field input,
+.capture-field textarea {
+    width: 100%;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    border: 2px solid var(--muted-color);
+    padding: 0.55rem;
+    font: inherit;
+}
+
+.capture-field textarea {
+    resize: vertical;
+}
+
+.capture-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    border: 1px solid var(--muted-color);
+    margin: 1rem 0;
+    padding: 0.75rem;
+}
+
+.capture-options label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.capture-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.capture-actions button[disabled] {
+    border-color: var(--muted-color);
+    color: var(--muted-color);
+    cursor: not-allowed;
+}
+
+.capture-settings-summary {
+    border: 1px dotted var(--muted-color);
+    margin: 1rem 0;
+    padding: 0.75rem;
+}
+
+.capture-preview {
+    background-color: #111;
+    border: 1px solid var(--muted-color);
+    display: grid;
+    margin-bottom: 1rem;
+    min-height: 180px;
+    place-items: center;
+}
+
+.capture-preview img {
+    display: block;
+    max-height: 360px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.capture-stats {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.capture-stats div {
+    border-bottom: 1px dotted var(--muted-color);
+    display: grid;
+    gap: 0.25rem;
+    padding-bottom: 0.5rem;
+}
+
+.capture-stats dt {
+    color: var(--muted-color);
+    font-size: 0.9rem;
+}
+
+.capture-stats dd {
+    font-family: var(--mono-font);
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.capture-status {
+    color: var(--muted-color);
+    margin-bottom: 0;
+}
+
+@media (min-width: 640px) {
+    .capture-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .capture-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "$schema": "../node_modules/wrangler/config-schema.json",
+    "name": "brianjdevries-capture",
+    "main": "./r2-image-upload-worker.js",
+    "compatibility_date": "2026-06-02",
+    "workers_dev": true,
+    "r2_buckets": [
+        {
+            "binding": "IMAGE_BUCKET",
+            "bucket_name": "brianjdevries-com-assets"
+        }
+    ],
+    "vars": {
+        "ASSET_BASE_URL": "https://assets.vries.land",
+        "GITHUB_OWNER": "techcarpenter",
+        "GITHUB_REPO": "brianjdevries.com",
+        "GITHUB_BRANCH": "main",
+        "ALLOWED_ORIGINS": "https://brianjdevries.com,http://localhost:8080"
+    },
+    "secrets": {
+        "required": [
+            "UPLOAD_TOKEN",
+            "GITHUB_TOKEN"
+        ]
+    }
+}

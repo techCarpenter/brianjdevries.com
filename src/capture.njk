@@ -1,0 +1,142 @@
+---
+title: "Capture"
+description: "Private capture helper for preparing living website images and notes."
+permalink: /capture/
+eleventyExcludeFromCollections: true
+showNewsletterForm: false
+---
+
+{% extends "./_includes/page.njk" %}
+{% from "./_includes/macros/htmlhead.njk" import htmlHead with context %}
+
+{% block headBlock %}
+  {{ htmlHead('<meta name="robots" content="noindex, nofollow"><link rel="stylesheet" href="/styles/capture.css">') }}
+{% endblock %}
+
+{% block contentBlock %}
+<h1 class="primary-title">{{ title }}</h1>
+
+<div class="capture-tool" id="capture-form">
+  <section class="capture-section" aria-labelledby="note-heading">
+    <h2 id="note-heading">Note</h2>
+
+    <label class="capture-field">
+      <span>Text</span>
+      <textarea id="note-text-input" name="note-text" rows="5" placeholder="What happened? What changed? What do you want to remember?"></textarea>
+    </label>
+  </section>
+
+  <section class="capture-section" aria-labelledby="image-heading">
+    <h2 id="image-heading">Image</h2>
+
+    <label class="capture-field">
+      <span>Photo</span>
+      <input id="image-input" name="image" type="file" accept="image/*" capture="environment">
+    </label>
+
+    <label class="capture-field">
+      <span>Alt text</span>
+      <textarea id="alt-input" name="alt" rows="3" required placeholder="Painted garden signs drying on my workbench"></textarea>
+    </label>
+
+    <div class="capture-grid">
+      <label class="capture-field">
+        <span>Filename slug</span>
+        <input id="slug-input" name="slug" type="text" inputmode="text" placeholder="garden-signs-drying">
+      </label>
+
+      <label class="capture-field">
+        <span>Folder</span>
+        <input id="folder-input" name="folder" type="text" value="photos">
+      </label>
+    </div>
+
+    <fieldset class="capture-options">
+      <legend>Size</legend>
+      <label>
+        <input type="radio" name="image-mode" value="normal" checked>
+        Normal, under 1 MB
+      </label>
+      <label>
+        <input type="radio" name="image-mode" value="large">
+        Large/detail
+      </label>
+    </fieldset>
+  </section>
+
+  <section class="capture-section" aria-labelledby="worker-heading">
+    <h2 id="worker-heading">Upload</h2>
+
+    <p class="capture-settings-summary" id="upload-settings-summary" hidden></p>
+
+    <div id="upload-settings-fields">
+      <div class="capture-grid">
+        <label class="capture-field">
+          <span>Worker endpoint</span>
+          <input id="endpoint-input" name="endpoint" type="url" autocomplete="off" placeholder="https://capture.example.workers.dev/upload">
+        </label>
+
+        <label class="capture-field">
+          <span>Bearer token</span>
+          <input id="token-input" name="token" type="password" autocomplete="off">
+        </label>
+      </div>
+
+      <label class="capture-field">
+        <span>Asset base URL</span>
+        <input id="asset-base-input" name="asset-base" type="url" value="https://assets.vries.land">
+      </label>
+    </div>
+
+    <div class="capture-actions">
+      <button type="button" id="edit-upload-settings-button" hidden>Edit upload settings</button>
+      <button type="button" id="forget-upload-settings-button" hidden>Forget settings</button>
+      <button type="button" id="compress-button">Prepare image</button>
+      <button type="button" id="upload-button" disabled>Upload to R2</button>
+      <button type="button" id="post-note-button">Post note</button>
+      <button type="button" id="copy-button" disabled>Copy Markdown</button>
+    </div>
+  </section>
+
+  <section class="capture-section capture-results" aria-labelledby="results-heading">
+    <h2 id="results-heading">Result</h2>
+
+    <div class="capture-preview" id="preview-panel" hidden>
+      <img id="preview-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="">
+    </div>
+
+    <dl class="capture-stats" id="stats-list">
+      <div>
+        <dt>Original</dt>
+        <dd id="original-size">-</dd>
+      </div>
+      <div>
+        <dt>Optimized</dt>
+        <dd id="optimized-size">-</dd>
+      </div>
+      <div>
+        <dt>Dimensions</dt>
+        <dd id="image-dimensions">-</dd>
+      </div>
+      <div>
+        <dt>Object key</dt>
+        <dd id="object-key">-</dd>
+      </div>
+    </dl>
+
+    <label class="capture-field">
+      <span>Markdown image snippet</span>
+      <textarea id="markdown-output" rows="4" readonly></textarea>
+    </label>
+
+    <label class="capture-field">
+      <span>Note draft</span>
+      <textarea id="note-output" rows="12" readonly></textarea>
+    </label>
+
+    <p class="capture-status" id="status-message" role="status" aria-live="polite"></p>
+  </section>
+</div>
+
+<script src="/scripts/capture.js"></script>
+{% endblock %}
