@@ -6,7 +6,7 @@ eleventyNavigation:
   key: "Now"
   title: "What Brian is doing now"
   order: 400
-lastModified: 2025-11-05
+lastModified: 2026-06-02
 showNewsletterForm: false
 ---
 
@@ -16,13 +16,12 @@ showNewsletterForm: false
 
 - I'm working as a Software Engineer for [Meijer](https://meijer.com). I work remotely, but have been able to meet many of my coworkers since HQ is only 20 minutes away.
   - C#, SQL, and .NET
-- Building websites for clients at [techcarpenter.org](https://techcarpenter.org/)
-- Raising my three sons (ages 7, 5, and 2) with my wife.
-  - Expecting my fourth son to arrive in late January 2026!
+- Building websites for clients at [jenisonwebdesign.com](https://jenisonwebdesign.com/)
+- Raising my four sons with my wife.
 - Running a self-hosted server on my local network.
 - I've been working on several cross-stitch designs. Some I've given away as gifts, others I'm making for myself.
   - My two oldest sons have shown some interest in learning so I've been teaching then to cross-stitch too! 🧵🪡
-- Doing lots of puzzles, melting bead patterns, wrestling, and reading books with my boys.
+- Doing lots of legos, melting bead patterns, wrestling, gardening, and reading books with my boys.
 
 ---
 
