@@ -1,4 +1,4 @@
-{% macro noteBlock(content, url, date) %}
+{% macro noteBlock(content, url, date, images = []) %}
 <article class="note">
   <div class="note__reply">
     <a href="mailto:brian@brianjdevries.com?subject=Nice%20note!&body={{ site.url }}{{ url }}%0D%0A%0D%0A">reply
@@ -7,6 +7,15 @@
   </div>
   <div class="note__content">
     {{ content | safe }}
+    {% if images and images.length %}
+      <div class="note__images">
+        {% for image in images %}
+          <figure class="note__image">
+            <img src="{{ image.url }}" alt="{{ image.alt }}">
+          </figure>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
   <footer>
     <a href="{{ url }}">

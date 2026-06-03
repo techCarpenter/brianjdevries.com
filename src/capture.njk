@@ -29,17 +29,37 @@ showNewsletterForm: false
   <section class="capture-section" aria-labelledby="image-heading">
     <h2 id="image-heading">Image</h2>
 
-    <label class="capture-field">
-      <span>Photo</span>
-      <input id="image-input" name="image" type="file" accept="image/*" capture="environment">
-    </label>
+    <div class="capture-image-actions">
+      <input class="capture-file-input" id="image-input" name="image" type="file" accept="image/*">
+      <label class="capture-file-button" for="image-input">
+        <span class="capture-file-button__icon" aria-hidden="true">▧</span>
+        <span>Library</span>
+      </label>
+
+      <input class="capture-file-input" id="camera-input" name="camera-image" type="file" accept="image/*" capture="environment">
+      <label class="capture-file-button capture-file-button--camera" for="camera-input">
+        <span class="capture-file-button__icon" aria-hidden="true">◎</span>
+        <span>Camera</span>
+      </label>
+    </div>
+
+    <div class="capture-preview" id="preview-panel" hidden>
+      <img id="preview-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="">
+    </div>
+
+    <div class="capture-actions">
+      <button type="button" id="remove-image-button" hidden>Remove image</button>
+    </div>
 
     <label class="capture-field">
       <span>Alt text</span>
       <textarea id="alt-input" name="alt" rows="3" required placeholder="Painted garden signs drying on my workbench"></textarea>
     </label>
 
-    <div class="capture-grid">
+    <details class="capture-advanced">
+      <summary>Storage options</summary>
+
+      <div class="capture-grid">
       <label class="capture-field">
         <span>Filename slug</span>
         <input id="slug-input" name="slug" type="text" inputmode="text" placeholder="garden-signs-drying">
@@ -49,7 +69,8 @@ showNewsletterForm: false
         <span>Folder</span>
         <input id="folder-input" name="folder" type="text" value="photos">
       </label>
-    </div>
+      </div>
+    </details>
 
     <fieldset class="capture-options">
       <legend>Size</legend>
@@ -65,45 +86,54 @@ showNewsletterForm: false
   </section>
 
   <section class="capture-section" aria-labelledby="worker-heading">
-    <h2 id="worker-heading">Upload</h2>
-
-    <p class="capture-settings-summary" id="upload-settings-summary" hidden></p>
-
-    <div id="upload-settings-fields">
-      <div class="capture-grid">
-        <label class="capture-field">
-          <span>Worker endpoint</span>
-          <input id="endpoint-input" name="endpoint" type="url" autocomplete="off" placeholder="https://capture.example.workers.dev/upload">
-        </label>
-
-        <label class="capture-field">
-          <span>Bearer token</span>
-          <input id="token-input" name="token" type="password" autocomplete="off">
-        </label>
-      </div>
-
-      <label class="capture-field">
-        <span>Asset base URL</span>
-        <input id="asset-base-input" name="asset-base" type="url" value="https://assets.vries.land">
-      </label>
-    </div>
+    <h2 id="worker-heading">Actions</h2>
 
     <div class="capture-actions">
-      <button type="button" id="edit-upload-settings-button" hidden>Edit upload settings</button>
-      <button type="button" id="forget-upload-settings-button" hidden>Forget settings</button>
       <button type="button" id="compress-button">Prepare image</button>
       <button type="button" id="upload-button" disabled>Upload to R2</button>
       <button type="button" id="post-note-button">Post note</button>
       <button type="button" id="copy-button" disabled>Copy Markdown</button>
+      <button type="button" id="reset-form-button">Reset form</button>
     </div>
+
+    <p class="capture-success" id="post-success-message" hidden>
+      Posted successfully:
+      <a id="post-success-link" href="/notes/">View note</a>
+    </p>
+
+    <details class="capture-advanced capture-settings-details">
+      <summary>Settings</summary>
+
+      <p class="capture-settings-summary" id="upload-settings-summary" hidden></p>
+
+      <div id="upload-settings-fields">
+        <div class="capture-grid">
+          <label class="capture-field">
+            <span>Worker endpoint</span>
+            <input id="endpoint-input" name="endpoint" type="url" autocomplete="off" placeholder="https://capture.example.workers.dev/upload">
+          </label>
+
+          <label class="capture-field">
+            <span>Bearer token</span>
+            <input id="token-input" name="token" type="password" autocomplete="off">
+          </label>
+        </div>
+
+        <label class="capture-field">
+          <span>Asset base URL</span>
+          <input id="asset-base-input" name="asset-base" type="url" value="https://assets.vries.land">
+        </label>
+      </div>
+
+      <div class="capture-actions">
+        <button type="button" id="edit-upload-settings-button" hidden>Edit upload settings</button>
+        <button type="button" id="forget-upload-settings-button" hidden>Forget settings</button>
+      </div>
+    </details>
   </section>
 
   <section class="capture-section capture-results" aria-labelledby="results-heading">
     <h2 id="results-heading">Result</h2>
-
-    <div class="capture-preview" id="preview-panel" hidden>
-      <img id="preview-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="">
-    </div>
 
     <dl class="capture-stats" id="stats-list">
       <div>

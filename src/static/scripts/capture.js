@@ -27,12 +27,15 @@
         key: "",
         markdown: "",
         objectUrl: "",
-        editingUploadSettings: false
+        editingUploadSettings: false,
+        statusTimeout: null,
+        prepareId: 0
     };
 
     const form = document.getElementById("capture-form");
     const noteTextInput = document.getElementById("note-text-input");
     const imageInput = document.getElementById("image-input");
+    const cameraInput = document.getElementById("camera-input");
     const altInput = document.getElementById("alt-input");
     const slugInput = document.getElementById("slug-input");
     const folderInput = document.getElementById("folder-input");
@@ -43,10 +46,12 @@
     const uploadSettingsSummary = document.getElementById("upload-settings-summary");
     const editUploadSettingsButton = document.getElementById("edit-upload-settings-button");
     const forgetUploadSettingsButton = document.getElementById("forget-upload-settings-button");
+    const removeImageButton = document.getElementById("remove-image-button");
     const compressButton = document.getElementById("compress-button");
     const uploadButton = document.getElementById("upload-button");
     const postNoteButton = document.getElementById("post-note-button");
     const copyButton = document.getElementById("copy-button");
+    const resetFormButton = document.getElementById("reset-form-button");
     const previewPanel = document.getElementById("preview-panel");
     const previewImage = document.getElementById("preview-image");
     const originalSize = document.getElementById("original-size");
@@ -55,15 +60,18 @@
     const objectKey = document.getElementById("object-key");
     const markdownOutput = document.getElementById("markdown-output");
     const noteOutput = document.getElementById("note-output");
+    const postSuccessMessage = document.getElementById("post-success-message");
+    const postSuccessLink = document.getElementById("post-success-link");
     const statusMessage = document.getElementById("status-message");
 
     loadSavedUploadSettings();
     renderUploadSettings();
 
-    compressButton.addEventListener("click", prepareImage);
+    compressButton.addEventListener("click", () => prepareImage());
     uploadButton.addEventListener("click", uploadImage);
     postNoteButton.addEventListener("click", postNote);
     copyButton.addEventListener("click", copyMarkdown);
+    resetFormButton.addEventListener("click", resetForm);
     form.addEventListener("input", updateCaptureOutput);
     editUploadSettingsButton.addEventListener("click", () => {
         state.editingUploadSettings = true;
@@ -71,15 +79,12 @@
         endpointInput.focus();
     });
     forgetUploadSettingsButton.addEventListener("click", forgetUploadSettings);
+    removeImageButton.addEventListener("click", removeImage);
     endpointInput.addEventListener("input", saveUploadSettings);
     tokenInput.addEventListener("input", saveUploadSettings);
     assetBaseInput.addEventListener("input", saveUploadSettings);
-    imageInput.addEventListener("change", () => {
-        if (!slugInput.value && imageInput.files[0]) {
-            slugInput.value = slugify(imageInput.files[0].name.replace(/\.[^.]+$/, ""));
-        }
-        clearPreparedImage();
-    });
+    imageInput.addEventListener("change", () => handleImageSelection(imageInput));
+    cameraInput.addEventListener("change", () => handleImageSelection(cameraInput));
 
     function loadSavedUploadSettings() {
         endpointInput.value = localStorage.getItem(storageKeys.endpoint) || sessionStorage.getItem(storageKeys.endpoint) || "";
@@ -113,6 +118,10 @@
     }
 
     function forgetUploadSettings() {
+        if (!window.confirm("Forget saved upload settings for this browser?")) {
+            return;
+        }
+
         Object.values(storageKeys).forEach(key => {
             localStorage.removeItem(key);
             sessionStorage.removeItem(key);
@@ -154,6 +163,8 @@
     }
 
     function updateCaptureOutput() {
+        hidePostSuccessLink();
+
         if (state.blob) {
             updateGeneratedText();
             return;
@@ -163,11 +174,51 @@
         copyButton.disabled = !noteTextInput.value.trim();
     }
 
-    async function prepareImage() {
-        const file = imageInput.files[0];
+    function handleImageSelection(sourceInput) {
+        hidePostSuccessLink();
+
+        const otherInput = sourceInput === imageInput ? cameraInput : imageInput;
+
+        if (sourceInput.files[0]) {
+            otherInput.value = "";
+        }
+
+        removeImageButton.hidden = !sourceInput.files[0];
+
+        const file = getSelectedImageFile();
+
+        if (!slugInput.value && file) {
+            slugInput.value = slugify(file.name.replace(/\.[^.]+$/, ""));
+        }
+
+        clearPreparedImage();
+
+        if (file) {
+            prepareImage({ quietWhenMissing: true });
+        }
+    }
+
+    function removeImage() {
+        altInput.value = "";
+        slugInput.value = "";
+        clearPreparedImage({ clearFileInput: true });
+        removeImageButton.hidden = true;
+        setStatus("Image removed.");
+    }
+
+    function getSelectedImageFile() {
+        return imageInput.files[0] || cameraInput.files[0] || null;
+    }
+
+    async function prepareImage({ quietWhenMissing = false } = {}) {
+        const prepareId = state.prepareId + 1;
+        state.prepareId = prepareId;
+        const file = getSelectedImageFile();
 
         if (!file) {
-            setStatus("Choose an image first.");
+            if (!quietWhenMissing) {
+                setStatus("Choose an image first.");
+            }
             return;
         }
 
@@ -183,6 +234,10 @@
             const mode = getMode();
             const bitmap = await createImageBitmap(file);
             const output = await compressBitmap(bitmap, mode);
+
+            if (prepareId !== state.prepareId) {
+                return;
+            }
 
             const isWithinLimit = output.blob.size <= mode.maxBytes;
 
@@ -210,15 +265,41 @@
             uploadButton.disabled = !isWithinLimit;
             copyButton.disabled = false;
         } catch (error) {
+            if (prepareId !== state.prepareId) {
+                return;
+            }
+
             setStatus(`Could not prepare image: ${error.message}`);
         } finally {
-            compressButton.disabled = false;
+            if (prepareId === state.prepareId) {
+                compressButton.disabled = false;
+            }
         }
     }
 
     async function uploadImage() {
         if (!state.blob) {
-            setStatus("Prepare an image before uploading.");
+            if (getSelectedImageFile()) {
+                setStatus("Preparing image before uploading...");
+                await prepareImage();
+            } else {
+                setStatus("Choose an image before uploading.");
+                return;
+            }
+        }
+
+        if (!state.blob) {
+            return;
+        }
+
+        if (state.blob.size > getMode().maxBytes) {
+            setStatus(`Prepared image is still above the ${getModeName()} upload limit.`);
+            return;
+        }
+
+        if (!altInput.value.trim()) {
+            setStatus("Add alt text before uploading.");
+            altInput.focus();
             return;
         }
 
@@ -264,16 +345,19 @@
             markdownOutput.value = result.markdown;
             updateNoteDraft();
             setStatus("Uploaded. Markdown is ready to copy.");
+            altInput.value = "";
+            slugInput.value = "";
+            clearPreparedImage({ preserveOutputs: true, clearFileInput: true });
         } catch (error) {
             setStatus(`Upload failed: ${error.message}`);
         } finally {
-            uploadButton.disabled = false;
+            uploadButton.disabled = !state.blob;
         }
     }
 
     async function postNote() {
         const noteText = noteTextInput.value.trim();
-        const hasSelectedImage = Boolean(imageInput.files[0]);
+        const hasSelectedImage = Boolean(getSelectedImageFile());
 
         if (!noteText && !hasSelectedImage) {
             setStatus("Add note text or choose an image before posting.");
@@ -354,7 +438,9 @@
                 objectKey.textContent = result.imageKey;
             }
 
+            showPostSuccessLink(result.noteUrl);
             setStatus(`Posted ${result.path}. Netlify should rebuild from the GitHub commit.`);
+            clearComposerAfterPost();
         } catch (error) {
             setStatus(`Post failed: ${error.message}`);
         } finally {
@@ -364,7 +450,7 @@
     }
 
     async function copyMarkdown() {
-        const text = noteOutput.value || markdownOutput.value;
+        const text = getCopyableText();
 
         if (!text) {
             setStatus("Nothing to copy yet.");
@@ -380,6 +466,10 @@
         }
     }
 
+    function getCopyableText() {
+        return noteOutput.value || markdownOutput.value;
+    }
+
     function updateGeneratedText() {
         if (!state.blob) {
             return;
@@ -391,6 +481,10 @@
 
         state.key = key;
         state.markdown = `![${escapeMarkdownAlt(alt)}](${url})`;
+        state.image = {
+            url,
+            alt
+        };
         objectKey.textContent = key;
         markdownOutput.value = state.markdown;
         previewImage.alt = alt;
@@ -401,38 +495,73 @@
         const now = new Date();
         const fileStamp = getDateStamp(now);
         const noteText = noteTextInput.value.trim();
-        const bodyParts = [];
+        const frontmatter = [
+            "---",
+            `date: ${now.toISOString()}`
+        ];
 
-        if (noteText) {
-            bodyParts.push(noteText);
+        if (state.image) {
+            frontmatter.push("images:");
+            frontmatter.push(`  - url: "${escapeYamlString(state.image.url)}"`);
+            frontmatter.push(`    alt: "${escapeYamlString(state.image.alt)}"`);
         }
 
-        if (state.markdown) {
-            bodyParts.push(state.markdown);
-        }
+        frontmatter.push("---");
 
-        noteOutput.value = `---\ndate: ${now.toISOString()}\n---\n\n${bodyParts.join("\n\n")}\n`;
+        noteOutput.value = `${frontmatter.join("\n")}\n\n${noteText}\n`;
         noteOutput.dataset.filename = `src/notes/${fileStamp}.md`;
     }
 
-    function clearPreparedImage() {
+    function clearComposerAfterPost() {
+        noteTextInput.value = "";
+        altInput.value = "";
+        slugInput.value = "";
+        clearPreparedImage({ preserveOutputs: true, clearFileInput: true });
+    }
+
+    function resetForm() {
+        noteTextInput.value = "";
+        altInput.value = "";
+        slugInput.value = "";
+        clearPreparedImage({ clearFileInput: true });
+        markdownOutput.value = "";
+        noteOutput.value = "";
+        hidePostSuccessLink();
+        setStatus("Form reset.");
+        noteTextInput.focus();
+    }
+
+    function clearPreparedImage({ preserveOutputs = false, clearFileInput = false } = {}) {
+        state.prepareId += 1;
+
+        if (clearFileInput) {
+            imageInput.value = "";
+            cameraInput.value = "";
+            removeImageButton.hidden = true;
+        }
+
         state.blob = null;
         state.extension = "";
         state.key = "";
         state.markdown = "";
+        state.image = null;
         uploadButton.disabled = true;
-        copyButton.disabled = true;
-        originalSize.textContent = imageInput.files[0] ? formatBytes(imageInput.files[0].size) : "-";
+        copyButton.disabled = preserveOutputs ? !getCopyableText() : true;
+        originalSize.textContent = getSelectedImageFile() ? formatBytes(getSelectedImageFile().size) : "-";
         optimizedSize.textContent = "-";
         imageDimensions.textContent = "-";
         objectKey.textContent = "-";
-        markdownOutput.value = "";
+        if (!preserveOutputs) {
+            markdownOutput.value = "";
+        }
         previewPanel.hidden = true;
         if (state.objectUrl) {
             URL.revokeObjectURL(state.objectUrl);
             state.objectUrl = "";
         }
-        updateCaptureOutput();
+        if (!preserveOutputs) {
+            updateCaptureOutput();
+        }
     }
 
     function getMode() {
@@ -592,7 +721,36 @@
         return value.replace(/\]/g, "\\]");
     }
 
+    function escapeYamlString(value) {
+        return value.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+    }
+
+    function showPostSuccessLink(noteUrl) {
+        if (!noteUrl) {
+            return;
+        }
+
+        const absoluteUrl = new URL(noteUrl, window.location.origin).toString();
+        postSuccessLink.href = absoluteUrl;
+        postSuccessLink.textContent = absoluteUrl;
+        postSuccessMessage.hidden = false;
+    }
+
+    function hidePostSuccessLink() {
+        postSuccessMessage.hidden = true;
+        postSuccessLink.href = "";
+        postSuccessLink.textContent = "";
+    }
+
     function setStatus(message) {
+        window.clearTimeout(state.statusTimeout);
         statusMessage.textContent = message;
+        statusMessage.classList.toggle("is-visible", Boolean(message));
+
+        if (message) {
+            state.statusTimeout = window.setTimeout(() => {
+                statusMessage.classList.remove("is-visible");
+            }, 6000);
+        }
     }
 }());

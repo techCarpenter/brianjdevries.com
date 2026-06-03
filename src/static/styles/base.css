@@ -141,6 +141,20 @@ hr {
     margin: auto;
 }
 
+.note__images {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.note__image {
+    margin: 0;
+}
+
+.note__image img {
+    display: block;
+}
+
 .note__time {
     font-style: italic;
 }

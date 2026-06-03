@@ -43,6 +43,48 @@
     resize: vertical;
 }
 
+.capture-image-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.capture-file-input {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.capture-file-button {
+    align-items: center;
+    border: 2px solid var(--vermillion);
+    color: var(--vermillion);
+    cursor: pointer;
+    display: inline-flex;
+    gap: 0.5rem;
+    justify-content: center;
+    min-height: 44px;
+    min-width: 9rem;
+    padding: 0.5rem 0.85rem;
+    text-decoration: none;
+}
+
+.capture-file-button:hover,
+.capture-file-input:focus + .capture-file-button,
+.capture-file-button:focus-within {
+    border-style: dashed;
+}
+
+.capture-file-button__icon {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
 .capture-options {
     display: flex;
     flex-wrap: wrap;
@@ -56,6 +98,14 @@
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
+}
+
+.capture-advanced {
+    margin: 1rem 0;
+}
+
+.capture-settings-details .capture-actions {
+    margin-bottom: 0.75rem;
 }
 
 .capture-actions {
@@ -77,6 +127,13 @@
     padding: 0.75rem;
 }
 
+.capture-success {
+    border: 1px dotted var(--vermillion);
+    margin: 1rem 0;
+    padding: 0.75rem;
+    overflow-wrap: anywhere;
+}
+
 .capture-preview {
     background-color: #111;
     border: 1px solid var(--muted-color);
@@ -84,6 +141,10 @@
     margin-bottom: 1rem;
     min-height: 180px;
     place-items: center;
+}
+
+.capture-preview[hidden] {
+    display: none;
 }
 
 .capture-preview img {
@@ -118,11 +179,35 @@
 }
 
 .capture-status {
-    color: var(--muted-color);
-    margin-bottom: 0;
+    background-color: var(--light-color);
+    border: 3px solid var(--vermillion);
+    bottom: 1rem;
+    color: var(--dark-color);
+    font-weight: 700;
+    left: 50%;
+    margin: 0;
+    max-width: min(32rem, calc(100% - 2rem));
+    opacity: 0;
+    padding: 0.75rem 1rem;
+    pointer-events: none;
+    position: fixed;
+    transform: translate(-50%, 1rem);
+    transition: opacity 160ms ease, transform 160ms ease;
+    width: max-content;
+    z-index: 10;
+}
+
+.capture-status.is-visible {
+    opacity: 1;
+    transform: translate(-50%, 0);
 }
 
 @media (min-width: 640px) {
+    .capture-file-button--camera,
+    #camera-input {
+        display: none;
+    }
+
     .capture-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }

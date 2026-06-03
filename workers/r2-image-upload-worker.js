@@ -88,12 +88,19 @@ async function createNotePost(formData, env) {
     }
 
     const date = new Date();
+    const dateStamp = getDateStamp(date);
     const markdown = buildNoteMarkdown({
         date,
         noteText,
-        imageMarkdown: imageUpload ? imageUpload.markdown : ""
+        image: imageUpload
+            ? {
+                url: imageUpload.url,
+                alt: imageUpload.alt
+            }
+            : null
     });
-    const path = `src/notes/${getDateStamp(date)}.md`;
+    const path = `src/notes/${dateStamp}.md`;
+    const noteUrl = `/notes/${dateStamp}/`;
 
     let commit = null;
 
@@ -102,7 +109,7 @@ async function createNotePost(formData, env) {
             env,
             path,
             content: markdown,
-            message: `Post quick note ${getDateStamp(date)}`
+            message: `Post quick note ${dateStamp}`
         });
     } catch (error) {
         if (imageUpload) {
@@ -114,6 +121,7 @@ async function createNotePost(formData, env) {
 
     return {
         path,
+        noteUrl,
         markdown,
         commitUrl: commit.html_url,
         imageKey: imageUpload ? imageUpload.key : "",
@@ -173,6 +181,7 @@ async function uploadImageFromForm(formData, env) {
     return {
         key,
         url,
+        alt,
         markdown: `![${escapeMarkdownAlt(alt)}](${url})`
     };
 }
@@ -189,18 +198,21 @@ async function rollbackR2Upload(env, key) {
     }
 }
 
-function buildNoteMarkdown({ date, noteText, imageMarkdown }) {
-    const bodyParts = [];
+function buildNoteMarkdown({ date, noteText, image }) {
+    const frontmatter = [
+        "---",
+        `date: ${date.toISOString()}`
+    ];
 
-    if (noteText) {
-        bodyParts.push(noteText);
+    if (image) {
+        frontmatter.push("images:");
+        frontmatter.push(`  - url: "${escapeYamlString(image.url)}"`);
+        frontmatter.push(`    alt: "${escapeYamlString(image.alt)}"`);
     }
 
-    if (imageMarkdown) {
-        bodyParts.push(imageMarkdown);
-    }
+    frontmatter.push("---");
 
-    return `---\ndate: ${date.toISOString()}\n---\n\n${bodyParts.join("\n\n")}\n`;
+    return `${frontmatter.join("\n")}\n\n${noteText}\n`;
 }
 
 async function commitFileToGitHub({ env, path, content, message }) {
@@ -294,6 +306,10 @@ function base64FromUtf8(value) {
 
 function escapeMarkdownAlt(value) {
     return value.replace(/\]/g, "\\]");
+}
+
+function escapeYamlString(value) {
+    return value.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
 }
 
 function json(payload, status, env, request) {

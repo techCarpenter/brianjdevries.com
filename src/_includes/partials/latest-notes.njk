@@ -4,7 +4,7 @@
   {% set count = 0 %}
   {% for note in collections.notes %}
   {% if count < maxNotes %}
-    {{ noteBlock(note.content, note.url, note.date) }}
+    {{ noteBlock(note.content, note.url, note.date, note.data.images) }}
   {% set count = count + 1 %}
   {% endif %}
   {% endfor %}
