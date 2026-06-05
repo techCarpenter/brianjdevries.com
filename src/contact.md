@@ -12,13 +12,13 @@ Consider saying hi! I [removed all analytics](/blog/removed-web-analytics/) and 
 |                        |     |                                             |
 | :--------------------- | :-: | :------------------------------------------ |
 | Email (personal)       | 📧  | [brian@brianjdevries.com][email-personal]   |
-| Email (website design) | 📧  | [brian@techcarpenter.com][email-web-design] |
+| Email (website design) | 📧  | [brian@jenisonwebdesign.com][email-web-design] |
 | LinkedIn               | 👨‍💼  | [Brian's LinkedIn][linkedin]                |
 | Github                 | 💻  | [github.com/techcarpenter][github]          |
 
 <!-- Links -->
 
 [email-personal]: mailto:brian@brianjdevries.com?subject=Hey%20Brian!%20👋 "Email Brian!"
-[email-web-design]: mailto:brian@techcarpenter.org?subject=Help%20With%20Web%20Design "Email Brian!"
+[email-web-design]: mailto:brian@jenisonwebdesign.com?subject=Help%20With%20Web%20Design "Email Brian!"
 [linkedin]: https://www.linkedin.com/in/brian-devries/ "Brian's LinkedIn Profile"
 [github]: https://github.com/techcarpenter "Brian's Github"

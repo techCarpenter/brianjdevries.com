@@ -17,7 +17,7 @@ Here are some things I've done in that time:
 - Helped port a Windows Forms desktop app to a Vue webapp for ~~[Life Storage](https://lifestorage.com)~~ Now [Extra Space](https://extraspace.com)
 - Set up my own DNS server with a Raspberry Pi
 - Contributed to the open source project Foam ([pull request #865](https://github.com/foambubble/foam/pull/865))
-- Designed and developed multiple client websites at [techcarpenter.org](https://techcarpenter.org)
+- Designed and developed multiple client websites at [jenisonwebdesign.com](https://jenisonwebdesign.com)
 
 Other personal project details can be found on my [project page](/projects/) and on [github](https://github.com/techcarpenter). Alternatively, take a look at my [work history](/work-history/).
 
