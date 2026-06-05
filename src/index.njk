@@ -15,32 +15,32 @@ showNewsletterForm: false
   height="194"
   width="194" />
 
-Hi, my name is Brian.
+<p>Hi, my name is Brian.</p>
 
-I've tried to categorize myself many times, but my interests cover a wide range: woodworking, sewing, programming, backpacking, and many more. The best way I can think to categorize myself is as a do-it-yourself guy who loves learning new things.
+<p>I've tried to categorize myself many times, but my interests cover a wide range: woodworking, sewing, programming, backpacking, and many more. The best way I can think to categorize myself is as a do-it-yourself guy who loves learning new things.</p>
 
-Having said that, I am a professional software engineer. My career transitioned in 2018 and I continue to write code to this day.
+<p>Having said that, I am a professional software engineer. My career transitioned in 2018 and I continue to write code to this day.</p>
 
-To learn more about me, check out [my about page](/about/). I also [write](/blog/) here on my site.
+<p>To learn more about me, check out <a href="/about/">my about page</a>. I also <a href="/blog/">write</a> here on my site.</p>
 
-If you'd like to get notified of new posts, you can either subscribe to my [email newsletter](https://buttondown.email/briandevries/) or follow my blog's [feed](/feed.xml).
+<p>If you'd like to get notified of new posts, you can either subscribe to my <a href="https://buttondown.email/briandevries/">email newsletter</a> or follow my blog's <a href="/feed.xml">feed</a>.</p>
 
----
+<hr>
 
-## Latest posts
+<h2>Latest posts</h2>
 
 <div style="display: flex; flex-direction: row; justify-content: flex-end; font-size: 1rem; color: var(--light-color)"><a class="button" href="/blog/">All Posts ➡</a></div>
 
-{% from "./_includes/partials/latest-posts.njk" import latestPosts with context%}
+{% from "./_includes/partials/latest-posts.njk" import latestPosts with context %}
 {{ latestPosts(3) }}
 
----
+<hr>
 
-## Latest notes
+<h2>Latest notes</h2>
 
 <div style="display: flex; flex-direction: row; justify-content: flex-end; font-size: 1rem; color: var(--light-color)"><a class="button" href="/notes/">All Notes ➡</a></div>
 
-{% from "./_includes/partials/latest-notes.njk" import latestNotes with context%}
+{% from "./_includes/partials/latest-notes.njk" import latestNotes with context %}
 {{ latestNotes(3) }}
 
 <script src="/scripts/dayjs.min.js"></script>

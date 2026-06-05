@@ -136,14 +136,27 @@ hr {
 }
 
 .note__content img {
-    max-width: 400px;
+    display: block;
+    max-width: 100%;
     width: 100%;
-    margin: auto;
+    height: auto;
+    max-height: min(72vh, 720px);
+    object-fit: contain;
+    margin: 1rem 0 0;
+    border: 1px solid color-mix(in srgb, var(--light-color) 35%, transparent);
+    border-radius: 8px;
+    background: #111;
+    cursor: zoom-in;
+}
+
+.note__content p:has(> img:only-child) {
+    margin: 1rem 0 0;
 }
 
 .note__images {
     display: grid;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
+    gap: 0.75rem;
     margin-top: 1rem;
 }
 
@@ -151,12 +164,70 @@ hr {
     margin: 0;
 }
 
-.note__image img {
+.note__image-link {
     display: block;
+    color: inherit;
+}
+
+.note__image img {
+    aspect-ratio: 4 / 3;
+    margin-top: 0;
+    max-height: none;
+    object-fit: cover;
+}
+
+.note__image:only-child img {
+    aspect-ratio: auto;
+    max-height: min(72vh, 720px);
+    object-fit: contain;
 }
 
 .note__time {
     font-style: italic;
+}
+
+.note-image-viewer-open {
+    overflow: hidden;
+}
+
+.note-image-viewer {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: clamp(1rem, 4vw, 3rem);
+    background: rgb(0 0 0 / 88%);
+}
+
+.note-image-viewer[hidden] {
+    display: none;
+}
+
+.note-image-viewer__image {
+    max-width: min(100%, 1200px);
+    max-height: 88vh;
+    width: auto;
+    height: auto;
+    border: 1px solid color-mix(in srgb, var(--light-color) 35%, transparent);
+    border-radius: 8px;
+    background: #111;
+    box-shadow: 0 1rem 4rem rgb(0 0 0 / 45%);
+}
+
+.note-image-viewer__close {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border-radius: 999px;
+    font-size: 2rem;
+    line-height: 1;
+    background: var(--dark-color);
 }
 
 .demo {

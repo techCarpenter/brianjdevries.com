@@ -6,6 +6,18 @@ module.exports = function (config) {
     const md = new markdownIt({
         html: true
     });
+    const defaultImageRenderer = md.renderer.rules.image || function (tokens, idx, options, env, self) {
+        return self.renderToken(tokens, idx, options);
+    };
+
+    md.renderer.rules.image = function (tokens, idx, options, env, self) {
+        const token = tokens[idx];
+
+        token.attrSet("loading", "lazy");
+        token.attrSet("decoding", "async");
+
+        return defaultImageRenderer(tokens, idx, options, env, self);
+    };
 
     if (process.env.ELEVENTY_ENV === "development") {
         /**
@@ -58,6 +70,7 @@ module.exports = function (config) {
     config.addFilter("markdown", content => md.render(content));
     config.addFilter("slugify", require("./lib/filters/slugify"));
     config.addFilter("splitlines", require("./lib/filters/splitLines"));
+    config.setLibrary("md", md);
 
     config.addPassthroughCopy({ "src/static": "/" });
     config.addPassthroughCopy({ "node_modules/dayjs/dayjs.min.js": "/scripts/dayjs.min.js" })

@@ -11,7 +11,9 @@
       <div class="note__images">
         {% for image in images %}
           <figure class="note__image">
-            <img src="{{ image.url }}" alt="{{ image.alt }}">
+            <a class="note__image-link" href="{{ image.url }}">
+              <img src="{{ image.url }}" alt="{{ image.alt }}" loading="lazy" decoding="async">
+            </a>
           </figure>
         {% endfor %}
       </div>
