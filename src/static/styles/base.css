@@ -119,6 +119,7 @@ hr {
 .note__reply {
     display: flex;
     justify-content: flex-end;
+    margin-top: 1rem;
 }
 
 .note__reply a {
@@ -150,6 +151,8 @@ hr {
 }
 
 .note__content p:has(> img:only-child) {
+    position: relative;
+    display: block;
     margin: 1rem 0 0;
 }
 
@@ -165,8 +168,34 @@ hr {
 }
 
 .note__image-link {
+    position: relative;
     display: block;
     color: inherit;
+}
+
+.note__image-link::after,
+.note__content p:has(> img:only-child)::after {
+    content: "";
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1px solid rgb(255 255 255 / 35%);
+    border-radius: 999px;
+    background: rgb(0 0 0 / 58%) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") center / 1.15rem 1.15rem no-repeat;
+    box-shadow: 0 0.35rem 1rem rgb(0 0 0 / 35%);
+    opacity: 0.78;
+    pointer-events: none;
+    transition: opacity 160ms ease, background-color 160ms ease;
+}
+
+.note__image-link:hover::after,
+.note__image-link:focus-visible::after,
+.note__content p:has(> img:only-child):hover::after,
+.note__content p:has(> img:only-child):focus-within::after {
+    opacity: 1;
+    background-color: rgb(0 0 0 / 72%);
 }
 
 .note__image img {
