@@ -608,7 +608,6 @@ main {
 }
 
 .profile-pic {
-    background-image: linear-gradient(0deg, var(--vermillion), #ffe16c);
     border-radius: 50%;
     margin: auto;
     max-width: 200px;
