@@ -26,6 +26,14 @@ collections:
           default: "Brian DeVries"
         }
       - { label: "Title", name: "title", widget: "string", required: true }
+      - label: "URL Slug"
+        name: "slug"
+        widget: "string"
+        required: false
+        hint: "Optional while drafting. Set before publishing. Avoid changing after publication."
+        pattern:
+          - "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          - "Use lowercase letters, numbers, and hyphens only."
       - {
           label: "Description",
           name: "description",

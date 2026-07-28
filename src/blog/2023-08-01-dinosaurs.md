@@ -1,5 +1,6 @@
 ---
 title: "Dinosaurs"
+slug: "dinosaurs"
 author: "Brian DeVries"
 description: "My son is getting pretty great at drawing dinosaurs"
 date: 2023-08-01T00:00:00.000Z

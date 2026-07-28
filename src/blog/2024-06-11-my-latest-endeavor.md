@@ -1,6 +1,7 @@
 ---
 author: Brian DeVries
 title: My latest endeavor
+slug: "my-latest-endeavor"
 description: I'm always trying new things and sometimes it's nice to make money
   from my efforts. I'm offering design and printing of custom stickers to
   promote your business/event or just for fun.

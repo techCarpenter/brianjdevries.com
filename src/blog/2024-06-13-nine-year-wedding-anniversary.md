@@ -1,6 +1,7 @@
 ---
 author: Brian DeVries
 title: Nine year wedding anniversary
+slug: "nine-year-wedding-anniversary"
 description: "Hannah and I have been married for nine years. "
 date: 2024-06-13T13:07:00.000Z
 ---

@@ -1,6 +1,7 @@
 ---
 author: Brian DeVries
 title: House Sketch
+slug: "house-sketch"
 description: I drew a picture of a house very similar to mine.
 date: 2024-04-18T23:55:00.000Z
 ---

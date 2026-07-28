@@ -1,5 +1,6 @@
 ---
 title: Website building blocks
+slug: "website-building-blocks"
 author: Brian DeVries
 description: "A basic introduction to html and website source markup. All websites have the same basic structure that anyone can learn."
 date: 2020-09-07T00:00:00.000Z

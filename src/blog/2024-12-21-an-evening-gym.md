@@ -1,5 +1,6 @@
 ---
 title: "An Evening Gym"
+slug: "an-evening-gym"
 author: "Brian DeVries"
 description: "While sitting at my son's basketball practice, I reflect on some of my basketball memories."
 tags: []
