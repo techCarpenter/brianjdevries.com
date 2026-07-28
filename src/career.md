@@ -26,7 +26,8 @@ Other personal project details can be found on my [project page](/projects/) and
 <!-- List testimonials -->
 {% for tml in testimonials %}
 <figure class="testimonial">
-<blockquote class="testimonial-quote">“{{tml.testimonial}}”</blockquote>
+{% set quote = "“" ~ tml.testimonial ~ "”" %}
+<blockquote class="testimonial-quote">{{ quote | markdown | safe}}</blockquote>
 <figcaption class="testimonial-caption">
 —<strong>{{tml.name}}</strong>, {{tml.title}}, <a href="{{tml.company.url}}" rel="noreferrer nofollow">{{tml.company.name}}</a>
 </figcaption>

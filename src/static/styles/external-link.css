@@ -1,0 +1,30 @@
+a[href]:not(:where(
+    /* exclude hash only links */
+    [href^="#"],
+    /* exclude javascript only links */
+    [href^="javascript:" i],
+    /* exclude relative but not double slash only links */
+    [href^="/"]:not([href^="//"]),
+    /* domains to exclude */
+    [href*="//brianjdevries.com"],
+    /* subdomains to exclude */
+    [href*="//assets.vries.land"],
+    .no-indicator,
+    .button
+  )):after {
+  position: static;
+  display: inline-block;
+  inline-size: 1em;
+  block-size: 1em;
+  background-image: url('/images/external.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60% auto;
+  /* alternative text rules */
+  content: '(external link)';
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 1em;
+  /* the width of the icon */
+  padding-inline-end: 0.8em;
+}

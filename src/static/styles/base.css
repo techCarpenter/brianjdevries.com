@@ -98,7 +98,7 @@ summary {
 
 hr {
     border: none;
-    height: 1px;
+    height: 3px;
     background-image: linear-gradient(to right, #242424ff, var(--vermillion), #242424ff);
     margin: 2.5rem 0;
 }
