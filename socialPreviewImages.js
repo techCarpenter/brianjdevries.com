@@ -2,25 +2,27 @@ const fs = require("fs");
 const Image = require("@11ty/eleventy-img");
 const {yellow} = require("kleur");
 
-module.exports = function () {
+module.exports = async function () {
     const socialPreviewImagesDir = "dist/images/social-preview-images/";
-    fs.readdir(socialPreviewImagesDir, (err, files) => {
-        if (!!files && files.length > 0) {
-            files.forEach(fileName => {
-                if (fileName.endsWith(".svg")) {
-                    let imageUrl = socialPreviewImagesDir + fileName;
-                    Image(imageUrl, {
-                        formats: ["jpeg"],
-                        outputDir: "./" + socialPreviewImagesDir,
-                        filenameFormat: function (id, src, width, format, options) {
-                            let outputFileName = fileName.substring(0, fileName.length - 4);
-                            return `${outputFileName}.${format}`;
-                        }
-                    });
-                }
-            });
-        } else {
-            console.log(yellow("⚠ No social images found"));
-        }
-    });
+    const files = await fs.promises.readdir(socialPreviewImagesDir);
+    const svgFiles = files.filter(fileName => fileName.endsWith(".svg"));
+
+    if (svgFiles.length === 0) {
+        console.log(yellow("⚠ No social images found"));
+        return;
+    }
+
+    await Promise.all(svgFiles.map(fileName => {
+        const imageUrl = socialPreviewImagesDir + fileName;
+
+        return Image(imageUrl, {
+            formats: ["jpeg"],
+            outputDir: "./" + socialPreviewImagesDir,
+            useCache: false,
+            filenameFormat: function (id, src, width, format, options) {
+                const outputFileName = fileName.substring(0, fileName.length - 4);
+                return `${outputFileName}.${format}`;
+            }
+        });
+    }));
 };

@@ -14,10 +14,11 @@
   <meta property="og:url" content="{{site.url}}{{ page.url }}">
 
   {# All blog posts have type og:type = 'article' #}
-  {% set regExp = r/.*\/blog\/.+/gi%}
-  <meta property="og:type" content="{% if regExp.test(page.url) %}article{% else %}website{% endif %}">
+  {% set blogPostRegExp = r/^\/blog\/\d{4}\/\d{2}\/\d{2}\/.+\/$/i %}
+  {% set isBlogPost = blogPostRegExp.test(page.url) %}
+  <meta property="og:type" content="{% if isBlogPost %}article{% else %}website{% endif %}">
 
-  {% if tags %}
+  {% if isBlogPost %}
   <meta property="og:image" content="{{site.url}}/images/social-preview-images/{{ page.date | dateformat("YYYY-MM-DD") }}-{{ title | slugify }}-preview.jpeg">
   <meta property="og:image:secure_url" content="{{site.url}}/images/social-preview-images/{{ page.date | dateformat("YYYY-MM-DD") }}-{{ title | slugify }}-preview.jpeg">
   {% else %}
