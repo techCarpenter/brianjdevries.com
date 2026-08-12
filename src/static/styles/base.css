@@ -462,33 +462,35 @@ th {
     justify-content: space-between;
 }
 
-.site-logo {
+.site-brand {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-}
-
-.site-nav>a {
+    gap: 0.6rem;
     color: var(--light-color);
     text-decoration: none;
 }
 
-.site-nav>a:hover,
-.site-nav>a:active,
-.site-nav>a:focus {
+.site-brand:hover,
+.site-brand:active,
+.site-brand:focus {
     color: var(--light-color);
+    text-decoration: none;
 }
 
-.site-logo img {
-    display: inline-block;
-    max-height: 30px;
-    max-width: 30px;
-    background-color: rgba(0, 0, 0, 0);
+.site-brand:focus-visible {
+    outline: 3px dashed var(--vermillion);
+    outline-offset: 0.3rem;
 }
 
-.site-logo span {
-    margin-left: 0.3em;
+.site-brand__mark {
+    width: 2.6rem;
+    height: 3rem;
+    flex: none;
+    color: var(--vermillion);
+}
+
+.site-brand__name {
     font-size: 1.5rem;
     text-transform: uppercase;
 }

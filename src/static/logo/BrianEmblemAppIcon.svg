@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="628" viewBox="0 0 1200 628">
-  <rect width="1200" height="628" fill="#242424"/>
-  <g fill="#ff4542" transform="translate(50 208) scale(8.48)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+  <rect width="25" height="25" fill="#242424"/>
+  <g fill="#ff4542" transform="translate(3.843 2.5) scale(.8)">
     <g transform="translate(-1.222656 -0.867188)">
       <path d="m12.044922.867188-10.822266 6.25v12.5l10.822266 6.25.25-.144532 10.570312-6.105468v-12.5Zm0 1.154296 9.820312 5.673828v11.345704l-9.820312 5.671875-9.822266-5.671875V7.695312Z"/>
       <g transform="translate(.005461)">
@@ -18,7 +18,4 @@
       </g>
     </g>
   </g>
-  <line x1="290" y1="80" x2="290" y2="548" stroke="#ff4542" stroke-width="4"/>
-  <text x="330" y="274" fill="#aaa" font-family="Arial, Helvetica, sans-serif" font-size="30" font-style="italic">brianjdevries.com</text>
-  <text x="330" y="370" fill="#dbdbdb" font-family="Arial, Helvetica, sans-serif" font-size="80" font-weight="700">Brian DeVries</text>
 </svg>

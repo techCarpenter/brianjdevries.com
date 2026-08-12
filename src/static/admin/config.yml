@@ -4,7 +4,7 @@ backend:
   branch: main
   squash_merges: true
 publish_mode: editorial_workflow
-logo_url: https://brianjdevries.com/android-chrome-512x512.png
+logo_url: /logo/BrianEmblemAppIcon.svg
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads"
 media_library:
@@ -17,7 +17,13 @@ collections:
     folder: "src/blog" # The path to the folder where the documents are stored
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    preview_path: blog/{{year}}/{{month}}/{{day}}/{{slug}}
+    preview_path: blog
+    sortable_fields:
+      - field: date
+        label: Publish Date
+        default_sort: desc
+      - field: title
+        label: Title
     fields:
       - {
           label: "Author",
@@ -62,6 +68,10 @@ collections:
     create: true
     slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}" # Filename template
     preview_path: notes
+    sortable_fields:
+      - field: date
+        label: Date
+        default_sort: desc
     fields:
       - {
           label: "Date",
