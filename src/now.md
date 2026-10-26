@@ -10,6 +10,8 @@ lastModified: 2026-06-02
 showNewsletterForm: false
 ---
 
+<div data-pagefind-body>
+
 **Last updated:** _{{ lastModified | dateformat("MMMM D, YYYY") }}_ <span id="edited-ago"></span>
 
 ---
@@ -26,6 +28,8 @@ showNewsletterForm: false
 ---
 
 Create your own [now page](https://nownownow.com/about), or [reach out](/contact/) if you want help getting your own site up and running!
+
+</div>
 
 <script>
   //Progressive Enhancement

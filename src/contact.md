@@ -5,20 +5,20 @@ layout: "page.njk"
 showNewsletterForm: false
 ---
 
-## Howdy!
+## Consider saying hi!
 
-Consider saying hi! I [removed all analytics](/blog/removed-web-analytics/) and tracking from this site to respect your privacy and reduce javascript, so the only way I know you stopped by is if you message me 😛
+<div data-pagefind-body>
 
 |                        |     |                                             |
 | :--------------------- | :-: | :------------------------------------------ |
 | Email (personal)       | 📧  | [brian@brianjdevries.com][email-personal]   |
-| Email (website design) | 📧  | [brian@jenisonwebdesign.com][email-web-design] |
 | LinkedIn               | 👨‍💼  | [Brian's LinkedIn][linkedin]                |
 | Github                 | 💻  | [github.com/techcarpenter][github]          |
+
+</div>
 
 <!-- Links -->
 
 [email-personal]: mailto:brian@brianjdevries.com?subject=Hey%20Brian!%20👋 "Email Brian!"
-[email-web-design]: mailto:brian@jenisonwebdesign.com?subject=Help%20With%20Web%20Design "Email Brian!"
 [linkedin]: https://www.linkedin.com/in/brian-devries/ "Brian's LinkedIn Profile"
 [github]: https://github.com/techcarpenter "Brian's Github"

@@ -9,7 +9,7 @@
     {{ htmlHead(prismLink) }}
   {% endblock %}
   {% block contentBlock %}
-    <article>
+    <article data-pagefind-body>
       <h1 class="primary-title">{{ title }}</h1>
       <p class="article-date">
         <time datetime="{{ page.date | dateformat("YYYY-MM-DDTHH:mm:ss.SSS[Z]") }}">{{ page.date | dateformat("MMMM D, YYYY") }}</time>

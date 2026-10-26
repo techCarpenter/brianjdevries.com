@@ -5,6 +5,8 @@ layout: "page.njk"
 showNewsletterForm: false
 ---
 
+<div data-pagefind-body>
+
 {% for job in workHistory | reverse %}
   <div class="experience-entry">
     <h2>{{job.title}}</h2>
@@ -29,6 +31,8 @@ showNewsletterForm: false
     </div>
     <hr class="entry-divider">
   {% endfor %}
+
+</div>
 
   <style>
     .entry-divider:nth-last-of-type(1) {

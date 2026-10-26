@@ -1,8 +1,8 @@
-<script src="/pagefind/pagefind-ui.js"></script>
+<link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-component-ui.js" type="module"></script>
 
-<div id="search"></div>
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        new PagefindUI({ element: "#search", showSubResults: true, showImages: false });
-    });
-</script>
+<div data-pf-theme="dark">
+  {# <pagefind-modal-trigger compact="true" hide-shortcut="true"></pagefind-modal-trigger> #}
+  <pagefind-modal-trigger></pagefind-modal-trigger>
+  <pagefind-modal></pagefind-modal>
+</div>

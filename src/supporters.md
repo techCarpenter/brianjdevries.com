@@ -5,6 +5,8 @@ layout: page.njk
 showNewsletterForm: false
 ---
 
+<div data-pagefind-body>
+
 ## Monthly supporters
 
 - [Manuel Moreale](https://manuelmoreale.com/) (First supporter 🙏🏼)
@@ -15,3 +17,5 @@ showNewsletterForm: false
 If you have found value in any of my work or just want to support me, you can check out my ko-fi page!
 
 <p style="text-align: center;">{% include "./_includes/partials/support-button.njk" %}</p>
+
+</div>

@@ -5,6 +5,8 @@ layout: "page.njk"
 showNewsletterForm: false
 ---
 
+<div data-pagefind-body>
+
 I'm Brian DeVries, a developer who's been shipping code since 2018.
 
 Here are some things I've done in that time:
@@ -35,6 +37,8 @@ Other personal project details can be found on my [project page](/projects/) and
 {% endfor %}
 
 If you think I can help you with a project, [get in touch](/contact/).
+
+</div>
 
 <style>
   .testimonial {

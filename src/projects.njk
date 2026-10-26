@@ -5,6 +5,8 @@ layout: "page.njk"
 showNewsletterForm: false
 ---
 
+<div data-pagefind-body>
+
 {% for project in projectData | reverse %}
   <div id="{{project.title | slugify}}" class="demo project-entry" data-demo-label="">
     <h2>{{project.title}}</h2>
@@ -25,6 +27,8 @@ showNewsletterForm: false
     {{ project.summary | markdown | safe }}
   </div>
 {% endfor %}
+
+</div>
 
 <style>
   .project-entry {

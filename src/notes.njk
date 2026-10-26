@@ -8,10 +8,13 @@ eleventyNavigation:
 showNewsletterForm: false
 ---
 
+
 {% from "./_includes/macros/note.njk" import noteBlock with context %}
+<div data-pagefind-ignore="all">
 {% for note in collections.notes %}
   {{ noteBlock(note.content, note.url, note.date, note.data.images) }}
 {% endfor %}
+</div>
 <script src="/scripts/dayjs.min.js"></script>
 <script src="/scripts/dayjs-utc.js"></script>
 <script>

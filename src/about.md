@@ -15,6 +15,8 @@ showNewsletterForm: false
   height="194"
   width="194" />
 
+<div data-pagefind-body>
+
 Thanks for stopping by. Read on to find out how exciting or boring I _really_ am.
 
 If you're looking for information about my professional life, check out my [career page](/career/).
@@ -32,3 +34,5 @@ From there, I went to college in Grand Rapids, MI for a degree in electrical eng
 Ultimately, my love of technology and learning led me to the land of programming, which is now what I do full-time.
 
 My whole life has been learning new things. I continue to learn new things and hope to inspire others to continue learning as well. But in all things, I strive to honor Jesus and praise Him for the gifts he has given me to share with others.
+
+</div>
