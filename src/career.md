@@ -7,7 +7,9 @@ showNewsletterForm: false
 
 <div data-pagefind-body>
 
-I'm Brian DeVries, a developer who's been shipping code since 2018.
+I'm Brian DeVries, a software engineer who's been shipping code since 2018.
+
+{% include "partials/contract-work-callout.njk" %}
 
 Here are some things I've done in that time:
 
@@ -49,5 +51,20 @@ If you think I can help you with a project, [get in touch](/contact/).
   }
   .testimonial-caption {
     margin-top: 0.75rem;
+  }
+
+  .contract-callout {
+    margin: 2rem 0;
+    padding: 0.25rem 1rem;
+    border-left: 3px solid var(--vermillion);
+  }
+
+  .contract-callout h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  .contract-callout p {
+    margin: 0;
   }
 </style>

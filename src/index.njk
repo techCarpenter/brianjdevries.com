@@ -22,7 +22,9 @@ showNewsletterForm: false
 
 <p>I've tried to categorize myself many times, but my interests cover a wide range: woodworking, sewing, programming, backpacking, and many more. The best way I can think to categorize myself is as a do-it-yourself guy who loves learning new things.</p>
 
-<p>Having said that, I am a professional software engineer. My career transitioned in 2018 and I continue to write code to this day.</p>
+<p>Having said that, I work as a professional software engineer. My career transitioned in 2018 and I continue to write code to this day.</p>
+
+{% include "partials/contract-work-callout.njk" %}
 
 <p>To learn more about me, check out <a href="/about/">my about page</a>. I also <a href="/blog/">write</a> here on my site.</p>
 
@@ -57,3 +59,20 @@ showNewsletterForm: false
     dates.forEach(date => date.innerText = dayjs(new Date(date.getAttribute("datetime"))).format("HH:mm ddd MMM DD YYYY"));
   }
 </script>
+
+<style>
+  .contract-callout {
+    margin: 2rem 0;
+    padding: 0.25rem 1rem;
+    border-left: 3px solid var(--vermillion);
+  }
+
+  .contract-callout h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  .contract-callout p {
+    margin: 0;
+  }
+</style>

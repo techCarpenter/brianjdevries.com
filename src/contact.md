@@ -5,8 +5,6 @@ layout: "page.njk"
 showNewsletterForm: false
 ---
 
-## Consider saying hi!
-
 <div data-pagefind-body>
 
 |                        |     |                                             |
