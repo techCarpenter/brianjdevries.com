@@ -1,8 +1,8 @@
-const fs = require("fs");
-const Image = require("@11ty/eleventy-img");
-const {yellow} = require("kleur");
+import fs from "fs";
+import Image from "@11ty/eleventy-img";
+import {yellow} from "kleur/colors";
 
-module.exports = async function () {
+export default async function () {
     const socialPreviewImagesDir = "dist/images/social-preview-images/";
     const files = await fs.promises.readdir(socialPreviewImagesDir);
     const svgFiles = files.filter(fileName => fileName.endsWith(".svg"));

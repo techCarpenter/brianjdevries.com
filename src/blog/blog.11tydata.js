@@ -3,7 +3,7 @@ const isProd = process.env.ELEVENTY_ENV === "production";
 
 const excludeFromProdBuild = data => isProd && !!data.draft && data.draft;
 
-module.exports = {
+export default {
   eleventyComputed: {
     eleventyExcludeFromCollections: data => {
       return excludeFromProdBuild(data) ? true : data.eleventyExcludeFromCollections;

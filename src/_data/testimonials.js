@@ -20,7 +20,7 @@ const companies = {
   }
 };
 
-module.exports = [
+export default [
   {
     name: "Denise Blumberg",
     testimonial:

@@ -1,8 +1,8 @@
-const fs = require("fs");
-const slugify = require("slugify").default;
-const { argv } = require("process");
-const { exec } = require("child_process");
-const dayjs = require("dayjs");
+import fs from "fs";
+import slugify from "slugify";
+import { argv } from "process";
+// import { exec } from "child_process";
+import dayjs from "dayjs";
 
 const dateFormat = dayjs().format("YYYY-MM-DD");
 const postTitle = argv[2];

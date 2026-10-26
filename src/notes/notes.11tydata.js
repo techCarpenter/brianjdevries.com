@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   eleventyComputed: {
     permalink: data => {
       let date = data.page.date,

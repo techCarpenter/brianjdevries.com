@@ -1,4 +1,4 @@
-module.exports = [
+export default [
     {
         name: "Responsive Web Design",
         url: "https://www.freecodecamp.org/certification/techcarpenter/responsive-web-design",

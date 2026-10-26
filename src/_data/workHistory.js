@@ -1,4 +1,4 @@
-module.exports = [
+export default [
     {
         startDate: new Date("2013-05-25"),
         endDate: new Date("2013-08-15"),

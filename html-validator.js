@@ -25,41 +25,41 @@ const validateConfig = {
     }
 };
 
-const { HtmlValidate, StaticConfigLoader } = require("html-validate");
+import { HtmlValidate, StaticConfigLoader } from "html-validate";
 const loader = new StaticConfigLoader(validateConfig);
 const htmlValidate = new HtmlValidate(loader);
-const fs = require("fs");
-const { green, red } = require("kleur");
+import fs from "fs";
+import { green, red } from "kleur/colors";
 
-exports.results = {};
+export const results = {};
 
-exports.storeResults = function storeResults() {
+export function storeResults() {
     const resultFilePath = "./dist/html-validation.json";
-    const totalErrors = Object.values(exports.results)
+    const totalErrors = Object.values(results)
         .filter(val => !!val)
         .reduce((acc, cur) => {
             return (acc = acc + cur.errorCount);
         }, 0);
-    const totalFileCount = Object.values(exports.results).filter(
+    const totalFileCount = Object.values(results).filter(
         file => !!file
     ).length;
-    let results = {};
+    const summary = {};
 
-    results["Total error count"] = totalErrors;
-    results["Files with errors"] = totalFileCount;
-    results["Results file path"] = resultFilePath;
+    summary["Total error count"] = totalErrors;
+    summary["Files with errors"] = totalFileCount;
+    summary["Results file path"] = resultFilePath;
 
     if (totalErrors > 0) {
-        const content = JSON.stringify(exports.results, null, 2);
+        const content = JSON.stringify(results, null, 2);
         fs.writeFileSync(resultFilePath, content);
 
-        console.table(results);
+        console.table(summary);
     } else {
         console.log(green(`✅ No html errors!`));
     }
 };
 
-exports.validate = function validate(content) {
+export function validate(content) {
     if (!this.outputPath) return;
 
     // Only validate 'html' files
@@ -83,7 +83,7 @@ exports.validate = function validate(content) {
         console.log(red(`❌ ${this.outputPath}`));
     }
 
-    exports.results[this.outputPath] = validationResult.valid
+    results[this.outputPath] = validationResult.valid
         ? undefined
         : validationResult;
 };

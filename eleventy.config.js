@@ -1,8 +1,15 @@
-const fs = require("fs");
-const htmlValidator = require("./html-validator");
-const markdownIt = require("markdown-it");
+import * as htmlValidator from "./html-validator.js";
+import navigation from "@11ty/eleventy-navigation";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import rss from "@11ty/eleventy-plugin-rss";
+import navlist from "./lib/shortcodes/navlist.js";
+import dateformat from "./lib/filters/dateformat.js";
+import slugify from "./lib/filters/slugify.js";
+import splitLines from "./lib/filters/splitLines.js";
+import socialPreviewImages from "./socialPreviewImages.js";
+import markdownIt from "markdown-it";
 
-module.exports = function (config) {
+export default function (config) {
     const md = new markdownIt({
         html: true
     });
@@ -20,37 +27,15 @@ module.exports = function (config) {
     };
 
     if (process.env.ELEVENTY_ENV === "development") {
-        /**
-         * Required during development to show 404 page
-         * when path doesn't exist
-         */
-        config.setBrowserSyncConfig({
-            callbacks: {
-                ready: function (err, bs) {
-                    bs.addMiddleware("*", (req, res) => {
-                        const content_404 = fs.readFileSync("dist/404.html");
-
-                        /**
-                         * Add 404 http status code in request header.
-                         */
-                        res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
-
-                        res.write(content_404);
-                        res.end();
-                    });
-                }
-            }
-        });
-
         config.on("eleventy.after", htmlValidator.storeResults);
         config.addLinter("html-validator", htmlValidator.validate);
     }
 
-    config.addPlugin(require("@11ty/eleventy-navigation"));
-    config.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
-    config.addPlugin(require("@11ty/eleventy-plugin-rss"));
+    config.addPlugin(navigation);
+    config.addPlugin(syntaxHighlight);
+    config.addPlugin(rss);
 
-    config.addShortcode("navlist", require("./lib/shortcodes/navlist.js"));
+    config.addShortcode("navlist", navlist);
 
     function getPosts(collectionApi) {
         return collectionApi.getFilteredByGlob("./src/blog/*.md").reverse();
@@ -66,17 +51,17 @@ module.exports = function (config) {
         return getNotes(collection);
     });
 
-    config.addFilter("dateformat", require("./lib/filters/dateformat"));
+    config.addFilter("dateformat", dateformat);
     config.addFilter("markdown", content => md.render(content));
-    config.addFilter("slugify", require("./lib/filters/slugify"));
-    config.addFilter("splitlines", require("./lib/filters/splitLines"));
+    config.addFilter("slugify", slugify);
+    config.addFilter("splitlines", splitLines);
     config.setLibrary("md", md);
 
     config.addPassthroughCopy({ "src/static": "/" });
     config.addPassthroughCopy({ "node_modules/dayjs/dayjs.min.js": "/scripts/dayjs.min.js" })
     config.addPassthroughCopy({ "node_modules/dayjs/plugin/utc.js": "/scripts/dayjs-utc.js" })
 
-    config.on("eleventy.after", require("./socialPreviewImages"));
+    config.on("eleventy.after", socialPreviewImages);
 
     return {
         dir: {
